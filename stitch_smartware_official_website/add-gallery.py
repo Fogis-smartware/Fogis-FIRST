@@ -11,7 +11,7 @@ import os
 import re
 import glob
 
-WEBSITE_DIR = "d:/CC/smartware/Version2/stitch_smartware_official_website"
+WEBSITE_DIR = "D:/GIT/stitch_smartware_official_website"
 
 # Gallery CSS to inject into the first <style> tag
 GALLERY_CSS = """

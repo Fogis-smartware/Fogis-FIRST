@@ -2,7 +2,7 @@
 # Download gallery images from batch data files
 # This script reads the JSON files and downloads all extra images
 
-IMGDIR="d:/CC/smartware/Version2/stitch_smartware_official_website/images"
+IMGDIR="D:/GIT/stitch_smartware_official_website/images"
 
 # Process a JSON array of {model, images[]} items
 process_json() {

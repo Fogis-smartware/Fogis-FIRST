@@ -1,7 +1,7 @@
 import os
 import glob
 
-website_dir = "d:/CC/smartware/Version2/stitch_smartware_official_website"
+website_dir = "D:/GIT/stitch_smartware_official_website"
 files = glob.glob(os.path.join(website_dir, "product-*.html"))
 
 fixed = 0
