@@ -19,7 +19,7 @@ const IMAGES_DIR = path.resolve(__dirname, 'images');
 const PROGRESS_FILE = path.resolve(__dirname, 'image_fetch_progress.json');
 const CATEGORIES_LOG = path.resolve(__dirname, 'image_fetch_categories.json');
 const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0';
-const BASE_URL = 'https://www.sst-smartware.com';
+const BASE_URL = 'https://www.smartware-official.com';
 const CDN_DOMAIN = 'gcdn.meidianbang.cn';
 
 // 最大并发数（TODO: 当前未实现并发控制，使用顺序处理；后续可基于此常量引入队列/信号量）

@@ -3,4 +3,4 @@ Allow: /
 Disallow: /node_modules/
 Disallow: /temp_original_page.html
 
-Sitemap: https://www.sst-smartware.com/sitemap.xml
+Sitemap: https://www.smartware-official.com/sitemap.xml
