@@ -1,0 +1,601 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/logo.png">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="description" content="Smartware (Shenzhen) Technology - Professional LED lighting solutions for automotive, engineering, and industrial applications. OEM/ODM manufacturer based in Shenzhen, China."/>
+<title data-en="Smartware Official - Leading LED Lighting Innovator" data-zh="云智迈科技 - 领航照明创新">Smartware Official - Leading LED Lighting Innovator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#a33e00",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-fixed-variant": "#00497b",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-container-high": "#e8e8e8",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#561d00",
+                        "on-error": "#ffffff",
+                        "primary-container": "#ff6600",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "secondary": "#5f5e5e",
+                        "on-surface": "#1a1c1c",
+                        "on-secondary-container": "#656464",
+                        "surface-tint": "#a33e00",
+                        "surface": "#f9f9f9",
+                        "surface-variant": "#e2e2e2",
+                        "secondary-fixed": "#e4e2e1",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#474747",
+                        "inverse-on-surface": "#f1f1f1",
+                        "tertiary-container": "#009cfc",
+                        "surface-container": "#eeeeee",
+                        "on-tertiary-container": "#003155",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#7c2e00",
+                        "error": "#ba1a1a",
+                        "inverse-surface": "#2f3131",
+                        "on-primary-fixed": "#360f00",
+                        "secondary-container": "#e4e2e1",
+                        "on-background": "#1a1c1c",
+                        "tertiary": "#0062a1",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "primary-fixed-dim": "#ffb596",
+                        "tertiary-fixed-dim": "#9ccaff",
+                        "outline": "#8e7164",
+                        "inverse-primary": "#ffb596",
+                        "primary-fixed": "#ffdbcd",
+                        "on-surface-variant": "#5a4136",
+                        "outline-variant": "#e3bfb1",
+                        "background": "#f9f9f9",
+                        "tertiary-fixed": "#d0e4ff",
+                        "on-tertiary-fixed": "#001d35"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .shadow-soft {
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        /* Scroll animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+        .fade-up.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.35s; }
+        .delay-4 { transition-delay: 0.5s; }
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .scale-in.animate {
+            opacity: 1;
+            transform: scale(1);
+        }
+    .lang-wrap{position:relative;display:inline-block}.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e3bfb1;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,0.1);z-index:9999;min-width:90px;overflow:hidden}.lang-menu button{display:block;width:100%;padding:8px 16px;text-align:left;border:none;background:none;cursor:pointer;font-size:14px;font-family:Inter,sans-serif;color:#1a1c1c;white-space:nowrap}.lang-menu button:hover{background:#f3f3f3}
+</style>
+
+<style id="lang-style">
+body:not(.show-zh) [lang="zh"] { display: none !important; }
+body.show-zh [lang="zh"] { display: inline !important; }
+body.show-zh [lang="zh"].block,
+body.show-zh [lang="zh"].flex,
+body.show-zh [lang="zh"].grid,
+body.show-zh [lang="zh"].inline-flex { display: inline-flex !important; }
+body.show-zh [lang="en"] { display: none !important; }
+</style>
+
+<script src="search-data.js"></script>
+<script src="search.js"></script>
+</head>
+<body class="font-body-md text-body-md">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center px-gutter md:px-margin-desktop h-24 md:h-28 max-w-container-max mx-auto bg-surface/80 backdrop-blur-xl border-b border-outline-variant shadow-sm full-width">
+<a href="index.html"><img alt="Smartware Logo" class="h-[90px] md:h-[108px] w-auto object-contain" src="images/logo.png"></a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1 transition-colors duration-200 cursor-pointer" href="index.html"><span lang="en">HOME</span><span lang="zh">首页</span></a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200 cursor-pointer" href="products.html"><span lang="en">PRODUCT</span><span lang="zh">产品</span></a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200 cursor-pointer" href="contact.html"><span lang="en">CONTACT</span><span lang="zh">联系我们</span></a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200 cursor-pointer" href="about_us.html"><span lang="en">ABOUT US</span><span lang="zh">关于我们</span></a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="hidden lg:relative lg:flex items-center border border-outline-variant rounded-full px-4 py-1 bg-surface-container">
+<input class="bg-transparent border-none focus:ring-0 text-body-md w-40" placeholder="Product Search..." type="text" data-en="Product Search..." data-zh="产品搜索...">
+<span class="material-symbols-outlined text-secondary cursor-pointer">search</span>
+</div>
+<button class="font-label-md text-label-md font-bold text-primary cursor-pointer active:opacity-70 flex items-center gap-1">
+<span class="material-symbols-outlined text-base">language</span><span> EN</span>
+            </button>
+<button class="md:hidden material-symbols-outlined text-on-surface">menu</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[700px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Industrial LED lighting application" class="w-full h-full object-cover" src="images/banner-1.jpg">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+</div>
+<div class="relative z-10 px-gutter md:px-margin-desktop max-w-container-max mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 flex flex-col justify-center fade-up">
+<div class="mb-6 inline-flex items-center px-3 py-1 bg-primary-container/10 border border-primary-container/20 rounded-lg w-fit">
+<span class="text-primary font-bold text-label-md uppercase tracking-wider"><span lang="en">Quality-First Manufacturing</span><span lang="zh">品质第一 制造先锋</span></span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">
+                        <span lang="en">Leading LED Lighting Innovator</span><br>
+<span class="text-primary" lang="zh">云智迈科技 - 领航照明创新</span>
+</h1>
+<p class="font-body-lg text-body-lg text-secondary mb-10 max-w-2xl" lang="en">
+                        A premier manufacturer of professional-grade LED solutions for automotive, engineering, and industrial applications. We deliver unmatched durability and performance from our state-of-the-art Shenzhen facility.<br>
+<span class="block mt-2" lang="zh">专业级 LED 照明解决方案制造商，产品广泛应用于汽车、工程及工业领域。依托深圳先进制造基地，提供卓越的耐用性与性能。</span>
+</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="products.html" class="bg-primary-container text-on-primary px-8 py-4 rounded-lg font-label-md text-label-md hover:bg-[#E65C00] transition-all shadow-soft flex items-center justify-center gap-2">
+                            <span lang="en">VIEW PRODUCTS</span><span lang="zh">查看产品</span>
+                            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a href="contact.html" class="border-2 border-on-surface text-on-surface px-8 py-4 rounded-lg font-label-md text-label-md hover:bg-on-surface hover:text-white transition-all flex items-center justify-center">
+                            <span lang="en">REQUEST QUOTE</span><span lang="zh">获取报价</span>
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Company Stats Section (removed - waiting for verified data) -->
+<!-- Brand Pillars Section -->
+<section class="py-section-gap px-gutter md:px-margin-desktop max-w-container-max mx-auto">
+  <div class="text-center mb-16 fade-up">
+    <span class="text-label-md text-primary tracking-widest uppercase font-bold"><span lang="en">Why Smartware</span><span lang="zh">选择云智迈</span></span>
+    <h2 class="font-headline-lg text-headline-lg text-on-surface mt-3 mb-4">
+      <span lang="en">Built for Performance. Built to Last.</span>
+      <span lang="zh">为性能而生，为耐用而造</span>
+    </h2>
+    <div class="w-12 h-0.5 bg-primary mx-auto"></div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+    <!-- Pillar 1: Precision Engineering -->
+    <div class="group bg-white rounded-xl p-8 border border-outline-variant shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-md fade-up delay-1">
+      <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+        <span class="material-symbols-outlined text-primary text-2xl">precision_manufacturing</span>
+      </div>
+      <h3 class="font-headline-md text-headline-md text-on-surface mb-2">
+        <span lang="en">Precision Engineering</span>
+        <span lang="zh">精密工程</span>
+      </h3>
+      <p class="text-label-md text-primary mb-4 uppercase tracking-wider font-bold"><span lang="en">R&amp;D Driven Innovation</span><span lang="zh">研发驱动创新</span></p>
+      <p class="text-secondary text-body-md mb-4">
+        <span lang="en">Our Shenzhen R&amp;D center focuses on thermal management and optical efficiency, with an 8-stage quality assurance protocol.</span>
+        <span lang="zh">深圳研发中心专注于热管理与光学效率优化，执行 8 阶段质量检测流程。</span>
+      </p>
+      <ul class="space-y-2">
+        <li class="flex items-center gap-2 text-sm text-secondary">
+          <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+          <span lang="en">Shenzhen R&amp;D Center</span><span lang="zh">深圳研发中心</span>
+        </li>
+        <li class="flex items-center gap-2 text-sm text-secondary">
+          <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+          <span lang="en">Thermal &amp; Optical Optimization</span><span lang="zh">热管理与光学优化</span>
+        </li>
+        <li class="flex items-center gap-2 text-sm text-secondary">
+          <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+          <span lang="en">8-Stage QA Protocol</span><span lang="zh">8 阶段质量检测</span>
+        </li>
+      </ul>
+    </div>
+    <!-- Pillar 2: Global Partner -->
+    <div class="group bg-white rounded-xl p-8 border border-outline-variant shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-md fade-up delay-2">
+      <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+        <span class="material-symbols-outlined text-primary text-2xl">language</span>
+      </div>
+      <h3 class="font-headline-md text-headline-md text-on-surface mb-2">
+        <span lang="en">Global OEM/ODM</span>
+        <span lang="zh">全球定制合作</span>
+      </h3>
+      <p class="text-label-md text-primary mb-4 uppercase tracking-wider font-bold"><span lang="en">Trusted Worldwide</span><span lang="zh">值得信赖</span></p>
+      <p class="text-secondary text-body-md mb-4">
+        <span lang="en">9 product categories covering 263 models, with professional custom manufacturing capabilities for industrial and commercial clients.</span>
+        <span lang="zh">9 大产品分类覆盖 263 款型号，为工业和商业客户提供专业定制生产能力。</span>
+      </p>
+      <ul class="space-y-2">
+        <li class="flex items-center gap-2 text-sm text-secondary">
+          <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+          <span lang="en">9 Product Categories</span><span lang="zh">9 大产品分类</span>
+        </li>
+        <li class="flex items-center gap-2 text-sm text-secondary">
+          <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+          <span lang="en">263 Models &amp; Growing</span><span lang="zh">263 款产品型号</span>
+        </li>
+        <li class="flex items-center gap-2 text-sm text-secondary">
+          <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+          <span lang="en">OEM/ODM Expertise</span><span lang="zh">专业定制能力</span>
+        </li>
+      </ul>
+    </div>
+    <!-- Pillar 3: Certified Quality -->
+    <div class="group bg-white rounded-xl p-8 border border-outline-variant shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-md fade-up delay-3">
+      <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+        <span class="material-symbols-outlined text-primary text-2xl">verified</span>
+      </div>
+      <h3 class="font-headline-md text-headline-md text-on-surface mb-2">
+        <span lang="en">Certified Quality</span>
+        <span lang="zh">品质认证</span>
+      </h3>
+      <p class="text-label-md text-primary mb-4 uppercase tracking-wider font-bold"><span lang="en">International Standards</span><span lang="zh">国际标准</span></p>
+      <p class="text-secondary text-body-md mb-4">
+        <span lang="en">All products certified with CE, RoHS, and FCC standards. IP67 weatherproof protection for reliable operation in harsh environments.</span>
+        <span lang="zh">全系产品通过 CE、RoHS、FCC 认证，IP67 防护等级确保严苛环境下稳定工作。</span>
+      </p>
+      <ul class="space-y-2">
+        <li class="flex items-center gap-2 text-sm text-secondary">
+          <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+          <span lang="en">CE / RoHS / FCC Certified</span><span lang="zh">CE / RoHS / FCC 认证</span>
+        </li>
+        <li class="flex items-center gap-2 text-sm text-secondary">
+          <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+          <span lang="en">IP67 Weatherproof</span><span lang="zh">IP67 全面防护</span>
+        </li>
+        <li class="flex items-center gap-2 text-sm text-secondary">
+          <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+          <span lang="en">Industrial-Grade Durability</span><span lang="zh">工业级耐用性</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- Featured Products Section -->
+<section class="py-section-gap px-gutter md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 fade-up">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4"><span lang="en">Professional Product Categories</span><span lang="zh">专业产品分类</span></h2>
+<p class="text-secondary body-md"><span lang="en">Explore our high-performance lighting solutions tailored for the toughest environments.</span><br><span lang="zh">探索专为极端环境设计的高性能照明方案。</span></p>
+</div>
+<a href="products.html" class="text-primary font-bold flex items-center gap-2 hover:underline">
+                    <span lang="en">EXPLORE ALL</span><span lang="zh">浏览全部</span> <span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Product 1: LED Rechargeable Work Light -->
+<div class="group bg-white rounded-xl overflow-hidden shadow-soft border border-outline-variant transition-all hover:-translate-y-2 fade-up delay-1">
+<div class="aspect-square overflow-hidden relative">
+<img alt="LED Rechargeable Work Light" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="images/et1-e001.jpg">
+<div class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded"><span lang="en">RECHARGEABLE</span><span lang="zh">可充电</span></div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2"><span lang="en">LED Rechargeable Work Light</span><span lang="zh">LED 可充电工作灯</span></h3>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center gap-2 text-secondary text-body-md">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">IP67 Lamp Head &amp; IP65 Battery Box</span><span lang="zh"> IP67灯头 & IP65电池盒防护</span>
+                            </li>
+<li class="flex items-center gap-2 text-secondary text-body-md">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">Multi-Level Brightness &amp; SOS Mode</span><span lang="zh"> 多档亮度调节 & SOS应急模式</span>
+                            </li>
+<li class="flex items-center gap-2 text-secondary text-body-md">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">Modular Circuit &amp; LG Battery Protection</span><span lang="zh"> 模块化电路 & LG电池保护</span>
+                            </li>
+</ul>
+<a href="category-led_rechargeable_work_light.html" class="block w-full py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors text-center"><span lang="en">DETAILS</span><span lang="zh">详情</span></a>
+</div>
+</div>
+<!-- Product 2: LED Work Light -->
+<div class="group bg-white rounded-xl overflow-hidden shadow-soft border border-outline-variant transition-all hover:-translate-y-2 fade-up delay-2">
+<div class="aspect-square overflow-hidden relative">
+<img alt="LED Work Light" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="images/et5-h009.jpg">
+<div class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded"><span lang="en">HIGH-PERFORMANCE</span><span lang="zh">高性能</span></div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2"><span lang="en">LED Work Light</span><span lang="zh">LED 工作灯</span></h3>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center gap-2 text-secondary text-body-md">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">CE &amp; RoHS B Approved</span><span lang="zh"> CE & RoHS B 认证</span>
+                            </li>
+<li class="flex items-center gap-2 text-secondary text-body-md">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">IP67 Weatherproof Protection</span><span lang="zh"> IP67 全面防护设计</span>
+                            </li>
+<li class="flex items-center gap-2 text-secondary text-body-md">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">Reliable in Harsh Environments</span><span lang="zh"> 严苛环境下可靠工作</span>
+                            </li>
+</ul>
+<a href="category-led_work_light.html" class="block w-full py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors text-center"><span lang="en">DETAILS</span><span lang="zh">详情</span></a>
+</div>
+</div>
+<!-- Product 3: LED Economy Work Light -->
+<div class="group bg-white rounded-xl overflow-hidden shadow-soft border border-outline-variant transition-all hover:-translate-y-2 fade-up delay-3">
+<div class="aspect-square overflow-hidden relative flex items-center justify-center bg-surface-container">
+<img alt="LED Economy Work Light" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="images/et1-c030.jpg">
+<div class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded"><span lang="en">COST-EFFECTIVE</span><span lang="zh">经济型</span></div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2"><span lang="en">LED Economy Work Light</span><span lang="zh">LED 经济型工作灯</span></h3>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center gap-2 text-secondary text-body-md">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">IP67 Fully Protected Design</span><span lang="zh"> IP67 全防护等级设计</span>
+                            </li>
+<li class="flex items-center gap-2 text-secondary text-body-md">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">IP65 Battery Box Protection</span><span lang="zh"> IP65 电池盒防护设计</span>
+                            </li>
+<li class="flex items-center gap-2 text-secondary text-body-md">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">Reliable in Harsh Conditions</span><span lang="zh"> 恶劣环境下稳定工作</span>
+                            </li>
+</ul>
+<a href="category-led_economy_work_light.html" class="block w-full py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors text-center"><span lang="en">DETAILS</span><span lang="zh">详情</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Quality & Innovation Section -->
+<section class="py-section-gap bg-on-surface text-white">
+<div class="px-gutter md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center fade-up">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-6"><span lang="en">Precision Engineering &amp; Testing</span><br><span class="text-primary" lang="zh">精密工程与质量检测</span></h2>
+<div class="space-y-6 text-white/70">
+<p class="" lang="en">Every Smartware product undergoes an 8-stage quality assurance protocol, including high-temperature aging, waterproof immersion, and vibration testing. Our Shenzhen R&amp;D center focuses on thermal management and optical efficiency.</p>
+<p class="" lang="zh">每一件云智迈科技的产品都经过 8 个阶段的质量保证流程，包括高温老化、防水浸泡和振动测试。我们的深圳研发中心专注于热管理和光学效率的持续优化。</p>
+</div>
+<div class="mt-10 grid grid-cols-2 gap-6">
+<div class="border-l-2 border-primary pl-4">
+<h4 class="font-bold text-white mb-1" lang="en">R&amp;D Focused</h4>
+<p class="text-xs text-white/50 uppercase"><span lang="en">Innovative Designs</span><span lang="zh">研发驱动</span></p>
+</div>
+<div class="border-l-2 border-primary pl-4">
+<h4 class="font-bold text-white mb-1" lang="en">Fully Certified</h4>
+<p class="text-xs text-white/50 uppercase"><span lang="en">CE, ROHS, FCC</span><span lang="zh">国际认证</span></p>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-video rounded-xl overflow-hidden shadow-2xl border border-white/10">
+<img alt="Production line" class="w-full h-full object-cover" src="images/5.jpg">
+</div>
+<div class="absolute -bottom-6 -right-6 glass-card p-6 rounded-lg text-on-surface">
+<span class="material-symbols-outlined text-primary mb-2">verified</span>
+<p class="font-bold"><span lang="en">Shenzhen Factory</span><span lang="zh"> 深圳工厂</span></p>
+<p class="text-xs text-secondary" lang="zh">每一件云智迈科技的产品都经过 8 个阶段的质量保证流程，包括高温老化、防水浸泡和振动测试。我们的深圳研发中心专注于热管理和光学效率的持续优化。</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Corporate Video Section -->
+<section class="relative py-section-gap overflow-hidden fade-up" style="background: linear-gradient(135deg, #1a1c1c 0%, #1f1a14 50%, #1a1c1c 100%);">
+  <div class="absolute inset-0 z-0 opacity-[0.05]" style="background: radial-gradient(circle at 30% 50%, #ff6600 0%, transparent 55%), radial-gradient(circle at 70% 50%, #a33e00 0%, transparent 55%);"></div>
+  <div class="relative z-10 px-gutter md:px-margin-desktop max-w-container-max mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="fade-up">
+        <span class="text-label-md text-primary tracking-widest uppercase font-bold"><span lang="en">Corporate Video</span><span lang="zh">企业宣传片</span></span>
+        <h2 class="font-headline-lg text-headline-lg text-white mt-3 mb-4">
+          <span lang="en">See Smartware in Action</span>
+          <span lang="zh">走进云智迈科技</span>
+        </h2>
+        <p class="text-white/50 text-body-md max-w-md">
+          <span lang="en">Take a tour of our Shenzhen manufacturing facility and discover the precision, quality, and innovation behind every Smartware product.</span>
+          <span lang="zh">走进深圳制造基地，探索每一件 Smartware 产品背后的精密工艺与创新科技。</span>
+        </p>
+      </div>
+      <div class="aspect-video rounded-xl overflow-hidden border border-white/10 bg-black/40 fade-up delay-2">
+      <video class="w-full h-full object-cover" src="videos/company_compressed.mp4" autoplay loop muted playsinline controls></video>
+    </div>
+  </div>
+  </div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap px-gutter md:px-margin-desktop max-w-container-max mx-auto">
+<div class="bg-primary py-20 px-8 rounded-2xl text-center relative overflow-hidden shadow-2xl scale-in">
+<div class="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full -mr-40 -mt-40 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full -ml-32 -mb-32 blur-3xl"></div>
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-lg text-white mb-6 relative z-10">
+                    <span lang="en">Partner with the Global Experts</span><br>
+<span lang="zh" class="opacity-80">与全球专家携手共赢</span>
+</h2>
+<p class="text-white/80 max-w-2xl mx-auto mb-10 relative z-10"><span lang="en">Searching for a reliable OEM/ODM partner for professional LED lighting? Let's discuss your next project.</span><br><span lang="zh">正在寻找专业 LED 照明领域可靠的 OEM/ODM 合作伙伴？让我们洽谈您的下一个项目。</span></p>
+<div class="flex flex-col sm:flex-row justify-center gap-6 relative z-10">
+<a href="catalog/Smartware_Product_Catalog.pdf" target="_blank" class="bg-white text-primary px-12 py-4 rounded-lg font-bold hover:bg-surface-container-highest transition-all shadow-lg flex items-center justify-center gap-2">
+                        <span lang="en">GET CATALOG</span><span lang="zh">获取目录</span>
+                        <span class="material-symbols-outlined text-lg">download</span>
+</a>
+<a href="contact.html" class="border-2 border-white text-white px-12 py-4 rounded-lg font-bold hover:bg-white/10 transition-all flex items-center justify-center">
+                        <span lang="en">CONTACT US</span><span lang="zh">联系我们</span>
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-16 pb-8 px-gutter md:px-margin-desktop max-w-container-max mx-auto border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="md:col-span-2">
+<a href="index.html"><img alt="Smartware Logo" class="h-[108px] w-auto object-contain mb-6" src="images/logo.png"></a>
+<p class="text-secondary body-md max-w-md"><span lang="en">Smartware (Shenzhen) Technology is dedicated to providing professional, high-performance LED lighting solutions to industrial and professional markets worldwide.</span><br><span lang="zh">云智迈科技（深圳）致力于为全球工业和专业市场提供专业、高性能的 LED 照明解决方案。</span></p>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs"><span lang="en">Navigation</span><span lang="zh">导航</span></h4>
+<ul class="space-y-4">
+<li class=""><a class="text-secondary hover:text-primary transition-colors" href="index.html"><span lang="en">Home</span><span lang="zh">首页</span></a></li>
+<li class=""><a class="text-secondary hover:text-primary transition-colors" href="products.html"><span lang="en">Products</span><span lang="zh">产品中心</span></a></li>
+<li class=""><a class="text-secondary hover:text-primary transition-colors" href="about_us.html"><span lang="en">About Us</span><span lang="zh">关于我们</span></a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs"><span lang="en">Contact</span><span lang="zh">联系</span></h4>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-secondary">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+                        <span lang="en">Shenzhen, China</span><span lang="zh">中国·深圳</span>
+                    </li>
+<li class="flex items-center gap-3 text-secondary">
+<span class="material-symbols-outlined text-primary text-sm">mail</span>
+                        <span lang="en">fogis@sst-smartware.com<br/>sunnie@sst-smartware.com<br/>henry@sst-smartware.com</span><span lang="zh">fogis@sst-smartware.com<br/>sunnie@sst-smartware.com<br/>henry@sst-smartware.com</span>
+                    </li>
+<li class="flex items-center gap-3 text-secondary">
+<span class="material-symbols-outlined text-primary text-sm">call</span>
+                        <span lang="en">+86 755 2108 4541</span><span lang="zh">+86 755 2108 4541</span>
+                    </li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/30 gap-4">
+<p class="text-label-md text-secondary">© 2026 Smartware (Shenzhen) Technology. All rights reserved.</p>
+</div>
+</footer>
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Scroll animation observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            document.querySelectorAll('.fade-up, .scale-in').forEach(el => observer.observe(el));
+
+            // Counter animation for stats
+            function animateCounter(el) {
+                const target = parseInt(el.textContent);
+                if (isNaN(target)) return;
+                let current = 0;
+                const step = Math.ceil(target / 60);
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    el.textContent = current + (el.textContent.includes('+') ? '+' : '');
+                }, 20);
+            }
+
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        statsObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('.stat-number').forEach(el => statsObserver.observe(el));
+
+            // Mobile menu
+            const menuBtn = document.querySelector('header .md\\:hidden.material-symbols-outlined');
+            if (menuBtn) {
+                const overlay = document.createElement('div');
+                overlay.style.cssText = 'display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(26,28,28,0.95);z-index:9999;justify-content:center;align-items:center;';
+                overlay.innerHTML = '<div style="text-align:center"><button class="mobile-close material-symbols-outlined" style="position:absolute;top:24px;right:24px;color:white;font-size:32px;cursor:pointer;background:none;border:none">close</button><nav style="display:flex;flex-direction:column;gap:32px"><a href="index.html" style="color:white;font-size:20px;font-weight:600;text-decoration:none"><span lang="en">HOME</span><span lang="zh">首页</span></a><a href="products.html" style="color:white;font-size:20px;font-weight:600;text-decoration:none"><span lang="en">PRODUCT</span><span lang="zh">产品</span></a><a href="contact.html" style="color:white;font-size:20px;font-weight:600;text-decoration:none"><span lang="en">CONTACT</span><span lang="zh">联系我们</span></a><a href="about_us.html" style="color:white;font-size:20px;font-weight:600;text-decoration:none"><span lang="en">ABOUT US</span><span lang="zh">关于我们</span></a></nav></div>';
+                document.body.appendChild(overlay);
+                menuBtn.addEventListener('click', () => overlay.style.display = 'flex');
+                overlay.querySelector('.mobile-close').addEventListener('click', () => overlay.style.display = 'none');
+                overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.style.display = 'none'; });
+            }
+        });
+
+// Language switch dropdown
+            (function() {
+                var btn = document.querySelector('button.flex.items-center.gap-1');
+                if (!btn) return;
+                var wrap = document.createElement('div');
+                wrap.className = 'lang-wrap';
+                wrap.style.cssText = 'position:relative;display:inline-block';
+                btn.parentNode.insertBefore(wrap, btn);
+                wrap.appendChild(btn);
+                var menu = document.createElement('div');
+                menu.className = 'lang-menu';
+                menu.innerHTML = '<button class="lang-opt" data-lang="zh">简体中文</button><button class="lang-opt" data-lang="en">EN</button>';
+                wrap.appendChild(menu);
+                function upd(isZh) {
+                    document.body.classList.toggle('show-zh', isZh);
+                    document.documentElement.lang = isZh ? 'zh' : 'en';
+                    var titleEl = document.querySelector('title');
+                    if (titleEl) document.title = isZh ? (titleEl.getAttribute('data-zh') || titleEl.textContent) : (titleEl.getAttribute('data-en') || titleEl.textContent);
+                    var opts = menu.querySelectorAll('.lang-opt');
+                    opts.forEach(function(o) {
+                        o.style.display = (isZh && o.dataset.lang === 'zh') || (!isZh && o.dataset.lang === 'en') ? 'none' : 'block';
+                    });
+                    btn.innerHTML = isZh ? '简体中文' : 'EN';
+                    localStorage.setItem('lang', isZh ? 'zh' : 'en');
+                    var si = document.querySelector('header input[type="text"]'); if(si) si.placeholder = isZh ? si.getAttribute('data-zh') : si.getAttribute('data-en');
+                }
+                document.addEventListener('click', function(e) {
+                    if (!wrap.contains(e.target)) menu.style.display = 'none';
+                });
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+                    upd(document.body.classList.contains('show-zh'));
+                });
+                menu.querySelectorAll('.lang-opt').forEach(function(opt) {
+                    opt.addEventListener('click', function() {
+                        upd(this.dataset.lang === 'zh');
+                        menu.style.display = 'none';
+                    });
+                });
+                var saved = localStorage.getItem("lang"); upd(saved === "zh");
+            })();
+    </script>
+</body></html>

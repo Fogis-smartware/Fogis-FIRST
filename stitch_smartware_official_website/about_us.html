@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link rel="icon" type="image/png" href="images/logo.png">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Learn about Smartware (Shenzhen) Technology, a leading LED lighting manufacturer. Our mission, team, and manufacturing excellence in Shenzhen, China."/>
+<title data-en="About Us - Smartware Leading LED Lighting Innovator" data-zh="关于我们 - 云智迈科技 领航照明创新">About Us - Smartware Leading LED Lighting Innovator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#a33e00",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-fixed-variant": "#00497b",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-container-high": "#e8e8e8",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#561d00",
+                        "on-error": "#ffffff",
+                        "primary-container": "#ff6600",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "secondary": "#5f5e5e",
+                        "on-surface": "#1a1c1c",
+                        "on-secondary-container": "#656464",
+                        "surface-tint": "#a33e00",
+                        "surface": "#f9f9f9",
+                        "surface-variant": "#e2e2e2",
+                        "secondary-fixed": "#e4e2e1",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#474747",
+                        "inverse-on-surface": "#f1f1f1",
+                        "tertiary-container": "#009cfc",
+                        "surface-container": "#eeeeee",
+                        "on-tertiary-container": "#003155",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#7c2e00",
+                        "error": "#ba1a1a",
+                        "inverse-surface": "#2f3131",
+                        "on-primary-fixed": "#360f00",
+                        "secondary-container": "#e4e2e1",
+                        "on-background": "#1a1c1c",
+                        "tertiary": "#0062a1",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "primary-fixed-dim": "#ffb596",
+                        "tertiary-fixed-dim": "#9ccaff",
+                        "outline": "#8e7164",
+                        "inverse-primary": "#ffb596",
+                        "primary-fixed": "#ffdbcd",
+                        "on-surface-variant": "#5a4136",
+                        "outline-variant": "#e3bfb1",
+                        "background": "#f9f9f9",
+                        "tertiary-fixed": "#d0e4ff",
+                        "on-tertiary-fixed": "#001d35"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .shadow-soft {
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        /* Scroll animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+        .fade-up.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.35s; }
+        .delay-4 { transition-delay: 0.5s; }
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .scale-in.animate {
+            opacity: 1;
+            transform: scale(1);
+        }
+    .lang-wrap{position:relative;display:inline-block}.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e3bfb1;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,0.1);z-index:9999;min-width:90px;overflow:hidden}.lang-menu button{display:block;width:100%;padding:8px 16px;text-align:left;border:none;background:none;cursor:pointer;font-size:14px;font-family:Inter,sans-serif;color:#1a1c1c;white-space:nowrap}.lang-menu button:hover{background:#f3f3f3}
+</style>
+
+<style id="lang-style">
+body:not(.show-zh) [lang="zh"] { display: none !important; }
+body.show-zh [lang="zh"] { display: inline !important; }
+body.show-zh [lang="zh"].block,
+body.show-zh [lang="zh"].flex,
+body.show-zh [lang="zh"].grid,
+body.show-zh [lang="zh"].inline-flex { display: inline-flex !important; }
+body.show-zh [lang="en"] { display: none !important; }
+</style>
+
+<script src="search-data.js"></script>
+<script src="search.js"></script>
+</head>
+<body class="font-body-md text-body-md">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center px-gutter md:px-margin-desktop h-24 md:h-28 max-w-container-max mx-auto bg-surface/80 backdrop-blur-xl border-b border-outline-variant shadow-sm full-width">
+<a href="index.html"><img alt="Smartware Logo" class="h-[90px] md:h-[108px] w-auto object-contain" src="images/logo.png"/></a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200 cursor-pointer" href="index.html"><span lang="en">HOME</span><span lang="zh">首页</span></a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200 cursor-pointer" href="products.html"><span lang="en">PRODUCT</span><span lang="zh">产品</span></a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200 cursor-pointer" href="contact.html"><span lang="en">CONTACT</span><span lang="zh">联系我们</span></a>
+<a class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1 transition-colors duration-200 cursor-pointer" href="about_us.html"><span lang="en">ABOUT US</span><span lang="zh">关于我们</span></a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="hidden lg:relative lg:flex items-center border border-outline-variant rounded-full px-4 py-1 bg-surface-container">
+<input class="bg-transparent border-none focus:ring-0 text-body-md w-40" placeholder="Product Search..." type="text"/>
+<span class="material-symbols-outlined text-secondary cursor-pointer">search</span>
+</div>
+<button class="font-label-md text-label-md font-bold text-primary cursor-pointer active:opacity-70 flex items-center gap-1">
+<span class="material-symbols-outlined text-base">language</span><span> EN</span>
+            </button>
+<button class="md:hidden material-symbols-outlined text-on-surface">menu</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[500px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Modern high-tech manufacturing facility" class="w-full h-full object-cover" src="images/banner-3.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+</div>
+<div class="relative z-10 px-gutter md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-3xl">
+<div class="mb-6 inline-flex items-center px-3 py-1 bg-primary-container/10 border border-primary-container/20 rounded-lg w-fit">
+<span class="text-primary font-bold text-label-md uppercase tracking-wider"><span lang="en">About Smartware</span><span lang="zh">关于云智迈</span></span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">
+                        <span lang="en">Illuminating Global Industry</span><br/>
+<span class="text-primary" lang="zh">云智迈科技 - 照明全球工业</span>
+</h1>
+<p class="font-body-lg text-body-lg text-secondary mb-10 max-w-2xl">
+                        Based in the heart of Shenzhen, we leverage advanced lighting technology R&amp;D and a robust global supply chain to deliver high-performance LED work lights.<br/>
+<span class="block mt-2" lang="zh">依托深圳研发中心与全球供应链体系，我们致力于为严苛工业环境提供高性能LED工作照明。</span>
+</p>
+</div>
+</div>
+</section>
+<!-- Mission & Journey Section -->
+<section class="py-section-gap px-gutter md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center fade-up">
+<div class="relative">
+<div class="aspect-video rounded-xl overflow-hidden shadow-2xl border border-outline-variant">
+<img alt="Shenzhen manufacturing excellence" class="w-full h-full object-cover" src="images/2.jpg"/>
+</div>
+<div class="absolute -bottom-6 -right-6 glass-card p-6 rounded-lg text-on-surface hidden md:block">
+<span class="material-symbols-outlined text-primary mb-2">precision_manufacturing</span>
+<p class="font-bold"><span lang="en">Production Excellence</span><span lang="zh">卓越制造</span></p>
+<p class="text-xs text-secondary"><span lang="en">Well-trained staff and rigorous multi-stage inspections ensure high quality and durability.</span><span lang="zh">员工经过专业培训，产品经过层层检验，确保高质量与耐用性。</span></p>
+</div>
+</div>
+<div class="space-y-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4"><span lang="en">Our Mission</span><span lang="zh">企业使命</span></h2>
+<div class="w-12 h-1 bg-primary mb-6"></div>
+<p class="font-body-lg text-secondary mb-4"><span lang="en">To provide reliable lighting solutions for the toughest environments.</span></p>
+<p class="font-body-md text-primary font-semibold"><span lang="zh">使命：为最严苛的环境提供可靠的照明解决方案。</span></p>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4"><span lang="en">Our Journey</span><span lang="zh">发展历程</span></h2>
+<div class="w-12 h-1 bg-primary mb-6"></div>
+<p class="font-body-md text-secondary mb-4 leading-relaxed"><span lang="en">Our story began in a specialized local factory in Shenzhen. Through continuous R&amp;D and commitment to quality, we have evolved into an international supplier of high-performance LED work lights, powering industries across continents.</span></p>
+<p class="font-body-md text-primary font-semibold"><span lang="zh">历程：从深圳本土起步，通过持续研发与品质坚持，我们已发展成为全球工业客户信赖的高性能LED照明供应商。</span></p>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Values Section (Bento Grid) -->
+<section class="py-section-gap bg-surface-container-low border-y border-outline-variant">
+<div class="px-gutter md:px-margin-desktop max-w-container-max mx-auto fade-up">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2"><span lang="en">Core Values</span><span lang="zh">核心价值</span></h2>
+<p class="text-secondary"><span lang="en">Innovation, Quality, and Global Connectivity.</span></p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Value 1 -->
+<div class="md:col-span-8 bg-white p-10 rounded-2xl shadow-soft border border-outline-variant hover:-translate-y-1 transition-all group">
+<span class="material-symbols-outlined text-primary text-4xl mb-6 group-hover:scale-110 transition-transform">precision_manufacturing</span>
+<h3 class="font-headline-md text-headline-md mb-4"><span lang="en">Shenzhen Manufacturing Excellence</span></h3>
+<p class="text-secondary body-md mb-6 max-w-xl"><span lang="en">Unmatched efficiency and precision at our state-of-the-art production base in the world's hardware capital.</span></p>
+<p class="text-primary font-bold"><span lang="zh">深圳制造实力：立足硬件之都，确保极致的生产效率与产品精度。</span></p>
+</div>
+<!-- Value 2 -->
+<div class="md:col-span-4 bg-white p-10 rounded-2xl shadow-soft border border-outline-variant hover:-translate-y-1 transition-all group">
+<span class="material-symbols-outlined text-primary text-4xl mb-6 group-hover:scale-110 transition-transform">lightbulb</span>
+<h3 class="font-headline-md text-headline-md mb-4"><span lang="en">Lighting R&amp;D</span></h3>
+<p class="text-secondary body-md mb-6"><span lang="en">Pushing boundaries of lumen efficiency.</span></p>
+<p class="text-primary font-bold"><span lang="zh">照明技术研发：挑战光效极限。</span></p>
+</div>
+<!-- Value 3 -->
+<div class="md:col-span-4 bg-white p-10 rounded-2xl shadow-soft border border-outline-variant hover:-translate-y-1 transition-all group">
+<span class="material-symbols-outlined text-primary text-4xl mb-6 group-hover:scale-110 transition-transform">public</span>
+<h3 class="font-headline-md text-headline-md mb-4"><span lang="en">Global Supply</span></h3>
+<p class="text-secondary body-md mb-6"><span lang="en">Seamless logistics management.</span></p>
+<p class="text-primary font-bold"><span lang="zh">全球供应链：无缝物流管理体系。</span></p>
+</div>
+<!-- Value 4 -->
+<div class="md:col-span-8 bg-primary-container p-10 rounded-2xl shadow-xl text-white relative overflow-hidden group">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-white text-4xl mb-6">eco</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-white"><span lang="en">Sustainable Lighting Innovation</span></h3>
+<p class="text-white/80 body-md mb-6 max-w-xl"><span lang="en">Leading the transition to high-efficiency LED solutions that reduce carbon footprints without sacrificing visibility.</span></p>
+<p class="text-white font-bold"><span lang="zh">可持续照明创新：引领高效LED方案，在降低碳足迹的同时确保卓越的照明效果。</span></p>
+</div>
+<div class="absolute bottom-0 right-0 opacity-10 -mr-10 -mb-10 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-[200px]">light</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Global Leadership Section -->
+<section class="py-section-gap px-gutter md:px-margin-desktop max-w-container-max mx-auto fade-up">
+<div class="max-w-3xl mb-12">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4"><span lang="en">Our Team</span><span lang="zh">我们的团队</span></h2>
+<p class="text-secondary body-md"><span lang="en">Get in touch with our dedicated sales team for inquiries, quotations, and partnership opportunities.</span><br><span lang="zh">如有询价、合作及其他业务需求，欢迎联系我们的专业销售团队。</span></p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+<!-- Member 1: Henry -->
+<div class="group">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-6 relative shadow-soft">
+<img alt="Henry - Sales Manager" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/henry.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="font-bold text-headline-md mb-1">Henry</h4>
+<p class="text-secondary text-label-md mb-2"><span lang="en">Sales Manager</span><span lang="zh">销售经理</span></p>
+<div class="space-y-1 text-sm text-secondary">
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">call</span> +86 133 1645 1923</p>
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">mail</span> henry@sst-smartware.com</p>
+</div>
+</div>
+<!-- Member 2: Sunnie -->
+<div class="group">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-6 relative shadow-soft">
+<img alt="Sunnie - Sales & Customer Service" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/sunnie.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="font-bold text-headline-md mb-1">Sunnie</h4>
+<p class="text-secondary text-label-md mb-2"><span lang="en">Sales &amp; Customer Service</span><span lang="zh">销售与客户服务</span></p>
+<div class="space-y-1 text-sm text-secondary">
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">call</span> +86 180 3806 1284</p>
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">mail</span> sunnie@sst-smartware.com</p>
+</div>
+</div>
+<!-- Member 3: Fogis Liu -->
+<div class="group">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-6 relative shadow-soft">
+<img alt="Fogis Liu - Sales Representative" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/fogis.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="font-bold text-headline-md mb-1">Fogis Liu</h4>
+<p class="text-secondary text-label-md mb-2"><span lang="en">Sales Representative</span><span lang="zh">销售代表</span></p>
+<div class="space-y-1 text-sm text-secondary">
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">call</span> +86 133 8010 3459</p>
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">mail</span> fogis@sst-smartware.com</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap px-gutter md:px-margin-desktop max-w-container-max mx-auto">
+<div class="bg-primary py-20 px-8 rounded-2xl text-center relative overflow-hidden shadow-2xl">
+<div class="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full -mr-40 -mt-40 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full -ml-32 -mb-32 blur-3xl"></div>
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-lg text-white mb-6 relative z-10">
+                    <span lang="en">Partner with the Global Experts</span><br/>
+<span lang="zh"><span class="opacity-80">与全球专家携手共赢</span></span>
+</h2>
+<p class="text-white/80 max-w-2xl mx-auto mb-10 relative z-10"><span lang="en">Searching for a reliable OEM/ODM partner for professional LED lighting? Let's discuss your next project.</span><br/><span lang="zh">正在寻找专业 LED 照明领域可靠的 OEM/ODM 合作伙伴？让我们洽谈您的下一个项目。</span></p>
+<div class="flex flex-col sm:flex-row justify-center gap-6 relative z-10">
+<a href="catalog/Smartware_Product_Catalog.pdf" target="_blank" class="bg-white text-primary px-12 py-4 rounded-lg font-bold hover:bg-surface-container-highest transition-all shadow-lg flex items-center justify-center gap-2">
+                        <span lang="en">GET CATALOG</span><span lang="zh">获取目录</span>
+                        <span class="material-symbols-outlined text-lg">download</span>
+</a>
+<a href="contact.html" class="border-2 border-white text-white px-12 py-4 rounded-lg font-bold hover:bg-white/10 transition-all flex items-center justify-center">
+                        <span lang="en">CONTACT US</span><span lang="zh">联系我们</span>
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-16 pb-8 px-gutter md:px-margin-desktop max-w-container-max mx-auto border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="md:col-span-2">
+<a href="index.html"><img alt="Smartware Logo" class="h-[108px] w-auto object-contain mb-6" src="images/logo.png"/></a>
+<p class="text-secondary body-md max-w-md"><span lang="en">Smartware (Shenzhen) Technology is dedicated to providing professional, high-performance LED lighting solutions to industrial and professional markets worldwide.</span><br/><span lang="zh">云智迈科技（深圳）致力于为全球工业和专业市场提供专业、高性能的 LED 照明解决方案。</span></p>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs"><span lang="en">Navigation</span><span lang="zh">导航</span></h4>
+<ul class="space-y-4">
+<li class=""><a class="text-secondary hover:text-primary transition-colors" href="index.html"><span lang="en">Home</span><span lang="zh">首页</span></a></li>
+<li class=""><a class="text-secondary hover:text-primary transition-colors" href="products.html"><span lang="en">Products</span><span lang="zh">产品中心</span></a></li>
+<li class=""><a class="text-secondary hover:text-primary transition-colors" href="about_us.html"><span lang="en">About Us</span><span lang="zh">关于我们</span></a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs"><span lang="en">Contact</span><span lang="zh">联系</span></h4>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-secondary">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+                        <span lang="en">Shenzhen, China</span><span lang="zh">中国·深圳</span>
+                    </li>
+<li class="flex items-center gap-3 text-secondary">
+<span class="material-symbols-outlined text-primary text-sm">mail</span>
+                        <span lang="en">fogis@sst-smartware.com<br/>sunnie@sst-smartware.com<br/>henry@sst-smartware.com</span><span lang="zh">fogis@sst-smartware.com<br/>sunnie@sst-smartware.com<br/>henry@sst-smartware.com</span>
+                    </li>
+<li class="flex items-center gap-3 text-secondary">
+<span class="material-symbols-outlined text-primary text-sm">call</span>
+                        <span lang="en">+86 755 2108 4541</span><span lang="zh">+86 755 2108 4541</span>
+                    </li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/30 gap-4">
+<p class="text-label-md text-secondary">© 2026 Smartware (Shenzhen) Technology. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            document.querySelectorAll('.fade-up, .scale-in').forEach(el => observer.observe(el));
+
+            // Mobile menu
+            const menuBtn = document.querySelector('header .md\\:hidden.material-symbols-outlined');
+            if (menuBtn) {
+                const overlay = document.createElement('div');
+                overlay.style.cssText = 'display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(26,28,28,0.95);z-index:9999;justify-content:center;align-items:center;';
+                overlay.innerHTML = '<div style="text-align:center"><button class="mobile-close material-symbols-outlined" style="position:absolute;top:24px;right:24px;color:white;font-size:32px;cursor:pointer;background:none;border:none">close</button><nav style="display:flex;flex-direction:column;gap:32px"><a href="index.html" style="color:white;font-size:20px;font-weight:600;text-decoration:none"><span lang="en">HOME</span><span lang="zh">首页</span></a><a href="products.html" style="color:white;font-size:20px;font-weight:600;text-decoration:none"><span lang="en">PRODUCT</span><span lang="zh">产品</span></a><a href="contact.html" style="color:white;font-size:20px;font-weight:600;text-decoration:none"><span lang="en">CONTACT</span><span lang="zh">联系我们</span></a><a href="about_us.html" style="color:white;font-size:20px;font-weight:600;text-decoration:none"><span lang="en">ABOUT US</span><span lang="zh">关于我们</span></a></nav></div>';
+                document.body.appendChild(overlay);
+                menuBtn.addEventListener('click', () => overlay.style.display = 'flex');
+                overlay.querySelector('.mobile-close').addEventListener('click', () => overlay.style.display = 'none');
+                overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.style.display = 'none'; });
+            }
+        });
+
+// Language switch dropdown
+            (function() {
+                var btn = document.querySelector('button.flex.items-center.gap-1');
+                if (!btn) return;
+                var wrap = document.createElement('div');
+                wrap.className = 'lang-wrap';
+                wrap.style.cssText = 'position:relative;display:inline-block';
+                btn.parentNode.insertBefore(wrap, btn);
+                wrap.appendChild(btn);
+                var menu = document.createElement('div');
+                menu.className = 'lang-menu';
+                menu.innerHTML = '<button class="lang-opt" data-lang="zh">简体中文</button><button class="lang-opt" data-lang="en">EN</button>';
+                wrap.appendChild(menu);
+                function upd(isZh) {
+                    document.body.classList.toggle('show-zh', isZh);
+                    document.documentElement.lang = isZh ? 'zh' : 'en';
+                    var titleEl = document.querySelector('title');
+                    if (titleEl) document.title = isZh ? (titleEl.getAttribute('data-zh') || titleEl.textContent) : (titleEl.getAttribute('data-en') || titleEl.textContent);
+                    var opts = menu.querySelectorAll('.lang-opt');
+                    opts.forEach(function(o) {
+                        o.style.display = (isZh && o.dataset.lang === 'zh') || (!isZh && o.dataset.lang === 'en') ? 'none' : 'block';
+                    });
+                    btn.innerHTML = isZh ? '简体中文' : 'EN';
+                    localStorage.setItem('lang', isZh ? 'zh' : 'en');
+                }
+                document.addEventListener('click', function(e) {
+                    if (!wrap.contains(e.target)) menu.style.display = 'none';
+                });
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+                    upd(document.body.classList.contains('show-zh'));
+                });
+                menu.querySelectorAll('.lang-opt').forEach(function(opt) {
+                    opt.addEventListener('click', function() {
+                        upd(this.dataset.lang === 'zh');
+                        menu.style.display = 'none';
+                    });
+                });
+                var saved = localStorage.getItem("lang"); upd(saved === "zh");
+            })();
+    </script>
+</body></html>

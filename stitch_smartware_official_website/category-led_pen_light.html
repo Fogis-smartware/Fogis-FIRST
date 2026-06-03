@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="icon" type="image/png" href="images/logo.png">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Browse Smartware LED pen lights. Compact, professional LED pen lights for precision work."/>
+<title data-en="LED Pen Light - Smartware" data-zh="LED Pen Light - 云智迈科技">LED Pen Light - Smartware</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"/>
+<style>
+body{background:#f9f9f9;color:#1a1c1c;overflow-x:hidden}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}
+.glass-card{background:rgba(255,255,255,0.7);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.3)}
+.shadow-soft{box-shadow:0px 4px 20px rgba(0,0,0,0.05)}
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease-out,transform 0.7s ease-out}
+.fade-up.animate{opacity:1;transform:translateY(0)}
+.delay-1{transition-delay:0.1s}.delay-2{transition-delay:0.2s}
+.lang-wrap{position:relative;display:inline-block}.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e3bfb1;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,0.1);z-index:9999;min-width:90px;overflow:hidden}.lang-menu button{display:block;width:100%;padding:8px 16px;text-align:left;border:none;background:none;cursor:pointer;font-size:14px;font-family:Inter,sans-serif;color:#1a1c1c;white-space:nowrap}.lang-menu button:hover{background:#f3f3f3}
+</style>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    primary: "#a33e00",
+                    secondary: "#5f5e5e",
+                    "on-surface": "#1a1c1c",
+                    "primary-container": "#ff6600",
+                    "on-primary": "#ffffff",
+                    surface: "#f9f9f9",
+                    "surface-container": "#eeeeee",
+                    background: "#f9f9f9",
+                    "outline-variant": "#e3bfb1"
+                },
+                spacing: {
+                    gutter: "24px",
+                    "container-max": "1280px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px"
+                }
+            }
+        }
+    ,
+                "fontFamily": {
+                    "headline-md": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-lg": ["Inter"]
+                },
+                "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+                }
+            }
+</script>
+<style id="lang-style">body:not(.show-zh) [lang="zh"]{display:none!important}body.show-zh [lang="zh"]{display:inline!important}body.show-zh [lang="zh"].block,body.show-zh [lang="zh"].flex,body.show-zh [lang="zh"].inline-flex{display:inline-flex!important}body.show-zh [lang="en"]{display:none!important}</style>
+
+<script src="search-data.js"></script>
+<script src="search.js"></script>
+</head>
+<body class="font-body-md text-body-md">
+<header class="sticky top-0 z-50 flex justify-between items-center px-gutter md:px-margin-desktop h-24 md:h-28 max-w-container-max mx-auto bg-surface/80 backdrop-blur-xl border-b border-outline-variant shadow-sm full-width">
+<a href="index.html"><img alt="Smartware Logo" class="h-[90px] md:h-[108px] w-auto object-contain" src="images/logo.png"/></a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200 cursor-pointer" href="index.html"><span lang="en">HOME</span><span lang="zh">首页</span></a>
+<a class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1 transition-colors duration-200 cursor-pointer font-bold" href="products.html"><span lang="en">PRODUCT</span><span lang="zh">产品</span></a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200 cursor-pointer" href="contact.html"><span lang="en">CONTACT</span><span lang="zh">联系我们</span></a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200 cursor-pointer" href="about_us.html"><span lang="en">ABOUT US</span><span lang="zh">关于我们</span></a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="hidden lg:relative lg:flex items-center border border-outline-variant rounded-full px-4 py-1 bg-surface-container">
+<input class="bg-transparent border-none focus:ring-0 text-body-md w-40" placeholder="Product Search..." type="text"/>
+<span class="material-symbols-outlined text-secondary cursor-pointer">search</span>
+</div>
+<button class="font-label-md text-label-md font-bold text-primary cursor-pointer active:opacity-70 flex items-center gap-1">
+<span class="material-symbols-outlined text-base">language</span><span> EN</span></button>
+<button class="md:hidden material-symbols-outlined text-on-surface">menu</button>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-gutter md:px-margin-desktop py-12">
+<nav class="mb-8 flex items-center gap-2 text-sm text-secondary">
+<a href="index.html" class="hover:text-primary"><span lang="en">Home</span><span lang="zh">首页</span></a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<a href="products.html" class="hover:text-primary"><span lang="en">Products</span><span lang="zh">产品</span></a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-primary font-semibold"><span lang="en">LED Pen Light</span></span>
+</nav>
+<div class="mb-12 fade-up">
+<h1 class="text-4xl font-bold text-on-surface mb-4"><span lang="en">LED Pen Light</span></h1>
+<p class="text-lg text-secondary"><span lang="zh">LED 笔灯</span><span lang="en"> - High-quality LED lighting solutions from Smartware.</span></p>
+</div>
+
+
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="product-card group bg-white rounded-xl overflow-hidden shadow-soft border border-outline-variant transition-all hover:-translate-y-2 fade-up delay-1" data-model="ET5-E081">
+<div class="aspect-square overflow-hidden relative bg-surface-container-low">
+<img alt="ET5-E081" class="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-110" src="images/et5-e081.jpg" loading="lazy"/>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-xl text-on-surface mb-1">ET5-E081</h3>
+<p class="text-primary text-sm font-semibold mb-4"><span lang="zh">LED 笔灯</span></p>
+<a href="product-et5-e081.html" class="block w-full py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors text-center text-sm"><span lang="en">VIEW DETAILS</span><span lang="zh">查看详情</span></a>
+</div>
+</div>
+<div class="product-card group bg-white rounded-xl overflow-hidden shadow-soft border border-outline-variant transition-all hover:-translate-y-2 fade-up delay-2" data-model="ET5-E079">
+<div class="aspect-square overflow-hidden relative bg-surface-container-low">
+<img alt="ET5-E079" class="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-110" src="images/et5-e079.jpg" loading="lazy"/>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-xl text-on-surface mb-1">ET5-E079</h3>
+<p class="text-primary text-sm font-semibold mb-4"><span lang="zh">LED 笔灯</span></p>
+<a href="product-et5-e079.html" class="block w-full py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors text-center text-sm"><span lang="en">VIEW DETAILS</span><span lang="zh">查看详情</span></a>
+</div>
+</div>
+<div class="product-card group bg-white rounded-xl overflow-hidden shadow-soft border border-outline-variant transition-all hover:-translate-y-2 fade-up delay-3" data-model="ET5-E078">
+<div class="aspect-square overflow-hidden relative bg-surface-container-low">
+<img alt="ET5-E078" class="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-110" src="images/et5-e078.jpg" loading="lazy"/>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-xl text-on-surface mb-1">ET5-E078</h3>
+<p class="text-primary text-sm font-semibold mb-4"><span lang="zh">LED 笔灯</span></p>
+<a href="product-et5-e078.html" class="block w-full py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors text-center text-sm"><span lang="en">VIEW DETAILS</span><span lang="zh">查看详情</span></a>
+</div>
+</div>
+<div class="product-card group bg-white rounded-xl overflow-hidden shadow-soft border border-outline-variant transition-all hover:-translate-y-2 fade-up delay-4" data-model="ET5-E077">
+<div class="aspect-square overflow-hidden relative bg-surface-container-low">
+<img alt="ET5-E077" class="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-110" src="images/et5-e077.jpg" loading="lazy"/>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-xl text-on-surface mb-1">ET5-E077</h3>
+<p class="text-primary text-sm font-semibold mb-4"><span lang="zh">LED 笔灯</span></p>
+<a href="product-et5-e077.html" class="block w-full py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors text-center text-sm"><span lang="en">VIEW DETAILS</span><span lang="zh">查看详情</span></a>
+</div>
+</div>
+<div class="product-card group bg-white rounded-xl overflow-hidden shadow-soft border border-outline-variant transition-all hover:-translate-y-2 fade-up delay-1" data-model="ET5-E076">
+<div class="aspect-square overflow-hidden relative bg-surface-container-low">
+<img alt="ET5-E076" class="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-110" src="images/et5-e076.jpg" loading="lazy"/>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-xl text-on-surface mb-1">ET5-E076</h3>
+<p class="text-primary text-sm font-semibold mb-4"><span lang="zh">LED 笔灯</span></p>
+<a href="product-et5-e076.html" class="block w-full py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors text-center text-sm"><span lang="en">VIEW DETAILS</span><span lang="zh">查看详情</span></a>
+</div>
+</div>
+<div class="product-card group bg-white rounded-xl overflow-hidden shadow-soft border border-outline-variant transition-all hover:-translate-y-2 fade-up delay-2" data-model="ET5-E074">
+<div class="aspect-square overflow-hidden relative bg-surface-container-low">
+<img alt="ET5-E074" class="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-110" src="images/et5-e074.jpg" loading="lazy"/>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-xl text-on-surface mb-1">ET5-E074</h3>
+<p class="text-primary text-sm font-semibold mb-4"><span lang="zh">LED 笔灯</span></p>
+<a href="product-et5-e074.html" class="block w-full py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors text-center text-sm"><span lang="en">VIEW DETAILS</span><span lang="zh">查看详情</span></a>
+</div>
+</div>
+<div class="product-card group bg-white rounded-xl overflow-hidden shadow-soft border border-outline-variant transition-all hover:-translate-y-2 fade-up delay-3" data-model="ET5-E044">
+<div class="aspect-square overflow-hidden relative bg-surface-container-low">
+<img alt="ET5-E044" class="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-110" src="images/et5-e044.jpg" loading="lazy"/>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-xl text-on-surface mb-1">ET5-E044</h3>
+<p class="text-primary text-sm font-semibold mb-4"><span lang="zh">LED 笔灯</span></p>
+<a href="product-et5-e044.html" class="block w-full py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors text-center text-sm"><span lang="en">VIEW DETAILS</span><span lang="zh">查看详情</span></a>
+</div>
+</div>
+<div class="product-card group bg-white rounded-xl overflow-hidden shadow-soft border border-outline-variant transition-all hover:-translate-y-2 fade-up delay-4" data-model="ET5-E043">
+<div class="aspect-square overflow-hidden relative bg-surface-container-low">
+<img alt="ET5-E043" class="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-110" src="images/et5-e043.jpg" loading="lazy"/>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-xl text-on-surface mb-1">ET5-E043</h3>
+<p class="text-primary text-sm font-semibold mb-4"><span lang="zh">LED 笔灯</span></p>
+<a href="product-et5-e043.html" class="block w-full py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors text-center text-sm"><span lang="en">VIEW DETAILS</span><span lang="zh">查看详情</span></a>
+</div>
+</div>
+<div class="product-card group bg-white rounded-xl overflow-hidden shadow-soft border border-outline-variant transition-all hover:-translate-y-2 fade-up delay-1" data-model="ET5-E042">
+<div class="aspect-square overflow-hidden relative bg-surface-container-low">
+<img alt="ET5-E042" class="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-110" src="images/et5-e042.jpg" loading="lazy"/>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-xl text-on-surface mb-1">ET5-E042</h3>
+<p class="text-primary text-sm font-semibold mb-4"><span lang="zh">LED 笔灯</span></p>
+<a href="product-et5-e042.html" class="block w-full py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors text-center text-sm"><span lang="en">VIEW DETAILS</span><span lang="zh">查看详情</span></a>
+</div>
+</div>
+<div class="product-card group bg-white rounded-xl overflow-hidden shadow-soft border border-outline-variant transition-all hover:-translate-y-2 fade-up delay-2" data-model="ET5-E041">
+<div class="aspect-square overflow-hidden relative bg-surface-container-low">
+<img alt="ET5-E041" class="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-110" src="images/et5-e041.jpg" loading="lazy"/>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-xl text-on-surface mb-1">ET5-E041</h3>
+<p class="text-primary text-sm font-semibold mb-4"><span lang="zh">LED 笔灯</span></p>
+<a href="product-et5-e041.html" class="block w-full py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors text-center text-sm"><span lang="en">VIEW DETAILS</span><span lang="zh">查看详情</span></a>
+</div>
+</div>
+<div class="product-card group bg-white rounded-xl overflow-hidden shadow-soft border border-outline-variant transition-all hover:-translate-y-2 fade-up delay-3" data-model="ET5-E027">
+<div class="aspect-square overflow-hidden relative bg-surface-container-low">
+<img alt="ET5-E027" class="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-110" src="images/et5-e027.jpg" loading="lazy"/>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-xl text-on-surface mb-1">ET5-E027</h3>
+<p class="text-primary text-sm font-semibold mb-4"><span lang="zh">LED 笔灯</span></p>
+<a href="product-et5-e027.html" class="block w-full py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors text-center text-sm"><span lang="en">VIEW DETAILS</span><span lang="zh">查看详情</span></a>
+</div>
+</div>
+<div class="product-card group bg-white rounded-xl overflow-hidden shadow-soft border border-outline-variant transition-all hover:-translate-y-2 fade-up delay-4" data-model="ET5-E025">
+<div class="aspect-square overflow-hidden relative bg-surface-container-low">
+<img alt="ET5-E025" class="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-110" src="images/et5-e025.jpg" loading="lazy"/>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-xl text-on-surface mb-1">ET5-E025</h3>
+<p class="text-primary text-sm font-semibold mb-4"><span lang="zh">LED 笔灯</span></p>
+<a href="product-et5-e025.html" class="block w-full py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors text-center text-sm"><span lang="en">VIEW DETAILS</span><span lang="zh">查看详情</span></a>
+</div>
+</div>
+<div class="product-card group bg-white rounded-xl overflow-hidden shadow-soft border border-outline-variant transition-all hover:-translate-y-2 fade-up delay-1" data-model="ET5-E026">
+<div class="aspect-square overflow-hidden relative bg-surface-container-low">
+<img alt="ET5-E026" class="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-110" src="images/et5-e026.jpg" loading="lazy"/>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-xl text-on-surface mb-1">ET5-E026</h3>
+<p class="text-primary text-sm font-semibold mb-4"><span lang="zh">LED 笔灯</span></p>
+<a href="product-et5-e026.html" class="block w-full py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors text-center text-sm"><span lang="en">VIEW DETAILS</span><span lang="zh">查看详情</span></a>
+</div>
+</div>
+<div class="product-card group bg-white rounded-xl overflow-hidden shadow-soft border border-outline-variant transition-all hover:-translate-y-2 fade-up delay-2" data-model="ET5-E080-1">
+<div class="aspect-square overflow-hidden relative bg-surface-container-low">
+<img alt="ET5-E080-1" class="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-110" src="images/et5-e080-1.jpg" loading="lazy"/>
+</div>
+<div class="p-6">
+<h3 class="font-bold text-xl text-on-surface mb-1">ET5-E080-1</h3>
+<p class="text-primary text-sm font-semibold mb-4"><span lang="zh">LED 笔灯</span></p>
+<a href="product-et5-e080-1.html" class="block w-full py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors text-center text-sm"><span lang="en">VIEW DETAILS</span><span lang="zh">查看详情</span></a>
+</div>
+</div>
+</div>
+
+<!-- Load More Container -->
+<div class="text-center mt-12 load-more-container">
+<button class="load-more-btn inline-flex items-center gap-2 px-8 py-4 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">expand_more</span>
+<span lang="en">VIEW MORE PRODUCTS</span><span lang="zh">查看更多产品</span>
+</button>
+<p class="text-secondary text-xs mt-3 load-more-count"></p>
+</div>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var cards = document.querySelectorAll('.product-card');
+  var perPage = 12;
+  var showing = perPage;
+  var container = document.querySelector('.load-more-container');
+  var btn = document.querySelector('.load-more-btn');
+  var countEl = document.querySelector('.load-more-count');
+
+  if (cards.length <= perPage) {
+    if (container) container.style.display = 'none';
+    return;
+  }
+
+  // Initially hide cards beyond first 12, but show first 12
+  cards.forEach(function(c, i) {
+    if (i >= perPage) {
+      c.style.display = 'none';
+      c.style.opacity = '0';
+      c.style.transform = 'translateY(20px)';
+    }
+  });
+
+  function updateCount() {
+    if (!countEl) return;
+    countEl.innerHTML = '<span lang="en">Showing ' + showing + ' of ' + cards.length + ' products</span><span lang="zh">已显示 ' + showing + ' 个，共 ' + cards.length + ' 个产品</span>';
+  }
+  updateCount();
+
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    var next = Math.min(showing + perPage, cards.length);
+    for (var i = showing; i < next; i++) {
+      cards[i].style.display = '';
+      // Trigger slide-up animation
+      setTimeout(function(idx) {
+        return function() {
+          cards[idx].style.opacity = '1';
+          cards[idx].style.transform = 'translateY(0)';
+          cards[idx].style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        };
+      }(i), (i - showing) * 80);
+    }
+    showing = next;
+    updateCount();
+    if (showing >= cards.length) {
+      btn.style.display = 'none';
+    }
+  });
+});
+</script>
+</main>
+<footer class="w-full pt-16 pb-8 px-gutter md:px-margin-desktop max-w-container-max mx-auto border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="md:col-span-2">
+<a href="index.html"><img alt="Smartware Logo" class="h-[108px] w-auto object-contain mb-6" src="images/logo.png"/></a>
+<p class="text-secondary body-md max-w-md"><span lang="en">Smartware (Shenzhen) Technology is dedicated to providing professional, high-performance LED lighting solutions to industrial and professional markets worldwide.</span><br/><span lang="zh">云智迈科技（深圳）致力于为全球工业和专业市场提供专业、高性能的 LED 照明解决方案。</span></p>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs"><span lang="en">Navigation</span><span lang="zh">导航</span></h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200 cursor-pointer" href="index.html"><span lang="en">Home</span><span lang="zh">首页</span></a></li>
+<li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200 cursor-pointer" href="products.html"><span lang="en">Products</span><span lang="zh">产品中心</span></a></li>
+<li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200 cursor-pointer" href="about_us.html"><span lang="en">About Us</span><span lang="zh">关于我们</span></a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs"><span lang="en">Contact</span><span lang="zh">联系</span></h4>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-secondary"><span class="material-symbols-outlined text-primary text-sm">location_on</span> <span lang="en">Shenzhen, China</span><span lang="zh">中国·深圳</span></li>
+<li class="flex items-center gap-3 text-secondary"><span class="material-symbols-outlined text-primary text-sm">mail</span> <span lang="en">fogis@sst-smartware.com<br/>sunnie@sst-smartware.com<br/>henry@sst-smartware.com</span><span lang="zh">fogis@sst-smartware.com<br/>sunnie@sst-smartware.com<br/>henry@sst-smartware.com</span></li>
+<li class="flex items-center gap-3 text-secondary"><span class="material-symbols-outlined text-primary text-sm">call</span> <span lang="en">+86 755 2108 4541</span><span lang="zh">+86 755 2108 4541</span></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/30 gap-4">
+<p class="text-label-md text-secondary">© 2026 Smartware (Shenzhen) Technology. All rights reserved.</p>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+const o=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&e.target.classList.add('animate')})},{threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(e=>o.observe(e));
+            // Mobile menu
+            const menuBtn = document.querySelector('header .md\\:hidden.material-symbols-outlined');
+            if (menuBtn) {
+                const overlay = document.createElement('div');
+                overlay.style.cssText = 'display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(26,28,28,0.95);z-index:9999;justify-content:center;align-items:center;';
+                overlay.innerHTML = '<div style="text-align:center"><button class="mobile-close material-symbols-outlined" style="position:absolute;top:24px;right:24px;color:white;font-size:32px;cursor:pointer;background:none;border:none">close</button><nav style="display:flex;flex-direction:column;gap:32px"><a href="index.html" style="color:white;font-size:20px;font-weight:600;text-decoration:none"><span lang="en">HOME</span><span lang="zh">首页</span></a><a href="products.html" style="color:white;font-size:20px;font-weight:600;text-decoration:none"><span lang="en">PRODUCT</span><span lang="zh">产品</span></a><a href="contact.html" style="color:white;font-size:20px;font-weight:600;text-decoration:none"><span lang="en">CONTACT</span><span lang="zh">联系我们</span></a><a href="about_us.html" style="color:white;font-size:20px;font-weight:600;text-decoration:none"><span lang="en">ABOUT US</span><span lang="zh">关于我们</span></a></nav></div>';
+                document.body.appendChild(overlay);
+                menuBtn.addEventListener('click', () => overlay.style.display = 'flex');
+                overlay.querySelector('.mobile-close').addEventListener('click', () => overlay.style.display = 'none');
+                overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.style.display = 'none'; });
+            }
+});
+</script>
+<script>
+
+// Language switch dropdown
+            (function() {
+                var btn = document.querySelector('button.flex.items-center.gap-1');
+                if (!btn) return;
+                var wrap = document.createElement('div');
+                wrap.className = 'lang-wrap';
+                wrap.style.cssText = 'position:relative;display:inline-block';
+                btn.parentNode.insertBefore(wrap, btn);
+                wrap.appendChild(btn);
+                var menu = document.createElement('div');
+                menu.className = 'lang-menu';
+                menu.innerHTML = '<button class="lang-opt" data-lang="zh">\u7b80\u4f53\u4e2d\u6587</button><button class="lang-opt" data-lang="en">EN</button>';
+                wrap.appendChild(menu);
+                function upd(isZh) {
+                    document.body.classList.toggle('show-zh', isZh);
+                    document.documentElement.lang = isZh ? 'zh' : 'en';
+                    var titleEl = document.querySelector('title');
+                    if (titleEl) document.title = isZh ? (titleEl.getAttribute('data-zh') || titleEl.textContent) : (titleEl.getAttribute('data-en') || titleEl.textContent);
+                    var opts = menu.querySelectorAll('.lang-opt');
+                    opts.forEach(function(o) {
+                        o.style.display = (isZh && o.dataset.lang === 'zh') || (!isZh && o.dataset.lang === 'en') ? 'none' : 'block';
+                    });
+                    btn.innerHTML = isZh ? '简体中文' : 'EN';
+                    localStorage.setItem('lang', isZh ? 'zh' : 'en');
+                }
+                document.addEventListener('click', function(e) {
+                    if (!wrap.contains(e.target)) menu.style.display = 'none';
+                });
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+                    upd(document.body.classList.contains('show-zh'));
+                });
+                menu.querySelectorAll('.lang-opt').forEach(function(opt) {
+                    opt.addEventListener('click', function() {
+                        upd(this.dataset.lang === 'zh');
+                        menu.style.display = 'none';
+                    });
+                });
+                var saved = localStorage.getItem("lang"); upd(saved === "zh");
+            })();
+</script>
+</body>
+</html>
