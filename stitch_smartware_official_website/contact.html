@@ -4,9 +4,10 @@
 <meta charset="utf-8"/>
 <link rel="icon" type="image/png" href="images/logo.png">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="robots" content="index, follow"/>
 <meta name="description" content="Contact Smartware (Shenzhen) Technology for LED lighting inquiries, OEM/ODM partnerships, and product specifications. Shenzhen-based manufacturer."/>
 <title data-en="Contact Us - Smartware LED Lighting" data-zh="联系我们 - 云智迈科技 LED照明">Contact Us - Smartware LED Lighting</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
@@ -100,7 +101,6 @@
     </script>
 <style>
         body {
-            background-color: #f9f9f9;
             color: #1a1c1c;
             overflow-x: hidden;
         }
@@ -148,20 +148,19 @@
 
 <style id="lang-style">
 body:not(.show-zh) [lang="zh"] { display: none !important; }
-body.show-zh [lang="zh"] { display: inline !important; }
-body.show-zh [lang="zh"].block,
-body.show-zh [lang="zh"].flex,
-body.show-zh [lang="zh"].grid,
-body.show-zh [lang="zh"].inline-flex { display: inline-flex !important; }
+body.show-zh [lang="zh"].block      { display: block !important; }
+body.show-zh [lang="zh"].flex       { display: flex !important; }
+body.show-zh [lang="zh"].grid       { display: grid !important; }
+body.show-zh [lang="zh"].inline-flex{ display: inline-flex !important; }
 body.show-zh [lang="en"] { display: none !important; }
 </style>
 
 <script src="search-data.js"></script>
 <script src="search.js"></script>
 </head>
-<body class="font-body-md text-body-md bg-background">
+<body class="font-body-md text-body-md bg-surface">
 <!-- TopNavBar -->
-<header class="sticky top-0 z-50 flex justify-between items-center px-gutter md:px-margin-desktop h-24 md:h-28 max-w-container-max mx-auto bg-surface/80 backdrop-blur-xl border-b border-outline-variant shadow-sm full-width">
+<header role="banner" class="sticky top-0 z-50 flex justify-between items-center px-gutter md:px-margin-desktop h-24 md:h-28 max-w-container-max mx-auto bg-surface/80 backdrop-blur-xl border-b border-outline-variant shadow-sm w-full">
 <a href="index.html"><img alt="Smartware Logo" class="h-[90px] md:h-[108px] w-auto object-contain" src="images/logo.png"/></a>
 <nav class="hidden md:flex items-center gap-8">
 <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200 cursor-pointer" href="index.html"><span lang="en">HOME</span><span lang="zh">首页</span></a>
@@ -171,7 +170,7 @@ body.show-zh [lang="en"] { display: none !important; }
 </nav>
 <div class="flex items-center gap-4">
 <div class="hidden lg:relative lg:flex items-center border border-outline-variant rounded-full px-4 py-1 bg-surface-container">
-<input class="bg-transparent border-none focus:ring-0 text-body-md w-40" data-zh="产品搜索..." placeholder="Product Search..." type="text"/>
+<input class="bg-transparent border-none focus:ring-0 text-body-md w-40" data-zh="产品搜索..." placeholder="Product Search..." type="text" aria-label="Search products"/>
 <span class="material-symbols-outlined text-secondary cursor-pointer">search</span>
 </div>
 <button class="font-label-md text-label-md font-bold text-primary cursor-pointer active:opacity-70 flex items-center gap-1">
@@ -316,11 +315,11 @@ body.show-zh [lang="en"] { display: none !important; }
 </section>
 </main>
 <!-- Footer -->
-<footer class="w-full pt-16 pb-8 px-gutter md:px-margin-desktop max-w-container-max mx-auto border-t border-outline-variant">
+<footer role="contentinfo" class="w-full pt-16 pb-8 px-gutter md:px-margin-desktop max-w-container-max mx-auto border-t border-outline-variant">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
 <div class="md:col-span-2">
 <a href="index.html"><img alt="Smartware Logo" class="h-[108px] w-auto object-contain mb-6" src="images/logo.png"/></a>
-<p class="text-secondary body-md max-w-md"><span lang="en">Smartware (Shenzhen) Technology is dedicated to providing professional, high-performance LED lighting solutions to industrial and professional markets worldwide.</span><br/><span lang="zh">云智迈科技（深圳）致力于为全球工业和专业市场提供专业、高性能的 LED 照明解决方案。</span></p>
+<p class="text-secondary text-body-md max-w-md"><span lang="en">Smartware (Shenzhen) Technology is dedicated to providing professional, high-performance LED lighting solutions to industrial and professional markets worldwide.</span><br/><span lang="zh">云智迈科技（深圳）致力于为全球工业和专业市场提供专业、高性能的 LED 照明解决方案。</span></p>
 </div>
 <div>
 <h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs"><span lang="en">Navigation</span><span lang="zh">导航</span></h4>
@@ -349,11 +348,12 @@ body.show-zh [lang="en"] { display: none !important; }
 </div>
 </div>
 <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/30 gap-4">
-<p class="text-label-md text-secondary">© 2026 Smartware (Shenzhen) Technology. All rights reserved.</p>
+<p class="text-label-md text-secondary">© <span id="copyright-year">2026</span> Smartware (Shenzhen) Technology. All rights reserved.</p>
 </div>
 </footer>
 <script>
         document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {

@@ -4,13 +4,14 @@
  * Output: search-data.js
  */
 const fs = require('fs');
+const path = require('path');
 
 // ── 1. Build category name map from category pages ──
-const catFiles = fs.readdirSync('.').filter(f => f.startsWith('category-') && f.endsWith('.html'));
+const catFiles = fs.readdirSync(__dirname).filter(f => f.startsWith('category-') && f.endsWith('.html'));
 const catNames = {};
 
 catFiles.forEach(catFile => {
-  const content = fs.readFileSync(catFile, 'utf8');
+  const content = fs.readFileSync(path.join(__dirname, catFile), 'utf8');
   let catEn = '', catZh = '';
 
   // Extract EN name from h1
@@ -37,7 +38,7 @@ catFiles.forEach(catFile => {
 });
 
 // ── 2. Build product URL mapping ──
-const urlLines = fs.readFileSync('our-product-urls.txt', 'utf8')
+const urlLines = fs.readFileSync(path.join(__dirname, 'our-product-urls.txt'), 'utf8')
   .trim().split('\n').filter(l => l.trim());
 const productMap = {};
 urlLines.forEach(line => {
@@ -48,13 +49,13 @@ urlLines.forEach(line => {
 });
 
 // ── 3. Parse all product detail pages ──
-const prodFiles = fs.readdirSync('.').filter(f => f.startsWith('product-') && f.endsWith('.html'));
+const prodFiles = fs.readdirSync(__dirname).filter(f => f.startsWith('product-') && f.endsWith('.html'));
 const searchIndex = [];
 const seenIds = new Set();
 
 prodFiles.forEach(file => {
   try {
-    const content = fs.readFileSync(file, 'utf8');
+    const content = fs.readFileSync(path.join(__dirname, file), 'utf8');
     const fileId = file.replace('product-', '').replace('.html', '');
 
     // Skip duplicates (some files might be .bak or special)
@@ -62,7 +63,7 @@ prodFiles.forEach(file => {
     seenIds.add(fileId);
 
     // Get model display name
-    const model = productMap[fileId] || fileId.toUpperCase().replace(/-/g, '-');
+    const model = productMap[fileId] || fileId.toUpperCase();
 
     // Get category from product page's category link
     const catMatch = content.match(/href="(category-[a-z_]+\.html)"/);
@@ -103,7 +104,7 @@ const output = `/**
 window.__SMARTWARE_SEARCH__ = ${JSON.stringify(searchIndex)};
 `;
 
-fs.writeFileSync('search-data.js', output);
+fs.writeFileSync(path.join(__dirname, 'search-data.js'), output);
 
 // ── 5. Report ──
 console.log('✅ search-data.js — ' + searchIndex.length + ' products from ' + prodFiles.length + ' pages\n');

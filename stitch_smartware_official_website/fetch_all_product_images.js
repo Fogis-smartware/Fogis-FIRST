@@ -22,7 +22,7 @@ const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
 const BASE_URL = 'https://www.sst-smartware.com';
 const CDN_DOMAIN = 'gcdn.meidianbang.cn';
 
-// 最大并发数
+// 最大并发数（TODO: 当前未实现并发控制，使用顺序处理；后续可基于此常量引入队列/信号量）
 const MAX_CONCURRENT = 3;
 
 // 所有分类ID（从原网站导航获取）

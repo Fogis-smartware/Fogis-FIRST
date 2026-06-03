@@ -4,9 +4,10 @@
 <meta charset="utf-8"/>
 <link rel="icon" type="image/png" href="images/logo.png">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="robots" content="index, follow"/>
 <meta name="description" content="Learn about Smartware (Shenzhen) Technology, a leading LED lighting manufacturer. Our mission, team, and manufacturing excellence in Shenzhen, China."/>
 <title data-en="About Us - Smartware Leading LED Lighting Innovator" data-zh="关于我们 - 云智迈科技 领航照明创新">About Us - Smartware Leading LED Lighting Innovator</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
@@ -100,7 +101,6 @@
     </script>
 <style>
         body {
-            background-color: #f9f9f9;
             color: #1a1c1c;
             overflow-x: hidden;
         }
@@ -143,20 +143,19 @@
 
 <style id="lang-style">
 body:not(.show-zh) [lang="zh"] { display: none !important; }
-body.show-zh [lang="zh"] { display: inline !important; }
-body.show-zh [lang="zh"].block,
-body.show-zh [lang="zh"].flex,
-body.show-zh [lang="zh"].grid,
-body.show-zh [lang="zh"].inline-flex { display: inline-flex !important; }
+body.show-zh [lang="zh"].block      { display: block !important; }
+body.show-zh [lang="zh"].flex       { display: flex !important; }
+body.show-zh [lang="zh"].grid       { display: grid !important; }
+body.show-zh [lang="zh"].inline-flex{ display: inline-flex !important; }
 body.show-zh [lang="en"] { display: none !important; }
 </style>
 
 <script src="search-data.js"></script>
 <script src="search.js"></script>
 </head>
-<body class="font-body-md text-body-md">
+<body class="font-body-md text-body-md bg-surface">
 <!-- TopNavBar -->
-<header class="sticky top-0 z-50 flex justify-between items-center px-gutter md:px-margin-desktop h-24 md:h-28 max-w-container-max mx-auto bg-surface/80 backdrop-blur-xl border-b border-outline-variant shadow-sm full-width">
+<header role="banner" class="sticky top-0 z-50 flex justify-between items-center px-gutter md:px-margin-desktop h-24 md:h-28 max-w-container-max mx-auto bg-surface/80 backdrop-blur-xl border-b border-outline-variant shadow-sm w-full">
 <a href="index.html"><img alt="Smartware Logo" class="h-[90px] md:h-[108px] w-auto object-contain" src="images/logo.png"/></a>
 <nav class="hidden md:flex items-center gap-8">
 <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200 cursor-pointer" href="index.html"><span lang="en">HOME</span><span lang="zh">首页</span></a>
@@ -166,7 +165,7 @@ body.show-zh [lang="en"] { display: none !important; }
 </nav>
 <div class="flex items-center gap-4">
 <div class="hidden lg:relative lg:flex items-center border border-outline-variant rounded-full px-4 py-1 bg-surface-container">
-<input class="bg-transparent border-none focus:ring-0 text-body-md w-40" placeholder="Product Search..." type="text"/>
+<input class="bg-transparent border-none focus:ring-0 text-body-md w-40" placeholder="Product Search..." type="text" aria-label="Search products"/>
 <span class="material-symbols-outlined text-secondary cursor-pointer">search</span>
 </div>
 <button class="font-label-md text-label-md font-bold text-primary cursor-pointer active:opacity-70 flex items-center gap-1">
@@ -239,21 +238,21 @@ body.show-zh [lang="en"] { display: none !important; }
 <div class="md:col-span-8 bg-white p-10 rounded-2xl shadow-soft border border-outline-variant hover:-translate-y-1 transition-all group">
 <span class="material-symbols-outlined text-primary text-4xl mb-6 group-hover:scale-110 transition-transform">precision_manufacturing</span>
 <h3 class="font-headline-md text-headline-md mb-4"><span lang="en">Shenzhen Manufacturing Excellence</span></h3>
-<p class="text-secondary body-md mb-6 max-w-xl"><span lang="en">Unmatched efficiency and precision at our state-of-the-art production base in the world's hardware capital.</span></p>
+<p class="text-secondary text-body-md mb-6 max-w-xl"><span lang="en">Unmatched efficiency and precision at our state-of-the-art production base in the world's hardware capital.</span></p>
 <p class="text-primary font-bold"><span lang="zh">深圳制造实力：立足硬件之都，确保极致的生产效率与产品精度。</span></p>
 </div>
 <!-- Value 2 -->
 <div class="md:col-span-4 bg-white p-10 rounded-2xl shadow-soft border border-outline-variant hover:-translate-y-1 transition-all group">
 <span class="material-symbols-outlined text-primary text-4xl mb-6 group-hover:scale-110 transition-transform">lightbulb</span>
 <h3 class="font-headline-md text-headline-md mb-4"><span lang="en">Lighting R&amp;D</span></h3>
-<p class="text-secondary body-md mb-6"><span lang="en">Pushing boundaries of lumen efficiency.</span></p>
+<p class="text-secondary text-body-md mb-6"><span lang="en">Pushing boundaries of lumen efficiency.</span></p>
 <p class="text-primary font-bold"><span lang="zh">照明技术研发：挑战光效极限。</span></p>
 </div>
 <!-- Value 3 -->
 <div class="md:col-span-4 bg-white p-10 rounded-2xl shadow-soft border border-outline-variant hover:-translate-y-1 transition-all group">
 <span class="material-symbols-outlined text-primary text-4xl mb-6 group-hover:scale-110 transition-transform">public</span>
 <h3 class="font-headline-md text-headline-md mb-4"><span lang="en">Global Supply</span></h3>
-<p class="text-secondary body-md mb-6"><span lang="en">Seamless logistics management.</span></p>
+<p class="text-secondary text-body-md mb-6"><span lang="en">Seamless logistics management.</span></p>
 <p class="text-primary font-bold"><span lang="zh">全球供应链：无缝物流管理体系。</span></p>
 </div>
 <!-- Value 4 -->
@@ -261,7 +260,7 @@ body.show-zh [lang="en"] { display: none !important; }
 <div class="relative z-10">
 <span class="material-symbols-outlined text-white text-4xl mb-6">eco</span>
 <h3 class="font-headline-md text-headline-md mb-4 text-white"><span lang="en">Sustainable Lighting Innovation</span></h3>
-<p class="text-white/80 body-md mb-6 max-w-xl"><span lang="en">Leading the transition to high-efficiency LED solutions that reduce carbon footprints without sacrificing visibility.</span></p>
+<p class="text-white/80 text-body-md mb-6 max-w-xl"><span lang="en">Leading the transition to high-efficiency LED solutions that reduce carbon footprints without sacrificing visibility.</span></p>
 <p class="text-white font-bold"><span lang="zh">可持续照明创新：引领高效LED方案，在降低碳足迹的同时确保卓越的照明效果。</span></p>
 </div>
 <div class="absolute bottom-0 right-0 opacity-10 -mr-10 -mb-10 group-hover:scale-110 transition-transform duration-500">
@@ -275,7 +274,7 @@ body.show-zh [lang="en"] { display: none !important; }
 <section class="py-section-gap px-gutter md:px-margin-desktop max-w-container-max mx-auto fade-up">
 <div class="max-w-3xl mb-12">
 <h2 class="font-headline-lg text-headline-lg text-on-surface mb-4"><span lang="en">Our Team</span><span lang="zh">我们的团队</span></h2>
-<p class="text-secondary body-md"><span lang="en">Get in touch with our dedicated sales team for inquiries, quotations, and partnership opportunities.</span><br><span lang="zh">如有询价、合作及其他业务需求，欢迎联系我们的专业销售团队。</span></p>
+<p class="text-secondary text-body-md"><span lang="en">Get in touch with our dedicated sales team for inquiries, quotations, and partnership opportunities.</span><br><span lang="zh">如有询价、合作及其他业务需求，欢迎联系我们的专业销售团队。</span></p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 <!-- Member 1: Henry -->
@@ -342,11 +341,11 @@ body.show-zh [lang="en"] { display: none !important; }
 </section>
 </main>
 <!-- Footer -->
-<footer class="w-full pt-16 pb-8 px-gutter md:px-margin-desktop max-w-container-max mx-auto border-t border-outline-variant">
+<footer role="contentinfo" class="w-full pt-16 pb-8 px-gutter md:px-margin-desktop max-w-container-max mx-auto border-t border-outline-variant">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
 <div class="md:col-span-2">
 <a href="index.html"><img alt="Smartware Logo" class="h-[108px] w-auto object-contain mb-6" src="images/logo.png"/></a>
-<p class="text-secondary body-md max-w-md"><span lang="en">Smartware (Shenzhen) Technology is dedicated to providing professional, high-performance LED lighting solutions to industrial and professional markets worldwide.</span><br/><span lang="zh">云智迈科技（深圳）致力于为全球工业和专业市场提供专业、高性能的 LED 照明解决方案。</span></p>
+<p class="text-secondary text-body-md max-w-md"><span lang="en">Smartware (Shenzhen) Technology is dedicated to providing professional, high-performance LED lighting solutions to industrial and professional markets worldwide.</span><br/><span lang="zh">云智迈科技（深圳）致力于为全球工业和专业市场提供专业、高性能的 LED 照明解决方案。</span></p>
 </div>
 <div>
 <h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs"><span lang="en">Navigation</span><span lang="zh">导航</span></h4>
@@ -375,11 +374,12 @@ body.show-zh [lang="en"] { display: none !important; }
 </div>
 </div>
 <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/30 gap-4">
-<p class="text-label-md text-secondary">© 2026 Smartware (Shenzhen) Technology. All rights reserved.</p>
+<p class="text-label-md text-secondary">© <span id="copyright-year">2026</span> Smartware (Shenzhen) Technology. All rights reserved.</p>
 </div>
 </footer>
 <script>
         document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {

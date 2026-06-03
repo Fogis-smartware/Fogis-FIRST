@@ -58,7 +58,11 @@ prodFiles.forEach(file => {
       return;
     }
 
-    const desc = descriptions[descKey].en;
+    function escapeHtml(str) {
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    const desc = escapeHtml(descriptions[descKey].en);
 
     // Build the description HTML block
     // Insert between the button area and the specs section

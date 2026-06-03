@@ -2,9 +2,10 @@
 <meta charset="utf-8">
 <link rel="icon" type="image/png" href="images/logo.png">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="robots" content="index, follow">
 <meta name="description" content="Smartware (Shenzhen) Technology - Professional LED lighting solutions for automotive, engineering, and industrial applications. OEM/ODM manufacturer based in Shenzhen, China."/>
 <title data-en="Smartware Official - Leading LED Lighting Innovator" data-zh="云智迈科技 - 领航照明创新">Smartware Official - Leading LED Lighting Innovator</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
         tailwind.config = {
@@ -98,7 +99,6 @@
     </script>
 <style>
         body {
-            background-color: #f9f9f9;
             color: #1a1c1c;
             overflow-x: hidden;
         }
@@ -141,20 +141,19 @@
 
 <style id="lang-style">
 body:not(.show-zh) [lang="zh"] { display: none !important; }
-body.show-zh [lang="zh"] { display: inline !important; }
-body.show-zh [lang="zh"].block,
-body.show-zh [lang="zh"].flex,
-body.show-zh [lang="zh"].grid,
-body.show-zh [lang="zh"].inline-flex { display: inline-flex !important; }
+body.show-zh [lang="zh"].block      { display: block !important; }
+body.show-zh [lang="zh"].flex       { display: flex !important; }
+body.show-zh [lang="zh"].grid       { display: grid !important; }
+body.show-zh [lang="zh"].inline-flex{ display: inline-flex !important; }
 body.show-zh [lang="en"] { display: none !important; }
 </style>
 
 <script src="search-data.js"></script>
 <script src="search.js"></script>
 </head>
-<body class="font-body-md text-body-md">
+<body class="font-body-md text-body-md bg-surface">
 <!-- TopNavBar -->
-<header class="sticky top-0 z-50 flex justify-between items-center px-gutter md:px-margin-desktop h-24 md:h-28 max-w-container-max mx-auto bg-surface/80 backdrop-blur-xl border-b border-outline-variant shadow-sm full-width">
+<header role="banner" class="sticky top-0 z-50 flex justify-between items-center px-gutter md:px-margin-desktop h-24 md:h-28 max-w-container-max mx-auto bg-surface/80 backdrop-blur-xl border-b border-outline-variant shadow-sm">
 <a href="index.html"><img alt="Smartware Logo" class="h-[90px] md:h-[108px] w-auto object-contain" src="images/logo.png"></a>
 <nav class="hidden md:flex items-center gap-8">
 <a class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1 transition-colors duration-200 cursor-pointer" href="index.html"><span lang="en">HOME</span><span lang="zh">首页</span></a>
@@ -164,7 +163,7 @@ body.show-zh [lang="en"] { display: none !important; }
 </nav>
 <div class="flex items-center gap-4">
 <div class="hidden lg:relative lg:flex items-center border border-outline-variant rounded-full px-4 py-1 bg-surface-container">
-<input class="bg-transparent border-none focus:ring-0 text-body-md w-40" placeholder="Product Search..." type="text" data-en="Product Search..." data-zh="产品搜索...">
+<input class="bg-transparent border-none focus:ring-0 text-body-md w-40" placeholder="Product Search..." type="text" aria-label="Search products" data-en="Product Search..." data-zh="产品搜索...">
 <span class="material-symbols-outlined text-secondary cursor-pointer">search</span>
 </div>
 <button class="font-label-md text-label-md font-bold text-primary cursor-pointer active:opacity-70 flex items-center gap-1">
@@ -311,7 +310,7 @@ body.show-zh [lang="en"] { display: none !important; }
 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 fade-up">
 <div class="max-w-2xl">
 <h2 class="font-headline-lg text-headline-lg text-on-surface mb-4"><span lang="en">Professional Product Categories</span><span lang="zh">专业产品分类</span></h2>
-<p class="text-secondary body-md"><span lang="en">Explore our high-performance lighting solutions tailored for the toughest environments.</span><br><span lang="zh">探索专为极端环境设计的高性能照明方案。</span></p>
+<p class="text-secondary text-body-md"><span lang="en">Explore our high-performance lighting solutions tailored for the toughest environments.</span><br><span lang="zh">探索专为极端环境设计的高性能照明方案。</span></p>
 </div>
 <a href="products.html" class="text-primary font-bold flex items-center gap-2 hover:underline">
                     <span lang="en">EXPLORE ALL</span><span lang="zh">浏览全部</span> <span class="material-symbols-outlined">chevron_right</span>
@@ -328,13 +327,13 @@ body.show-zh [lang="en"] { display: none !important; }
 <h3 class="font-headline-md text-headline-md text-on-surface mb-2"><span lang="en">LED Rechargeable Work Light</span><span lang="zh">LED 可充电工作灯</span></h3>
 <ul class="space-y-2 mb-6">
 <li class="flex items-center gap-2 text-secondary text-body-md">
-<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">IP67 Lamp Head &amp; IP65 Battery Box</span><span lang="zh"> IP67灯头 & IP65电池盒防护</span>
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">IP67 Lamp Head &amp; IP65 Battery Box</span><span lang="zh">IP67灯头 & IP65电池盒防护</span>
                             </li>
 <li class="flex items-center gap-2 text-secondary text-body-md">
-<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">Multi-Level Brightness &amp; SOS Mode</span><span lang="zh"> 多档亮度调节 & SOS应急模式</span>
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">Multi-Level Brightness &amp; SOS Mode</span><span lang="zh">多档亮度调节 & SOS应急模式</span>
                             </li>
 <li class="flex items-center gap-2 text-secondary text-body-md">
-<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">Modular Circuit &amp; LG Battery Protection</span><span lang="zh"> 模块化电路 & LG电池保护</span>
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">Modular Circuit &amp; LG Battery Protection</span><span lang="zh">模块化电路 & LG电池保护</span>
                             </li>
 </ul>
 <a href="category-led_rechargeable_work_light.html" class="block w-full py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors text-center"><span lang="en">DETAILS</span><span lang="zh">详情</span></a>
@@ -350,13 +349,13 @@ body.show-zh [lang="en"] { display: none !important; }
 <h3 class="font-headline-md text-headline-md text-on-surface mb-2"><span lang="en">LED Work Light</span><span lang="zh">LED 工作灯</span></h3>
 <ul class="space-y-2 mb-6">
 <li class="flex items-center gap-2 text-secondary text-body-md">
-<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">CE &amp; RoHS B Approved</span><span lang="zh"> CE & RoHS B 认证</span>
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">CE &amp; RoHS B Approved</span><span lang="zh">CE & RoHS B 认证</span>
                             </li>
 <li class="flex items-center gap-2 text-secondary text-body-md">
-<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">IP67 Weatherproof Protection</span><span lang="zh"> IP67 全面防护设计</span>
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">IP67 Weatherproof Protection</span><span lang="zh">IP67 全面防护设计</span>
                             </li>
 <li class="flex items-center gap-2 text-secondary text-body-md">
-<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">Reliable in Harsh Environments</span><span lang="zh"> 严苛环境下可靠工作</span>
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">Reliable in Harsh Environments</span><span lang="zh">严苛环境下可靠工作</span>
                             </li>
 </ul>
 <a href="category-led_work_light.html" class="block w-full py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors text-center"><span lang="en">DETAILS</span><span lang="zh">详情</span></a>
@@ -372,13 +371,13 @@ body.show-zh [lang="en"] { display: none !important; }
 <h3 class="font-headline-md text-headline-md text-on-surface mb-2"><span lang="en">LED Economy Work Light</span><span lang="zh">LED 经济型工作灯</span></h3>
 <ul class="space-y-2 mb-6">
 <li class="flex items-center gap-2 text-secondary text-body-md">
-<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">IP67 Fully Protected Design</span><span lang="zh"> IP67 全防护等级设计</span>
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">IP67 Fully Protected Design</span><span lang="zh">IP67 全防护等级设计</span>
                             </li>
 <li class="flex items-center gap-2 text-secondary text-body-md">
-<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">IP65 Battery Box Protection</span><span lang="zh"> IP65 电池盒防护设计</span>
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">IP65 Battery Box Protection</span><span lang="zh">IP65 电池盒防护设计</span>
                             </li>
 <li class="flex items-center gap-2 text-secondary text-body-md">
-<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">Reliable in Harsh Conditions</span><span lang="zh"> 恶劣环境下稳定工作</span>
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span lang="en">Reliable in Harsh Conditions</span><span lang="zh">恶劣环境下稳定工作</span>
                             </li>
 </ul>
 <a href="category-led_economy_work_light.html" class="block w-full py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors text-center"><span lang="en">DETAILS</span><span lang="zh">详情</span></a>
@@ -413,7 +412,7 @@ body.show-zh [lang="en"] { display: none !important; }
 </div>
 <div class="absolute -bottom-6 -right-6 glass-card p-6 rounded-lg text-on-surface">
 <span class="material-symbols-outlined text-primary mb-2">verified</span>
-<p class="font-bold"><span lang="en">Shenzhen Factory</span><span lang="zh"> 深圳工厂</span></p>
+<p class="font-bold"><span lang="en">Shenzhen Factory</span><span lang="zh">深圳工厂</span></p>
 <p class="text-xs text-secondary" lang="zh">每一件云智迈科技的产品都经过 8 个阶段的质量保证流程，包括高温老化、防水浸泡和振动测试。我们的深圳研发中心专注于热管理和光学效率的持续优化。</p>
 </div>
 </div>
@@ -465,11 +464,11 @@ body.show-zh [lang="en"] { display: none !important; }
 </section>
 </main>
 <!-- Footer -->
-<footer class="w-full pt-16 pb-8 px-gutter md:px-margin-desktop max-w-container-max mx-auto border-t border-outline-variant">
+<footer role="contentinfo" class="w-full pt-16 pb-8 px-gutter md:px-margin-desktop max-w-container-max mx-auto border-t border-outline-variant">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
 <div class="md:col-span-2">
 <a href="index.html"><img alt="Smartware Logo" class="h-[108px] w-auto object-contain mb-6" src="images/logo.png"></a>
-<p class="text-secondary body-md max-w-md"><span lang="en">Smartware (Shenzhen) Technology is dedicated to providing professional, high-performance LED lighting solutions to industrial and professional markets worldwide.</span><br><span lang="zh">云智迈科技（深圳）致力于为全球工业和专业市场提供专业、高性能的 LED 照明解决方案。</span></p>
+<p class="text-secondary text-body-md max-w-md"><span lang="en">Smartware (Shenzhen) Technology is dedicated to providing professional, high-performance LED lighting solutions to industrial and professional markets worldwide.</span><br><span lang="zh">云智迈科技（深圳）致力于为全球工业和专业市场提供专业、高性能的 LED 照明解决方案。</span></p>
 </div>
 <div>
 <h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs"><span lang="en">Navigation</span><span lang="zh">导航</span></h4>
@@ -498,12 +497,13 @@ body.show-zh [lang="en"] { display: none !important; }
 </div>
 </div>
 <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/30 gap-4">
-<p class="text-label-md text-secondary">© 2026 Smartware (Shenzhen) Technology. All rights reserved.</p>
+<p class="text-label-md text-secondary">© <span id="copyright-year">2026</span> Smartware (Shenzhen) Technology. All rights reserved.</p>
 </div>
 </footer>
 
 <script>
         document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
             // Scroll animation observer
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {

@@ -5,6 +5,16 @@
 (function () {
   'use strict';
 
+  function debounce(fn, delay) {
+    var timer;
+    return function() {
+      var args = arguments;
+      var ctx = this;
+      clearTimeout(timer);
+      timer = setTimeout(function() { fn.apply(ctx, args); }, delay);
+    };
+  }
+
   var DATA = window.__SMARTWARE_SEARCH__;
   if (!DATA || !DATA.length) return;
 
@@ -131,7 +141,7 @@
         'display:flex;align-items:center;justify-content:center;overflow:hidden">' +
         '<img src="' + p.image + '" alt="' + p.model + '" ' +
         'style="width:100%;height:100%;object-fit:contain;padding:4px" ' +
-        'onerror="this.parentElement.innerHTML=\'<span style=font-size:10px;color:#999>\'+this.alt.substring(0,4)+\'</span>\'">' +
+        'onerror="this.parentElement.innerHTML=\'&lt;span style=&quot;font-size:10px;color:#999&quot;&gt;\'+this.alt.substring(0,4)+\'&lt;/span&gt;\'">' +
         '</div>' +
         '<div style="flex:1;min-width:0">' +
         '<div style="font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' +
@@ -269,7 +279,7 @@
     }
 
     // Input event — live search
-    inputEl.addEventListener('input', function () {
+    inputEl.addEventListener('input', debounce(function () {
       var val = this.value.trim();
       if (val.length >= 1) {
         doSearch(val);
@@ -277,7 +287,7 @@
       } else {
         closeSearch();
       }
-    });
+    }, 200));
 
     // Focus event
     inputEl.addEventListener('focus', function () {
@@ -299,14 +309,14 @@
     });
 
     // Resize — reposition
-    window.addEventListener('resize', function () {
+    window.addEventListener('resize', debounce(function () {
       if (dropdownEl && dropdownEl.style.display === 'block') {
         positionDropdown();
       }
-    });
+    }, 150));
 
     // Handle products.html?search=xxx
-    if (window.location.pathname.indexOf('products.html') !== -1) {
+    if (window.location.pathname.endsWith('/products.html') || window.location.pathname.endsWith('/products')) {
       var params = new URLSearchParams(window.location.search);
       var searchQuery = params.get('search');
       if (searchQuery && inputEl) {

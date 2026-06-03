@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta name="description" content="Browse Smartware LED flash lights. High-performance portable LED torches for professional use."/>
 <title data-en="LED Flash Light - Smartware" data-zh="LED Flash Light - 云智迈科技">LED Flash Light - Smartware</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"/>
 <style>
 body{background:#f9f9f9;color:#1a1c1c;overflow-x:hidden}
@@ -15,7 +15,7 @@ body{background:#f9f9f9;color:#1a1c1c;overflow-x:hidden}
 .shadow-soft{box-shadow:0px 4px 20px rgba(0,0,0,0.05)}
 .fade-up{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease-out,transform 0.7s ease-out}
 .fade-up.animate{opacity:1;transform:translateY(0)}
-.delay-1{transition-delay:0.1s}.delay-2{transition-delay:0.2s}
+.delay-1{transition-delay:0.1s}.delay-2{transition-delay:0.2s}.delay-3{transition-delay:0.35s}.delay-4{transition-delay:0.5s}
 .lang-wrap{position:relative;display:inline-block}.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e3bfb1;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,0.1);z-index:9999;min-width:90px;overflow:hidden}.lang-menu button{display:block;width:100%;padding:8px 16px;text-align:left;border:none;background:none;cursor:pointer;font-size:14px;font-family:Inter,sans-serif;color:#1a1c1c;white-space:nowrap}.lang-menu button:hover{background:#f3f3f3}
 </style>
 <script id="tailwind-config">
@@ -30,7 +30,7 @@ body{background:#f9f9f9;color:#1a1c1c;overflow-x:hidden}
                     "primary-container": "#ff6600",
                     "on-primary": "#ffffff",
                     surface: "#f9f9f9",
-                    "surface-container": "#eeeeee",
+                    "surface-container-low":"#f3f3f3","surface-container":"#eeeeee",
                     background: "#f9f9f9",
                     "outline-variant": "#e3bfb1"
                 },
@@ -39,10 +39,7 @@ body{background:#f9f9f9;color:#1a1c1c;overflow-x:hidden}
                     "container-max": "1280px",
                     "margin-desktop": "64px",
                     "margin-mobile": "20px"
-                }
-            }
-        }
-    ,
+                },
                 "fontFamily": {
                     "headline-md": ["Inter"],
                     "display-lg-mobile": ["Inter"],
@@ -68,14 +65,16 @@ body{background:#f9f9f9;color:#1a1c1c;overflow-x:hidden}
                     "full": "0.75rem"
                 }
             }
+        }
+    }
 </script>
-<style id="lang-style">body:not(.show-zh) [lang="zh"]{display:none!important}body.show-zh [lang="zh"]{display:inline!important}body.show-zh [lang="zh"].block,body.show-zh [lang="zh"].flex,body.show-zh [lang="zh"].inline-flex{display:inline-flex!important}body.show-zh [lang="en"]{display:none!important}</style>
+<style id="lang-style">body:not(.show-zh) [lang="zh"]{display:none!important}body.show-zh [lang="zh"].block{display:block!important}body.show-zh [lang="zh"].flex{display:flex!important}body.show-zh [lang="zh"].grid{display:grid!important}body.show-zh [lang="zh"].inline-flex{display:inline-flex!important}body.show-zh [lang="en"]{display:none!important}</style>
 
 <script src="search-data.js"></script>
 <script src="search.js"></script>
 </head>
 <body class="font-body-md text-body-md">
-<header class="sticky top-0 z-50 flex justify-between items-center px-gutter md:px-margin-desktop h-24 md:h-28 max-w-container-max mx-auto bg-surface/80 backdrop-blur-xl border-b border-outline-variant shadow-sm full-width">
+<header class="sticky top-0 z-50 flex justify-between items-center px-gutter md:px-margin-desktop h-24 md:h-28 max-w-container-max mx-auto bg-surface/80 backdrop-blur-xl border-b border-outline-variant shadow-sm w-full">
 <a href="index.html"><img alt="Smartware Logo" class="h-[90px] md:h-[108px] w-auto object-contain" src="images/logo.png"/></a>
 <nav class="hidden md:flex items-center gap-8">
 <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200 cursor-pointer" href="index.html"><span lang="en">HOME</span><span lang="zh">首页</span></a>
@@ -99,10 +98,10 @@ body{background:#f9f9f9;color:#1a1c1c;overflow-x:hidden}
 <span class="material-symbols-outlined text-sm">chevron_right</span>
 <a href="products.html" class="hover:text-primary"><span lang="en">Products</span><span lang="zh">产品</span></a>
 <span class="material-symbols-outlined text-sm">chevron_right</span>
-<span class="text-primary font-semibold"><span lang="en">LED Flash Light</span></span>
+<span class="text-primary font-semibold"><span lang="en">LED Flash Light</span><span lang="zh">LED 手电筒</span></span>
 </nav>
 <div class="mb-12 fade-up">
-<h1 class="text-4xl font-bold text-on-surface mb-4"><span lang="en">LED Flash Light</span></h1>
+<h1 class="text-4xl font-bold text-on-surface mb-4"><span lang="en">LED Flash Light</span><span lang="zh">LED 手电筒</span></h1>
 <p class="text-lg text-secondary"><span lang="zh">LED 手电筒</span><span lang="en"> - High-quality LED lighting solutions from Smartware.</span></p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -173,7 +172,7 @@ body{background:#f9f9f9;color:#1a1c1c;overflow-x:hidden}
 <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
 <div class="md:col-span-2">
 <a href="index.html"><img alt="Smartware Logo" class="h-[108px] w-auto object-contain mb-6" src="images/logo.png"/></a>
-<p class="text-secondary body-md max-w-md"><span lang="en">Smartware (Shenzhen) Technology is dedicated to providing professional, high-performance LED lighting solutions to industrial and professional markets worldwide.</span><br/><span lang="zh">云智迈科技（深圳）致力于为全球工业和专业市场提供专业、高性能的 LED 照明解决方案。</span></p>
+<p class="text-secondary text-body-md max-w-md"><span lang="en">Smartware (Shenzhen) Technology is dedicated to providing professional, high-performance LED lighting solutions to industrial and professional markets worldwide.</span><br/><span lang="zh">云智迈科技（深圳）致力于为全球工业和专业市场提供专业、高性能的 LED 照明解决方案。</span></p>
 </div>
 <div>
 <h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs"><span lang="en">Navigation</span><span lang="zh">导航</span></h4>

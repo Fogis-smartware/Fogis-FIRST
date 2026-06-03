@@ -1,8 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const glob = require('fs').glob || require('path');
-
-const websiteDir = 'D:/GIT/stitch_smartware_official_website';
+const websiteDir = path.resolve(__dirname);
 
 const galleryCSS = `
         .product-gallery{position:relative}.gallery-main{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden}.gallery-main img{max-width:100%;max-height:100%;object-fit:contain;transition:opacity .3s ease}.gallery-thumbs{display:flex;gap:8px;margin-top:12px;overflow-x:auto;padding-bottom:4px}.gallery-thumbs::-webkit-scrollbar{height:4px}.gallery-thumbs::-webkit-scrollbar-thumb{background:#ccc;border-radius:2px}.gallery-thumb{width:64px;height:64px;border:2px solid transparent;border-radius:6px;overflow:hidden;cursor:pointer;flex-shrink:0;transition:border-color .2s;background:#fff;display:flex;align-items:center;justify-content:center}.gallery-thumb:hover{border-color:#a33e00}.gallery-thumb.active{border-color:#ff6600}.gallery-thumb img{max-width:100%;max-height:100%;object-fit:contain}.gallery-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:10;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.9);border:1px solid #e3bfb1;cursor:pointer;display:none;align-items:center;justify-content:center;transition:all .2s;box-shadow:0 2px 8px rgba(0,0,0,0.1)}.product-gallery:hover .gallery-nav{display:flex}.gallery-nav:hover{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.15)}.gallery-nav.prev{left:8px}.gallery-nav.next{right:8px}.gallery-nav .material-symbols-outlined{font-size:20px;color:#a33e00}
@@ -14,7 +12,7 @@ const galleryJS = `
     var mainImg = document.querySelector('.gallery-main img') || document.querySelector('.aspect-square img');
     if (!mainImg) return;
     var src = mainImg.getAttribute('src');
-    var match = src.match(/images\\\\([^.-]+)/);
+    var match = src.match(/images\\/([^.]+)/);
     if (!match) return;
     var model = match[1];
     var container = mainImg.closest('.aspect-square') || mainImg.parentNode;
@@ -93,6 +91,7 @@ const galleryJS = `
     prevBtn.onclick = function() { showImage(currentIdx - 1); };
     nextBtn.onclick = function() { showImage(currentIdx + 1); };
     document.addEventListener('keydown', function(e) {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
         if (e.key === 'ArrowLeft') showImage(currentIdx - 1);
         if (e.key === 'ArrowRight') showImage(currentIdx + 1);
     });
