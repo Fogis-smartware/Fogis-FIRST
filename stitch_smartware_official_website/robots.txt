@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: /temp_original_page.html
+
+Sitemap: https://www.sst-smartware.com/sitemap.xml
