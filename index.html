@@ -159,6 +159,8 @@
             transform: scale(1);
         }
     .lang-wrap{position:relative;display:inline-block}.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e3bfb1;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,0.1);z-index:9999;min-width:90px;overflow:hidden}.lang-menu button{display:block;width:100%;padding:8px 16px;text-align:left;border:none;background:none;cursor:pointer;font-size:14px;font-family:Inter,sans-serif;color:#1a1c1c;white-space:nowrap}.lang-menu button:hover{background:#f3f3f3}
+.hero-char{display:inline-block;opacity:0;filter:blur(4px);background:linear-gradient(to right,#1a1c1c,#0062a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:heroReveal .6s ease-out var(--reveal-delay,0s) forwards,heroFloat var(--float-dur,3s) ease-in-out var(--float-delay,1.2s) infinite}@keyframes heroReveal{to{opacity:1;filter:blur(0)}}@keyframes heroFloat{0%,100%{transform:translateY(0)}25%{transform:translateY(var(--float-y,-3px))}50%{transform:translateY(0)}75%{transform:translateY(var(--float-y2,3px))}}
+
 </style>
 
 <style id="lang-style">
@@ -204,9 +206,9 @@ body.show-zh [lang="en"] { display: none !important; }
 <div class="relative z-10 px-gutter md:px-margin-desktop max-w-container-max mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-gutter">
 <div class="md:col-span-8 flex flex-col justify-center fade-up">
 <p class="mb-6 font-bold uppercase tracking-wider" style="font-size:21px;background:linear-gradient(to right,#1a1c1c,#ffffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text"><span lang="en">OEM/ODM Since 2018</span><span lang="zh">始于2018，专业定制</span></p>
-<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">
-                        <span lang="en" style="background:linear-gradient(to right,#1a1c1c,#0062a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Smartware - Leading LED Lighting Innovator</span><br>
-<span lang="zh" style="background:linear-gradient(to right,#1a1c1c,#0062a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">云智迈科技 - 领航照明创新</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6" style="line-height:1.35;padding:8px 0;overflow:visible">
+                        <span lang="en">Smartware - Leading LED Lighting Innovator</span><br>
+<span lang="zh">云智迈科技 - 领航照明创新</span>
 </h1>
 <p class="font-body-lg text-body-lg text-secondary mb-10 max-w-2xl">
                         <span lang="en">A premier manufacturer of professional-grade LED solutions for automotive, engineering, and industrial applications. We deliver unmatched durability and performance from our state-of-the-art Shenzhen facility.</span><br>
@@ -430,7 +432,7 @@ body.show-zh [lang="en"] { display: none !important; }
 <div class="px-gutter md:px-margin-desktop max-w-container-max mx-auto">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center fade-up">
 <div>
-<h2 class="font-headline-lg text-headline-lg mb-6"><span lang="en">Precision Engineering &amp; Testing</span><br><span class="text-primary" lang="zh">精密工程与质量检测</span></h2>
+<h2 class="font-headline-lg text-headline-lg mb-6"><span lang="en">Precision Engineering &amp; Testing</span><br><span class="text-white" lang="zh">精密工程与质量检测</span></h2>
 <div class="space-y-6 text-white/70">
 <p class="" lang="en">Every Smartware product undergoes an 8-stage quality assurance protocol, including high-temperature aging, waterproof immersion, and vibration testing. Our Shenzhen R&amp;D center focuses on thermal management and optical efficiency.</p>
 <p class="" lang="zh">每一件云智迈科技的产品都经过 8 个阶段的质量保证流程，包括高温老化、防水浸泡和振动测试。我们的深圳研发中心专注于热管理和光学效率的持续优化。</p>
@@ -438,11 +440,9 @@ body.show-zh [lang="en"] { display: none !important; }
 <div class="mt-10 grid grid-cols-2 gap-6">
 <div class="border-l-2 border-primary pl-4">
 <h4 class="font-bold text-white mb-1"><span lang="en">R&amp;D Focused</span><span lang="zh">研发驱动</span></h4>
-<p class="text-xs text-white/50 uppercase"><span lang="en">R&amp;D Focused</span><span lang="zh">研发驱动</span></p>
 </div>
 <div class="border-l-2 border-primary pl-4">
 <h4 class="font-bold text-white mb-1"><span lang="en">Fully Certified</span><span lang="zh">全面认证</span></h4>
-<p class="text-xs text-white/50 uppercase"><span lang="en">CE, ROHS, FCC</span><span lang="zh">国际认证</span></p>
 </div>
 </div>
 </div>
@@ -544,6 +544,28 @@ body.show-zh [lang="en"] { display: none !important; }
 <script>
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('copyright-year').textContent = new Date().getFullYear();
+            // Hero heading character animation
+            function initHeroChars() {
+                var h1 = document.querySelector('h1[class*=\"display-lg\"]');
+                if (!h1) return;
+                var spans = h1.querySelectorAll('span[lang]');
+                spans.forEach(function(span) {
+                    if (span.querySelector('.hero-char')) return; // already done
+                    var text = span.textContent;
+                    var html = '';
+                    for (var i = 0; i < text.length; i++) {
+                        var c = text[i] === ' ' ? '&nbsp;' : text[i];
+                        var rd = (i * 0.04) + 's';
+                        var fd = (1 + i * 0.12 % 1.5) + 's';
+                        var dur = (2.5 + Math.random() * 1.5).toFixed(1) + 's';
+                        var y1 = (-2 - Math.random() * 3).toFixed(1) + 'px';
+                        var y2 = (2 + Math.random() * 3).toFixed(1) + 'px';
+                        html += '<span class=\"hero-char\" style=\"--reveal-delay:' + rd + ';--float-delay:' + fd + ';--float-dur:' + dur + ';--float-y:' + y1 + ';--float-y2:' + y2 + '\">' + c + '</span>';
+                    }
+                    span.innerHTML = html;
+                });
+            }
+            initHeroChars();
             // Scroll animation observer
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -614,6 +636,7 @@ body.show-zh [lang="en"] { display: none !important; }
                     document.documentElement.lang = isZh ? 'zh' : 'en';
                     var titleEl = document.querySelector('title');
                     if (titleEl) document.title = isZh ? (titleEl.getAttribute('data-zh') || titleEl.textContent) : (titleEl.getAttribute('data-en') || titleEl.textContent);
+                    setTimeout(initHeroChars, 50);
                     var opts = menu.querySelectorAll('.lang-opt');
                     opts.forEach(function(o) {
                         o.style.display = (isZh && o.dataset.lang === 'zh') || (!isZh && o.dataset.lang === 'en') ? 'none' : 'block';
