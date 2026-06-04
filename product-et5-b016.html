@@ -308,14 +308,14 @@ document.querySelectorAll('.fade-up').forEach(e=>o.observe(e));
             totalImages = images.length;
             var thumb = document.createElement('div');
             thumb.className = 'gallery-thumb' + (totalImages === 2 ? ' active' : '');
-            thumb.innerHTML = '<img src="' + trySrc + '" alt="Gallery ' + idx + '">';
+            thumb.innerHTML = '<img src="' + trySrc + '" alt="' + model + ' - Detail ' + idx + '">';
             thumb.onclick = function() { showImage(idx); };
             thumbs.appendChild(thumb);
             thumbsContainer.style.display = 'block';
             if (totalImages === 2) {
                 var firstThumb = document.createElement('div');
                 firstThumb.className = 'gallery-thumb active';
-                firstThumb.innerHTML = '<img src="' + images[0] + '" alt="Main">';
+                firstThumb.innerHTML = '<img src="' + images[0] + '" alt="' + model.toUpperCase() + ' Main Image">';
                 firstThumb.onclick = function() { showImage(0); };
                 thumbs.insertBefore(firstThumb, thumbs.firstChild);
             }
