@@ -174,20 +174,28 @@ body.show-zh [lang="en"] { display: none !important; }
 <button class="md:hidden material-symbols-outlined text-on-surface">menu</button>
 </div>
 </header>
-<main class="max-w-container-max mx-auto px-gutter md:px-margin-desktop py-12 md:py-24">
-<!-- Header Section -->
-<div class="mb-16 fade-up">
-<div class="mb-4 inline-flex items-center px-3 py-1 bg-primary-container/10 border border-primary-container/20 rounded-lg w-fit">
-<span class="text-primary font-bold text-label-md uppercase tracking-wider"><span lang="en">Product Catalog</span><span lang="zh">产品目录</span></span>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[500px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Professional LED lighting product lineup" class="w-full h-full object-cover" src="images/banner-3.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
 </div>
+<div class="relative z-10 px-gutter md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="mb-16 fade-up">
+<p class="mb-6 font-bold uppercase tracking-wider" style="font-size:21px;background:linear-gradient(to right,#1a1c1c,#ffffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text"><span lang="en">Product Catalog</span><span lang="zh">产品目录</span></p>
 <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6">
-            <span lang="en">Advanced LED</span><br/><span class="text-primary"><span lang="en">Lighting Solutions</span><span lang="zh">领航照明创新</span></span>
+            <span lang="en" style="background:linear-gradient(to right,#1a1c1c,#0062a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Advanced LED Lighting Solutions</span>
+<span lang="zh" style="background:linear-gradient(to right,#1a1c1c,#0062a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">先进 LED 照明解决方案</span>
 </h1>
 <p class="font-body-lg text-body-lg text-secondary max-w-2xl">
             <span lang="en">High-performance industrial and portable lighting designed for maximum durability and extreme environments. Engineered for professionals.</span><br/>
 <span lang="zh"><span class="text-on-surface font-semibold">云智迈科技 (Smartware)</span> 提供的高性能工业与便携照明方案，专为极端环境下的耐用性与专业需求而生。</span>
         </p>
 </div>
+</div>
+</section>
+<div class="max-w-container-max mx-auto px-gutter md:px-margin-desktop py-12 md:py-24">
 <!-- Filter & Search Visual -->
 <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-16 border-b border-outline-variant pb-8 fade-up">
 <div class="w-full md:w-1/3">
@@ -374,6 +382,7 @@ body.show-zh [lang="en"] { display: none !important; }
 </div>
 </div>
 </section>
+</div>
 </main>
 <!-- Footer -->
 <footer role="contentinfo" class="w-full pt-16 pb-8 px-gutter md:px-margin-desktop max-w-container-max mx-auto border-t border-outline-variant">
