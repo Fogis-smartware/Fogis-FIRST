@@ -226,7 +226,27 @@ body.show-zh [lang="en"] { display: none !important; }
 </div>
 </div>
 </section>
-<!-- Company Stats Section (removed - waiting for verified data) -->
+<!-- Company Stats Section -->
+<section class="py-section-gap px-gutter md:px-margin-desktop max-w-container-max mx-auto">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 fade-up">
+    <div class="text-center p-8 bg-white rounded-xl shadow-soft border border-outline-variant hover:-translate-y-1 transition-transform">
+      <div class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-2 stat-number" data-target="2018">0</div>
+      <p class="text-secondary text-sm tracking-wide uppercase font-semibold"><span lang="en">Year Founded</span><span lang="zh">成立年份</span></p>
+    </div>
+    <div class="text-center p-8 bg-white rounded-xl shadow-soft border border-outline-variant hover:-translate-y-1 transition-transform delay-1">
+      <div class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-2 stat-number" data-target="2000" data-suffix="m²">0</div>
+      <p class="text-secondary text-sm tracking-wide uppercase font-semibold"><span lang="en">Factory Area</span><span lang="zh">工厂面积</span></p>
+    </div>
+    <div class="text-center p-8 bg-white rounded-xl shadow-soft border border-outline-variant hover:-translate-y-1 transition-transform delay-2">
+      <div class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-2 stat-number" data-target="260" data-suffix="+">0</div>
+      <p class="text-secondary text-sm tracking-wide uppercase font-semibold"><span lang="en">Products</span><span lang="zh">产品型号</span></p>
+    </div>
+    <div class="text-center p-8 bg-white rounded-xl shadow-soft border border-outline-variant hover:-translate-y-1 transition-transform delay-3">
+      <div class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-2 stat-number" data-target="30" data-suffix="+">0</div>
+      <p class="text-secondary text-sm tracking-wide uppercase font-semibold"><span lang="en">Export Countries</span><span lang="zh">出口国家</span></p>
+    </div>
+  </div>
+</section>
 <!-- Brand Pillars Section -->
 <section class="py-section-gap px-gutter md:px-margin-desktop max-w-container-max mx-auto">
   <div class="text-center mb-16 fade-up">
@@ -539,17 +559,18 @@ body.show-zh [lang="en"] { display: none !important; }
 
             // Counter animation for stats
             function animateCounter(el) {
-                const target = parseInt(el.textContent);
+                const target = parseInt(el.getAttribute('data-target')) || parseInt(el.textContent);
                 if (isNaN(target)) return;
+                const suffix = el.getAttribute('data-suffix') || (el.textContent.includes('+') ? '+' : '');
                 let current = 0;
-                const step = Math.ceil(target / 60);
+                const step = Math.max(1, Math.ceil(target / 60));
                 const timer = setInterval(() => {
                     current += step;
                     if (current >= target) {
                         current = target;
                         clearInterval(timer);
                     }
-                    el.textContent = current + (el.textContent.includes('+') ? '+' : '');
+                    el.textContent = (suffix === 'm²') ? current.toLocaleString() + ' m²' : current.toLocaleString() + suffix;
                 }, 20);
             }
 
