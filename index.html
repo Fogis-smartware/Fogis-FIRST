@@ -176,7 +176,7 @@
     #back-to-top.show { opacity: 1; pointer-events: auto; }
     #back-to-top:hover { background: #E65C00; }
     .lang-wrap{position:relative;display:inline-block}.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e3bfb1;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,0.1);z-index:9999;min-width:90px;overflow:hidden}.lang-menu button{display:block;width:100%;padding:8px 16px;text-align:left;border:none;background:none;cursor:pointer;font-size:14px;font-family:Inter,sans-serif;color:#1a1c1c;white-space:nowrap}.lang-menu button:hover{background:#f3f3f3}
-.hero-char{display:inline-block;opacity:0;filter:blur(4px);background:linear-gradient(to right,#1a1c1c,#0062a1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:heroReveal .6s ease-out var(--reveal-delay,0s) forwards,heroFloat var(--float-dur,3s) ease-in-out var(--float-delay,1.2s) infinite}@keyframes heroReveal{to{opacity:1;filter:blur(0)}}@keyframes heroFloat{0%,100%{transform:translateY(0)}25%{transform:translateY(var(--float-y,-3px))}50%{transform:translateY(0)}75%{transform:translateY(var(--float-y2,3px))}}
+.hero-char{display:inline-block;opacity:0;filter:blur(4px);color:#a33e00;text-shadow:0 0 10px rgba(255,255,255,0.5),0 0 2px rgba(255,255,255,0.8);animation:heroReveal .6s ease-out var(--reveal-delay,0s) forwards,heroFloat var(--float-dur,3s) ease-in-out var(--float-delay,1.2s) infinite}@keyframes heroReveal{to{opacity:1;filter:blur(0)}}@keyframes heroFloat{0%,100%{transform:translateY(0)}25%{transform:translateY(var(--float-y,-3px))}50%{transform:translateY(0)}75%{transform:translateY(var(--float-y2,3px))}}
 
 
 #cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(26,28,28,0.97);color:#fff;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;transform:translateY(100%);transition:transform 0.4s ease}#cookie-banner.show{transform:translateY(0)}#cookie-banner p{font-size:14px;line-height:1.5;margin:0;color:rgba(255,255,255,0.8);max-width:700px}#cookie-banner button{background:#a33e00;color:#fff;border:none;padding:10px 24px;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background 0.2s}#cookie-banner button:hover{background:#E65C00}
@@ -214,7 +214,7 @@ body.show-zh [lang="en"] { display: none !important; }
 <span class="material-symbols-outlined text-secondary cursor-pointer">search</span>
 </div>
 <button class="font-label-md text-label-md font-bold text-primary cursor-pointer active:opacity-70 flex items-center gap-1">
-<span class="material-symbols-outlined text-base">language</span><span> EN</span>
+<span class="material-symbols-outlined text-base">language</span><span class="lang-label">EN</span>
             </button>
 <button class="md:hidden material-symbols-outlined text-on-surface">menu</button>
 </div>
@@ -223,20 +223,16 @@ body.show-zh [lang="en"] { display: none !important; }
 <!-- Hero Section -->
 <section class="relative min-h-[700px] flex items-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img alt="Industrial LED lighting application" class="w-full h-full object-cover" src="images/banner-1.jpg">
-<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+<img alt="Smartware LED lighting manufacturing" class="w-full h-full object-cover" src="images/banner-E013.png">
+<!-- <div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div> -->
 </div>
 <div class="relative z-10 px-gutter md:px-margin-desktop max-w-container-max mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-gutter">
 <div class="md:col-span-8 flex flex-col justify-center fade-up">
-<p class="mb-6 font-bold uppercase tracking-wider" style="font-size:21px;background:linear-gradient(to right,#1a1c1c,#ffffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text"><span lang="en">OEM/ODM Since 2018</span><span lang="zh">始于2018，专业定制</span></p>
+<p class="mb-6 font-bold uppercase tracking-wider" style="font-size:21px;color:#a33e00;text-shadow:0 0 10px rgba(255,255,255,0.5),0 0 2px rgba(255,255,255,0.8)"><span lang="en">OEM/ODM Since 2018</span><span lang="zh">始于2018，专业定制</span></p>
 <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6" style="line-height:1.35;padding:8px 0;overflow:visible">
                         <span lang="en">Smartware - Leading LED Lighting Innovator</span><br>
 <span lang="zh">云智迈科技 - 领航照明创新</span>
 </h1>
-<p class="font-body-lg text-body-lg text-secondary mb-10 max-w-2xl">
-                        <span lang="en">A premier manufacturer of professional-grade LED solutions for automotive, engineering, and industrial applications. We deliver unmatched durability and performance from our state-of-the-art Shenzhen facility.</span><br>
-<span class="block mt-2" lang="zh">专业级 LED 照明解决方案制造商，产品广泛应用于汽车、工程及工业领域。依托深圳先进制造基地，提供卓越的耐用性与性能。</span>
-</p>
 <div class="flex flex-col sm:flex-row gap-4">
 <a href="products.html" class="bg-primary-container text-on-primary px-8 py-4 rounded-lg font-label-md text-label-md hover:bg-[#E65C00] transition-all shadow-soft flex items-center justify-center gap-2">
                             <span lang="en">VIEW PRODUCTS</span><span lang="zh">查看产品</span>
@@ -653,7 +649,8 @@ body.show-zh [lang="en"] { display: none !important; }
                     opts.forEach(function(o) {
                         o.style.display = (isZh && o.dataset.lang === 'zh') || (!isZh && o.dataset.lang === 'en') ? 'none' : 'block';
                     });
-                    btn.innerHTML = isZh ? '简体中文' : 'EN';
+                    var labelSpan = btn.querySelector('.lang-label');
+labelSpan.textContent = isZh ? '简体中文' : 'EN';
                     localStorage.setItem('lang', isZh ? 'zh' : 'en');
                     var si = document.querySelector('header input[type="text"]'); if(si) si.placeholder = isZh ? si.getAttribute('data-zh') : si.getAttribute('data-en');
                 }

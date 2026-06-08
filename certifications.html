@@ -131,7 +131,7 @@ body.show-zh [lang="en"] { display: none !important; }
 <input class="bg-transparent border-none focus:ring-0 text-body-md w-40" placeholder="Product Search..." type="text" aria-label="Search products" data-en="Product Search..." data-zh="产品搜索..."/>
 <span class="material-symbols-outlined text-secondary cursor-pointer">search</span>
 </div>
-<button class="font-label-md text-label-md font-bold text-primary cursor-pointer active:opacity-70 flex items-center gap-1"><span class="material-symbols-outlined text-base">language</span><span> EN</span></button>
+<button class="font-label-md text-label-md font-bold text-primary cursor-pointer active:opacity-70 flex items-center gap-1"><span class="material-symbols-outlined text-base">language</span><span class="lang-label">EN</span></button>
 <button class="md:hidden material-symbols-outlined text-on-surface">menu</button>
 </div>
 </header>
@@ -235,7 +235,7 @@ body.show-zh [lang="en"] { display: none !important; }
         var titleEl = document.querySelector('title');
         if (titleEl) document.title = isZh ? (titleEl.getAttribute('data-zh') || titleEl.textContent) : (titleEl.getAttribute('data-en') || titleEl.textContent);
         menu.querySelectorAll('.lang-opt').forEach(function(o) { o.style.display = (isZh && o.dataset.lang === 'zh') || (!isZh && o.dataset.lang === 'en') ? 'none' : 'block'; });
-        btn.innerHTML = isZh ? '简体中文' : 'EN';
+        var labelSpan = btn.querySelector('.lang-label'); labelSpan.textContent = isZh ? '简体中文' : 'EN';
         localStorage.setItem('lang', isZh ? 'zh' : 'en');
         var si = document.querySelector('header input[type="text"]'); if(si){var p=si.getAttribute('data-'+ (isZh?'zh':'en'));if(p)si.placeholder=p}
     }

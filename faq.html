@@ -268,7 +268,7 @@ body.show-zh [lang="en"] { display: none !important; }
 <span class="material-symbols-outlined text-secondary cursor-pointer">search</span>
 </div>
 <button class="font-label-md text-label-md font-bold text-primary cursor-pointer active:opacity-70 flex items-center gap-1">
-<span class="material-symbols-outlined text-base">language</span><span> EN</span>
+<span class="material-symbols-outlined text-base">language</span><span class="lang-label">EN</span>
             </button>
 <button class="md:hidden material-symbols-outlined text-on-surface">menu</button>
 </div>
@@ -442,7 +442,7 @@ body.show-zh [lang="en"] { display: none !important; }
                     opts.forEach(function(o) {
                         o.style.display = (isZh && o.dataset.lang === 'zh') || (!isZh && o.dataset.lang === 'en') ? 'none' : 'block';
                     });
-                    btn.innerHTML = isZh ? '简体中文' : 'EN';
+                    var labelSpan = btn.querySelector('.lang-label'); labelSpan.textContent = isZh ? '简体中文' : 'EN';
                     localStorage.setItem('lang', isZh ? 'zh' : 'en');
                     var si = document.querySelector('header input[type="text"]'); if(si){var p=si.getAttribute('data-'+ (isZh?'zh':'en'));if(p)si.placeholder=p}
                 }
