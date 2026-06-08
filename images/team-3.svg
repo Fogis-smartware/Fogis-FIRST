@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
-  <rect width="400" height="500" fill="#f0f0f0"/>
-  <circle cx="200" cy="160" r="80" fill="#a33e00" opacity="0.3"/>
-  <rect x="120" y="280" width="160" height="180" rx="80" fill="#a33e00" opacity="0.2"/>
-  <text x="200" y="175" text-anchor="middle" fill="#a33e00" font-size="40" font-family="Inter, sans-serif" font-weight="600">JL</text>
-  <text x="200" y="400" text-anchor="middle" fill="#5f5e5e" font-size="14" font-family="Inter, sans-serif">James Li</text>
-</svg>

@@ -20,6 +20,79 @@
 <link rel="alternate" hreflang="en" href="https://www.smartware-official.com/faq.html"/>
 <link rel="alternate" hreflang="zh" href="https://www.smartware-official.com/faq.html"/>
 <link rel="alternate" hreflang="x-default" href="https://www.smartware-official.com/faq.html"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What products does Smartware manufacture?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Smartware specializes in professional LED lighting solutions across 14 product categories, including LED work lights, rechargeable work lights, economy work lights, motorcycle lights, light bars, head lights, flash lights, search lights, pen lights, strip lights, solar panel products, tripods, bicycle accessories, and industrial parts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer OEM / ODM services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. OEM and ODM is our core business. We provide custom branding, packaging, specification modifications, and full product development from concept to mass production."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum order quantity (MOQ)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MOQ varies by product category. Standard catalog items typically start from 100-500 units. Custom OEM orders depend on the complexity of customization."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What certifications do your products have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our products meet international standards including CE, RoHS, FCC, PSE, and SAA. Most products feature IP67 waterproof and dustproof protection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is your typical lead time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard catalog products: 7-15 working days. Custom OEM orders: 20-45 working days. Sample orders: 3-7 working days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you handle shipping and logistics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We ship worldwide via sea freight, air freight, and express courier (DHL/UPS/FedEx). We handle export documentation, customs clearance support, and can ship on FOB or CIF terms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What warranty do you provide?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All Smartware products come with a standard 1-year warranty against manufacturing defects. Extended warranty options are available for OEM/ODM partnerships."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I request a sample before placing a bulk order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we encourage clients to evaluate samples before committing to bulk orders. Sample fees are typically refundable against future bulk orders."
+      }
+    }
+  ]
+}
+</script>
+
 <title data-en="FAQ - Smartware LED Lighting" data-zh="常见问题 - 云智迈科技 LED照明">FAQ - Smartware LED Lighting</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -191,7 +264,7 @@ body.show-zh [lang="en"] { display: none !important; }
 </nav>
 <div class="flex items-center gap-4">
 <div class="hidden lg:relative lg:flex items-center border border-outline-variant rounded-full px-4 py-1 bg-surface-container">
-<input class="bg-transparent border-none focus:ring-0 text-body-md w-40" placeholder="Product Search..." type="text" aria-label="Search products"/>
+<input class="bg-transparent border-none focus:ring-0 text-body-md w-40" placeholder="Product Search..." type="text" aria-label="Search products" data-en="Product Search..." data-zh="产品搜索..."/>
 <span class="material-symbols-outlined text-secondary cursor-pointer">search</span>
 </div>
 <button class="font-label-md text-label-md font-bold text-primary cursor-pointer active:opacity-70 flex items-center gap-1">
@@ -371,6 +444,7 @@ body.show-zh [lang="en"] { display: none !important; }
                     });
                     btn.innerHTML = isZh ? '简体中文' : 'EN';
                     localStorage.setItem('lang', isZh ? 'zh' : 'en');
+                    var si = document.querySelector('header input[type="text"]'); if(si){var p=si.getAttribute('data-'+ (isZh?'zh':'en'));if(p)si.placeholder=p}
                 }
                 document.addEventListener('click', function(e) {
                     if (!wrap.contains(e.target)) menu.style.display = 'none';

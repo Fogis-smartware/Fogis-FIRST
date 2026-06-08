@@ -180,6 +180,7 @@
 
 
 #cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(26,28,28,0.97);color:#fff;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;transform:translateY(100%);transition:transform 0.4s ease}#cookie-banner.show{transform:translateY(0)}#cookie-banner p{font-size:14px;line-height:1.5;margin:0;color:rgba(255,255,255,0.8);max-width:700px}#cookie-banner button{background:#a33e00;color:#fff;border:none;padding:10px 24px;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background 0.2s}#cookie-banner button:hover{background:#E65C00}
+.carousel-wrapper{position:relative;width:100%;height:520px;overflow:hidden}.carousel-card{position:absolute;width:540px;height:360px;border-radius:12px;overflow:hidden;border:3px solid transparent;box-shadow:0 4px 24px rgba(0,0,0,0.15);transition:top 0.7s cubic-bezier(0.25,0.46,0.45,0.94),left 0.7s cubic-bezier(0.25,0.46,0.45,0.94),border-color 0.5s,opacity 0.5s,transform 0.5s}.carousel-card img{width:100%;height:100%;object-fit:cover;pointer-events:none;user-select:none}.carousel-card.active{border-color:#ff6600;box-shadow:0 8px 40px rgba(255,102,0,0.35);z-index:99!important}.factory-left{display:flex;flex-direction:column;justify-content:center;height:520px}.factory-nav{display:flex;gap:12px;margin-top:24px}.factory-nav button{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,0.3);background:rgba(255,255,255,0.05);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;color:#fff}.factory-nav button:hover{background:#a33e00;color:#fff;border-color:#a33e00}.factory-dots{display:flex;gap:8px;margin-top:16px}.factory-dots .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.3);border:none;cursor:pointer;transition:all 0.3s;padding:0}.factory-dots .dot.active{background:#ff6600;width:24px;border-radius:4px}
 </style>
 
 <style id="lang-style">
@@ -449,35 +450,22 @@ body.show-zh [lang="en"] { display: none !important; }
 </div>
 </div>
 </section>
-<!-- Quality & Innovation Section -->
+<!-- Factory Showcase Carousel Section -->
 <section class="py-section-gap bg-on-surface text-white">
 <div class="px-gutter md:px-margin-desktop max-w-container-max mx-auto">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center fade-up">
+<div class="grid grid-cols-1 lg:grid-cols-[42%_58%] gap-8 items-center fade-up">
+<div class="factory-left">
 <div>
-<h2 class="font-headline-lg text-headline-lg mb-6"><span lang="en">Precision Engineering &amp; Testing</span><br><span class="text-white" lang="zh">精密工程与质量检测</span></h2>
-<div class="space-y-6 text-white/70">
-<p class="" lang="en">Every Smartware product undergoes an 8-stage quality assurance protocol, including high-temperature aging, waterproof immersion, and vibration testing. Our Shenzhen R&amp;D center focuses on thermal management and optical efficiency.</p>
-<p class="" lang="zh">每一件云智迈科技的产品都经过 8 个阶段的质量保证流程，包括高温老化、防水浸泡和振动测试。我们的深圳研发中心专注于热管理和光学效率的持续优化。</p>
+<h2 class="font-headline-lg text-headline-lg mb-3"><span lang="en">Factory Showcase</span><span lang="zh">工厂展示</span></h2>
+<p id="factory-title" class="text-white/80 text-2xl font-semibold mb-2"><span lang="en">Charge &amp; Discharge Testing</span><span lang="zh">充电放电测试</span></p>
 </div>
-<div class="mt-10 grid grid-cols-2 gap-6">
-<div class="border-l-2 border-primary pl-4">
-<h4 class="font-bold text-white mb-1"><span lang="en">R&amp;D Focused</span><span lang="zh">研发驱动</span></h4>
+<div class="factory-nav">
+<button id="factory-prev" aria-label="Previous">&#8249;</button>
+<button id="factory-next" aria-label="Next">&#8250;</button>
 </div>
-<div class="border-l-2 border-primary pl-4">
-<h4 class="font-bold text-white mb-1"><span lang="en">Fully Certified</span><span lang="zh">全面认证</span></h4>
+<div id="factory-dots" class="factory-dots"></div>
 </div>
-</div>
-</div>
-<div class="relative">
-<div class="aspect-video rounded-xl overflow-hidden shadow-2xl border border-white/10">
-<img alt="Production line" class="w-full h-full object-cover" src="images/5.jpg" loading="lazy">
-</div>
-<div class="absolute -bottom-6 -right-6 glass-card p-6 rounded-lg text-on-surface">
-<span class="material-symbols-outlined text-primary mb-2">verified</span>
-<p class="font-bold"><span lang="en">Shenzhen Factory</span><span lang="zh">深圳工厂</span></p>
-<p class="text-xs text-secondary"><span lang="en">Every product undergoes an 8-stage quality protocol — high-temp aging, waterproof immersion, and vibration testing — backed by our Shenzhen R&amp;D center's focus on thermal management and optical efficiency.</span><span lang="zh">每一件云智迈科技的产品都经过 8 个阶段的质量保证流程，包括高温老化、防水浸泡和振动测试。我们的深圳研发中心专注于热管理和光学效率的持续优化。</span></p>
-</div>
-</div>
+<div class="carousel-wrapper" id="factory-carousel"></div>
 </div>
 </div>
 </section>
@@ -690,4 +678,5 @@ body.show-zh [lang="en"] { display: none !important; }
 <script>window.addEventListener('scroll',function(){var b=document.getElementById('back-to-top');b.classList.toggle('show',window.scrollY>400)});</script>
 <div id=cookie-banner><p><span lang=en>We use cookies to enhance your browsing experience and analyze site traffic. By continuing to use this site, you agree to our use of cookies.</span><span lang=zh>我们使用 Cookie 来提升您的浏览体验并分析网站流量。继续使用本网站即表示您同意我们使用 Cookie。</span></p><button onclick="document.getElementById('cookie-banner').classList.remove('show');localStorage.setItem('cookie-consent','1')"><span lang=en>Accept</span><span lang=zh>接受</span></button></div>
 <script>(function(){if(!localStorage.getItem('cookie-consent')){var b=document.getElementById('cookie-banner');setTimeout(function(){b.classList.add('show')},500)}})();</script>
+<script>(function(){const w=document.getElementById('factory-carousel');if(!w)return;const titleEl=document.getElementById('factory-title');const dotsCt=document.getElementById('factory-dots');const btnPrev=document.getElementById('factory-prev');const btnNext=document.getElementById('factory-next');const CARD_W=540,CARD_H=360,RADIUS=675,AUTO_MS=3000;const slides=[{img:'images/1.jpg',scale:1.5,titleEn:'Charge & Discharge Testing',titleZh:'充电放电测试'},{img:'images/3.jpg',scale:1.5,titleEn:'Product Bonding Process',titleZh:'产品粘合工艺'},{img:'images/4.jpg',scale:1.5,titleEn:'Quality Inspection',titleZh:'产品质量检测'},{img:'images/6.jpg',titleEn:'Manual LED Sorting',titleZh:'人工筛选灯珠'},{img:'images/7.jpg',titleEn:'Component Assembly',titleZh:'安装产品部件'},{img:'images/8.jpg',titleEn:'Operational Testing',titleZh:'测试产品运行'},{img:'images/9.jpg',titleEn:'Internal Wiring',titleZh:'安装内部元件'},{img:'images/5.jpg',scale:1.5,titleEn:'Waterproof Testing',titleZh:'产品防水测试'}];const N=slides.length,ANGLE_STEP=360/N;let baseAngle=180,activeIndex=0,autoTimer=null;const cards=[];for(let i=0;i<N;i++){const div=document.createElement('div');div.className='carousel-card';const s=slides[i].scale||1;div.innerHTML='<img src="'+slides[i].img+'" alt="'+slides[i].titleEn+'" draggable="false" style="transform:scale('+s+')">';div.addEventListener('click',function(){goTo(i,true)});w.appendChild(div);cards.push(div);const dot=document.createElement('button');dot.className='dot';dot.addEventListener('click',function(){goTo(i,true)});dotsCt.appendChild(dot)}function getCenter(){var ww=w.clientWidth,wh=w.clientHeight;return{x:ww+RADIUS-20-CARD_W*0.6,y:wh/2}}function positionAll(){var c=getCenter();for(var i=0;i<N;i++){var ang=i*ANGLE_STEP+baseAngle;var rad=ang*Math.PI/180;var cx=c.x+RADIUS*Math.cos(rad);var cy=c.y+RADIUS*Math.sin(rad);var card=cards[i];card.style.left=(cx-CARD_W/2)+'px';card.style.top=(cy-CARD_H/2)+'px';var isActive=i===activeIndex;card.classList.toggle('active',isActive);card.style.opacity=1;card.style.pointerEvents='auto';card.style.zIndex=Math.round(100-Math.abs((((ang%360)+540)%360)-180))}}function updateInfo(){var s=slides[activeIndex];if(titleEl){titleEl.querySelector('[lang="en"]').textContent=s.titleEn;titleEl.querySelector('[lang="zh"]').textContent=s.titleZh}var dots=dotsCt.querySelectorAll('.dot');dots.forEach(function(d,i){d.classList.toggle('active',i===activeIndex)})}function goTo(index,isManual){if(index===activeIndex)return;if(isManual){stopAuto();scheduleAuto()}var targetNewBase=(180-index*ANGLE_STEP)%360;var curBase=((baseAngle%360)+360)%360;var delta=targetNewBase-curBase;if(delta>180)delta-=360;if(delta<-180)delta+=360;baseAngle+=delta;activeIndex=index;positionAll();updateInfo()}function next(){goTo((activeIndex+1)%N,false)}function prev(){goTo((activeIndex-1+N)%N,true)}var cooldownTimer=null;function scheduleAuto(){if(cooldownTimer)clearTimeout(cooldownTimer);cooldownTimer=setTimeout(function(){startAuto()},5000)}function startAuto(){stopAuto();autoTimer=setInterval(next,AUTO_MS)}function stopAuto(){if(autoTimer){clearInterval(autoTimer);autoTimer=null}if(cooldownTimer){clearTimeout(cooldownTimer);cooldownTimer=null}}btnPrev.addEventListener('click',function(){prev()});btnNext.addEventListener('click',function(){goTo((activeIndex+1)%N,true)});positionAll();updateInfo();setTimeout(function(){positionAll()},50);startAuto();window.addEventListener('resize',function(){positionAll()})})();</script>
 </body></html>

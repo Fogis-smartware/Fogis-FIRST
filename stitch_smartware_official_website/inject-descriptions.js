@@ -63,6 +63,7 @@ prodFiles.forEach(file => {
     }
 
     const desc = escapeHtml(descriptions[descKey].en);
+    const descZh = escapeHtml(descriptions[descKey].zh || descriptions[descKey].en);
 
     // Build the description HTML block
     // Insert between the button area and the specs section
@@ -73,7 +74,7 @@ prodFiles.forEach(file => {
       '    <div class="max-w-container-max mx-auto px-gutter md:px-margin-desktop pb-8 fade-up">\n' +
       '      <p class="text-body-lg text-secondary leading-relaxed max-w-3xl">\n' +
       '        <span lang="en">' + desc + '</span>\n' +
-      '        <span lang="zh">' + desc + '</span>\n' +
+      '        <span lang="zh">' + descZh + '</span>\n' +
       '      </p>\n' +
       '    </div>\n';
 

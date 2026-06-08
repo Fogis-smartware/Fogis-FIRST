@@ -12,3 +12,6 @@ desktop.ini
 .idea/
 *.swp
 *.swo
+
+# 测试文件（不上传网站）
+TEXT/

@@ -66,10 +66,13 @@
 
     for (var i = 0; i < DATA.length; i++) {
       var tokens = DATA[i].tokens;
-      if (tokens.indexOf(q) !== -1) {
+      // 1. Exact model match (e.g. "et1-a001")
+      if (DATA[i].model.toLowerCase() === q) {
         exact.push(DATA[i]);
+      // 2. Word-boundary prefix match (token starts with q, or q follows a space)
       } else if (tokens.indexOf(q) === 0 || tokens.indexOf(' ' + q) !== -1) {
         prefix.push(DATA[i]);
+      // 3. Substring match not at word boundary (e.g. "001" inside "et1-a001")
       } else if (tokens.indexOf(q) > 0) {
         contain.push(DATA[i]);
       }

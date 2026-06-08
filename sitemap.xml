@@ -2,1669 +2,1687 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.smartware-official.com/</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.smartware-official.com/products.html</loc>
-    <lastmod>2026-06-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.smartware-official.com/contact.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <loc>https://www.smartware-official.com/about_us.html</loc>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.smartware-official.com/about_us.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <loc>https://www.smartware-official.com/certifications.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.smartware-official.com/contact.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.smartware-official.com/faq.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.smartware-official.com/products.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.smartware-official.com/resources.html</loc>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/category-bicycle_accessories.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/category-industrial_parts.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/category-led_economy_work_light.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/category-led_flash_light.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/category-led_head_light.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/category-led_light_bar.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/category-led_motorcycle_light.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/category-led_pen_light.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/category-led_rechargeable_work_light.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/category-led_search_light.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/category-led_solar_panel.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/category-led_strip_light.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/category-led_tripod.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/category-led_work_light.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-a001.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-a001c.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-a002.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-a003.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-a004.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-a006-3.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-a007.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-a008.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-a016.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-a017h.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-a021.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-a022.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-a030.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-a031.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-a041.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-b007.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-b018.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-b020.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-b025.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c001.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c002.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c003.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c016.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c017.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c018.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c019.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c020.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c021.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c022.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c023.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c024.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c025.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c026.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c027.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c028.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c029.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c030.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c032.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c033.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c034.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c035.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c036.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c037.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c038.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c039.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c042.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c043.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c044.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c045.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c046.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c047.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c048.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c049.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c065.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-c082.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d001ac.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d002ac.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d003ac.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d004ac.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d005ac.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d006ac.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d007ac.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d011.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d012.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d013.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d014.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d015.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d016.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d016s.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d017.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d018.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d019ac.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d020ac.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d021.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d025.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d027.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-d029.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e001.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e001c.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e005.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e006.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e007.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e009.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e010.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e011.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e012.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e013.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e013c.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e014.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e017.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e017c.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e022.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e026.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e027.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e028.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e029.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e030.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e032.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-e034.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-g001ac.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-g002ac.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et1-g003ac.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et10-a001.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et10-b059.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et10-b060.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et10-b061.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et2-a004.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et2-a010.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et2-a015.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et2-a020.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et2-a026.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et2-a027.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et2-b001.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et2-b005.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et2-b008.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et2-b012.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et2-b014.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et2-b024.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et2-d014.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et2-d015.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et2-d016.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et2-d017.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et2-d018.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et2-d019.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et2-d020.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et2-d021.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et2-d022.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-a026.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-a027.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-a028.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-a029.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-d001.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-d002.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-d003.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-d004.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-d005.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-d006.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-d007.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-d008.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-d009.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-d010.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-d011.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-d012.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-d014.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-d016.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-d018.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-d020.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-d021.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-d022.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-d023.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-d024.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e065.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e066.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e067-1.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e067-2.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e067.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e068.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e074.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e076.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e077.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e078.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e079.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e080.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e081.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e082.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e083.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e084.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e085.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e086.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e087-1.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e087-2.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e088-1.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e088-2.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e089-1.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-e089-2.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-f001b.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-f001r.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et3-f004.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-a019.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-a020.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-a021.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-a022.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-a023.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-a024.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-a025.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-b014.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-b015.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-b016.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-d012.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-d013.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-e025.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-e026.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-e027.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-e041.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-e042.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-e043.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-e044.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-e074.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-e076.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-e077.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-e078.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-e079.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-e080-1.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-e081.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-f022.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-f022a.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-f023.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-f023a.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-f024.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-f025.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-g059.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-g061.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-g062.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-g063.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-g064.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-g065.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-g066.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-h009.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-h010.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-h011.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-h012.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et5-h013.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et7-a008.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et7-a012.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et7-a013.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et7-b006.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et7-b010.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et7-e004.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et7-e007.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-a002.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-a026.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-a029.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-b008.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-b009.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-b010.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-e001.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-e002.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-e003.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-e004.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-e005.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-e006.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-e007.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-e008.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-e009.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-e010.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-e011.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-e012.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-f001.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-f002.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-f003.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-f005.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-f006.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-f007.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-f008.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-f009.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-f010.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-f011.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-f012.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-f013.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smartware-official.com/product-et8-f014.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
