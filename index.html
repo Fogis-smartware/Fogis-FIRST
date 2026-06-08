@@ -644,7 +644,6 @@ body.show-zh [lang="en"] { display: none !important; }
                     document.documentElement.lang = isZh ? 'zh' : 'en';
                     var titleEl = document.querySelector('title');
                     if (titleEl) document.title = isZh ? (titleEl.getAttribute('data-zh') || titleEl.textContent) : (titleEl.getAttribute('data-en') || titleEl.textContent);
-                    setTimeout(initHeroChars, 50);
                     var opts = menu.querySelectorAll('.lang-opt');
                     opts.forEach(function(o) {
                         o.style.display = (isZh && o.dataset.lang === 'zh') || (!isZh && o.dataset.lang === 'en') ? 'none' : 'block';
