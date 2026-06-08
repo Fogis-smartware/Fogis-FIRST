@@ -257,8 +257,8 @@ document.querySelectorAll('.fade-up').forEach(e=>o.observe(e));
                     opts.forEach(function(o) {
                         o.style.display = (isZh && o.dataset.lang === 'zh') || (!isZh && o.dataset.lang === 'en') ? 'none' : 'block';
                     });
-                    var labelSpan = btn.querySelector('.lang-label'); labelSpan.textContent = isZh ? '简体中文' : 'EN';
-                    localStorage.setItem('lang', isZh ? 'zh' : 'en');
+                    localStorage.setItem('lang', isZh ? 'zh' : 'en'); var labelSpan = btn.querySelector('.lang-label'); if(labelSpan) labelSpan.textContent = isZh ? '简体中文' : 'EN';
+
                 }
                 document.addEventListener('click', function(e) {
                     if (!wrap.contains(e.target)) menu.style.display = 'none';

@@ -235,8 +235,8 @@ body.show-zh [lang="en"] { display: none !important; }
         var titleEl = document.querySelector('title');
         if (titleEl) document.title = isZh ? (titleEl.getAttribute('data-zh') || titleEl.textContent) : (titleEl.getAttribute('data-en') || titleEl.textContent);
         menu.querySelectorAll('.lang-opt').forEach(function(o) { o.style.display = (isZh && o.dataset.lang === 'zh') || (!isZh && o.dataset.lang === 'en') ? 'none' : 'block'; });
-        var labelSpan = btn.querySelector('.lang-label'); labelSpan.textContent = isZh ? '简体中文' : 'EN';
-        localStorage.setItem('lang', isZh ? 'zh' : 'en');
+        localStorage.setItem('lang', isZh ? 'zh' : 'en'); var labelSpan = btn.querySelector('.lang-label'); if(labelSpan) labelSpan.textContent = isZh ? '简体中文' : 'EN';
+
         var si = document.querySelector('header input[type="text"]'); if(si){var p=si.getAttribute('data-'+ (isZh?'zh':'en'));if(p)si.placeholder=p}
     }
     document.addEventListener('click', function(e) { if (!wrap.contains(e.target)) menu.style.display = 'none'; });
