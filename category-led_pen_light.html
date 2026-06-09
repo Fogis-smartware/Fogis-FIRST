@@ -61,6 +61,8 @@ body{background:#f9f9f9;color:#1a1c1c;overflow-x:hidden}
 #back-to-top{position:fixed;bottom:32px;right:32px;z-index:999;width:48px;height:48px;border-radius:50%;background:#a33e00;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.2);cursor:pointer;border:none;outline:none;opacity:0;pointer-events:none;transition:opacity 0.3s ease}#back-to-top.show{opacity:1;pointer-events:auto}#back-to-top:hover{background:#E65C00}
 
 #cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(26,28,28,0.97);color:#fff;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;transform:translateY(100%);transition:transform 0.4s ease}#cookie-banner.show{transform:translateY(0)}#cookie-banner p{font-size:14px;line-height:1.5;margin:0;color:rgba(255,255,255,0.8);max-width:700px}#cookie-banner button{background:#a33e00;color:#fff;border:none;padding:10px 24px;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background 0.2s}#cookie-banner button:hover{background:#E65C00}
+@media (max-width:767px){.py-section-gap{padding-top:60px!important;padding-bottom:60px!important}}
+@media (max-width:767px){.product-grid{grid-template-columns:repeat(2,1fr)!important;gap:10px!important}.product-grid .product-card h3{font-size:14px!important}.product-grid .product-card .text-sm{font-size:11px!important}.product-grid .product-card .py-3{padding-top:6px!important;padding-bottom:6px!important}.product-grid .product-card .p-6{padding:10px!important}.product-grid .product-card img{padding:10px!important}}
 </style>
 <script id="tailwind-config">
     tailwind.config = {
@@ -131,13 +133,13 @@ body{background:#f9f9f9;color:#1a1c1c;overflow-x:hidden}
 <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200 cursor-pointer" href="about_us.html"><span lang="en">ABOUT US</span><span lang="zh">关于我们</span></a>
 </nav>
 <div class="flex items-center gap-4">
-<div class="hidden lg:relative lg:flex items-center border border-outline-variant rounded-full px-4 py-1 bg-surface-container">
-<input class="bg-transparent border-none focus:ring-0 text-body-md w-40" placeholder="Product Search..." type="text"/>
+<div class="relative flex items-center border border-outline-variant rounded-full px-3 py-1 bg-surface-container flex-1 max-w-[200px] lg:max-w-none lg:px-4 mx-2 lg:mx-0">
+<input class="bg-transparent border-none focus:ring-0 text-body-md w-full lg:w-40" placeholder="Product Search..." type="text"/>
 <span class="material-symbols-outlined text-secondary cursor-pointer">search</span>
 </div>
 <button class="font-label-md text-label-md font-bold text-primary cursor-pointer active:opacity-70 flex items-center gap-1">
 <span class="material-symbols-outlined text-base">language</span><span class="lang-label">EN</span></button>
-<button class="md:hidden material-symbols-outlined text-on-surface">menu</button>
+<button class="md:hidden material-symbols-outlined text-on-surface" aria-label="Open menu">menu</button>
 </div>
 </header>
 <main class="max-w-container-max mx-auto px-gutter md:px-margin-desktop py-12">
@@ -157,7 +159,7 @@ body{background:#f9f9f9;color:#1a1c1c;overflow-x:hidden}
 
 
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 product-grid">
 <div class="product-card group bg-white rounded-xl overflow-hidden shadow-soft border border-outline-variant transition-all hover:-translate-y-2 fade-up delay-1" data-model="ET5-E081">
 <div class="aspect-square overflow-hidden relative bg-surface-container-low">
 <img alt="ET5-E081" class="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-110" src="images/et5-e081.jpg" loading="lazy"/ loading="lazy">
@@ -366,7 +368,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <footer class="w-full pt-16 pb-8 px-gutter md:px-margin-desktop max-w-container-max mx-auto border-t border-outline-variant">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
 <div class="md:col-span-2">
-<a href="index.html"><img alt="Smartware Logo" class="h-[108px] w-auto object-contain mb-6" src="images/logo.png"/></a>
+<a href="index.html"><img alt="Smartware Logo" class="h-[80px] md:h-[108px] w-auto object-contain mb-6" src="images/logo.png"/></a>
 <p class="text-secondary text-body-md max-w-md"><span lang="en">Smartware (Shenzhen) Technology is dedicated to providing professional, high-performance LED lighting solutions to industrial and professional markets worldwide.</span><br/><span lang="zh">云智迈科技（深圳）致力于为全球工业和专业市场提供专业、高性能的 LED 照明解决方案。</span></p>
 </div>
 <div>

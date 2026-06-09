@@ -38,10 +38,32 @@
     document.body.appendChild(dropdownEl);
   }
 
+  // ── Visibility helper ──────────────────────────────
+  function isVisible(el) {
+    if (!el) return false;
+    var style = window.getComputedStyle(el);
+    if (style.display === 'none' || style.visibility === 'hidden') return false;
+    var parent = el.parentElement;
+    while (parent) {
+      var ps = window.getComputedStyle(parent);
+      if (ps.display === 'none') return false;
+      parent = parent.parentElement;
+    }
+    return true;
+  }
+
   // ── Find search input ──────────────────────────────
   function findInput() {
-    // Look for the header search input
     var inputs = document.querySelectorAll('input[type="text"]');
+    // First pass: prefer visible inputs
+    for (var i = 0; i < inputs.length; i++) {
+      if (!isVisible(inputs[i])) continue;
+      var ph = (inputs[i].getAttribute('placeholder') || '').toLowerCase();
+      if (ph.indexOf('search') !== -1 || ph.indexOf('产品搜索') !== -1 || ph.indexOf('搜索') !== -1) {
+        return inputs[i];
+      }
+    }
+    // Second pass: any input (including hidden)
     for (var i = 0; i < inputs.length; i++) {
       var ph = (inputs[i].getAttribute('placeholder') || '').toLowerCase();
       if (ph.indexOf('search') !== -1 || ph.indexOf('产品搜索') !== -1 || ph.indexOf('搜索') !== -1) {
@@ -186,12 +208,14 @@
     // For the header search which is inside a relative container, position relative to input
     var parent = inputEl.closest('.relative, .lg\\:relative');
     if (parent) {
-      dropdownEl.style.position = 'absolute';
-      dropdownEl.style.top = '100%';
-      dropdownEl.style.left = '0';
+      var ddWidth = Math.min(Math.max(rect.width + 20, 300), window.innerWidth - 32);
+      dropdownEl.style.position = 'fixed';
+      dropdownEl.style.top = rect.bottom + 4 + 'px';
+      dropdownEl.style.left = Math.max(8, (window.innerWidth - ddWidth) / 2) + 'px';
       dropdownEl.style.right = 'auto';
-      dropdownEl.style.width = Math.max(rect.width + 20, 340) + 'px';
-      dropdownEl.style.maxWidth = '90vw';
+      dropdownEl.style.transform = 'none';
+      dropdownEl.style.width = ddWidth + 'px';
+      dropdownEl.style.maxWidth = (window.innerWidth - 32) + 'px';
     } else {
       dropdownEl.style.position = 'fixed';
       dropdownEl.style.top = rect.bottom + 4 + 'px';
