@@ -13,12 +13,16 @@
 - **旧站域名**：sst-smartware.com（wds168.cn 平台，将被替代）
 - **GitHub**：github.com/Fogis-smartware/Fogis-FIRST
 - **当前部署**：GitHub Pages（待迁阿里云香港 OSS + CDN）
-- **网站类型**：纯静态 HTML（Tailwind CSS CDN）
-- **页面总数**：282 页
+- **网站类型**：纯静态 HTML（Tailwind 静态 CSS + shared.css）
+- **页面总数**：284 页
 
-## Git 提交（15 commits）
+## Git 提交（19 commits）
 
 ```
+3eaeb82 feat: 全站页脚 LinkedIn + 首页 sameAs
+ef717c9 chore: sitemap 更新至283 URLs
+7f0ff14 feat: 页脚导航 + Privacy/Terms
+de89e7d feat: 全站性能优化 + 架构重构 + 图集修复
 5e7ef20 feat: 全站移动端适配 + UI 优化 — 283页
 41a1f5b fix: index语言切换失效 — initHeroChars作用域错误导致upd()阻断
 43a4740 fix: localStorage 语言偏好保存顺序修复 — 282页
@@ -60,7 +64,7 @@ bd37fe1 fix: 全项目前端代码质量修复 — 274页+7JS
 - 首页 Organization / 260产品页 Product / 14分类页 BreadcrumbList
 
 ### 工程化
-- .gitignore、robots.txt、sitemap.xml（278 URLs）
+- .gitignore、robots.txt、sitemap.xml（283 URLs）
 - 视频压缩 106MB→65MB、node_modules 移除、.bak 清理
 
 ## 2026-06-04 工作记录
@@ -116,7 +120,7 @@ f6388fc chore: trigger Pages deploy after public visibility restore
 
 ### 待后续
 - [ ] 迁移阿里云香港 OSS + CDN（暂缓）
-- [ ] 图片压缩 WebP（暂缓，等 CDN 后自动转）
+- [x] ~~图片压缩 WebP~~ → 2026-06-10 已完成（Banner/缩略图/轮播图全部 WebP）
 
 ---
 
@@ -376,3 +380,202 @@ f6388fc chore: trigger Pages deploy after public visibility restore
 - HTML：282 页面（全站）
 - 新增 CSS：py-section-gap 移动端 + product-grid + hero-badge + stat-suffix + articles-double
 - 桌面端：零影响（所有改动在 @media/响应式类内）
+
+---
+
+## 2026-06-10 工作记录
+
+### 评审驱动优化
+基于专业网站评分（7.56/10）17项修复清单逐条核实，执行策略 B（P0+P1+P2-17）。
+
+### P0 性能优化
+- [x] Banner PNG→WebP：2,069KB → 111KB（94.6%）
+- [x] 产品缩略图 ×3→WebP：793KB → 26KB（96.7%），存入 images/thumbnails/
+- [x] 工厂轮播图 ×9→WebP：4,198KB → 452KB（89.2%）
+- [x] 视频 preload="none" + poster 占位图
+- [x] Tailwind CDN→静态 CSS：418KB JS+运行时编译 → 31KB tailwind-static.css
+- [x] 首页预估传输：~5MB → ~1.5MB（70%↓）
+
+### P1 架构重构
+- [x] shared.css（3.9KB）+ shared.js（6.9KB）抽离
+- [x] 284 页注入 shared.css/js + 清除内联重复（语言切换/菜单/回顶/Cookie/动画/版权）
+- [x] search-data.js 按需加载：6 页非搜索页移除 58KB
+- [x] 全站 CSS/JS 路径改为相对路径
+
+### Bug 修复
+- [x] **tailwind-static.css 缺 preflight**：构建时错误设置 `preflight: false`，页面无样式。移除+重建后恢复
+- [x] **42 个产品图集编号断裂**：Gallery JS 遇 404 立即停止。8 个产品缺 -1（gallery 完全不可用），28 个缺中间编号。共重命名 224 张图片
+- [x] 页脚 LinkedIn 重复：index.html 手动+批量双重添加，去重
+- [x] sitemap 过期：281→283 URLs，全部刷新至 6/10，补全 privacy/terms
+
+### 新增
+- [x] privacy-policy.html + terms-of-service.html（中英双语）
+- [x] 全站页脚导航 +Privacy Policy / +Terms of Service / +LinkedIn（蓝色 in Logo）
+- [x] 首页 JSON-LD Organization + sameAs 关联 LinkedIn 公司页面
+- [x] 工具脚本：tools/convert-images.js、inject-shared.js、swap-tailwind.js、fix-tailwind-link.js、create-legal-pages.js、fix-gallery-gaps.js
+
+### 评审不属实项（3 项）
+- P1-6 category-led_indoor_lighting.html 404：文件不存在但全站无链接，已停产产品线
+- P1-7 sitemap.xml 缺失：已存在（现更新至 283 URLs）
+- P2-13 robots.txt 缺失：已存在
+
+### 策略 B 外未执行（P2-11~16）
+- [ ] P2-11 hreflang URL 区分中英文
+- [ ] P2-12 移动端搜索框可展开
+- [ ] P2-14 语言切换后 Hero 动画重播
+- [ ] P2-15 loading="lazy" 补全
+- [ ] P2-16 alt 属性补全
+
+### Git 提交
+```
+3eaeb82 feat: 全站页脚 LinkedIn + 首页 sameAs
+ef717c9 chore: sitemap 更新至283 URLs
+7f0ff14 feat: 页脚导航 + Privacy/Terms
+de89e7d feat: 全站性能优化 + 架构重构 + 图集修复
+```
+
+### 页面总数更新
+284 页（+privacy-policy / +terms-of-service）
+
+### 操作教训
+- `.claude/memory/website1.md` 是本地工作记录，不 commit 到网站仓库
+- Tailwind 静态构建必须匹配 CDN：preflight 默认开启 + forms 插件
+- Gallery 编号连续性是致命问题：缺 -1 导致整个图集不可用
+- 全站批量 sed 前先单页测试，避免 index.html 重复添加
+
+---
+
+## 2026-06-11 工作记录
+
+### 首页数据修正
+- [x] 出口国家统计：30+ → 20+（`data-target="30"` → `"20"`）
+- [x] 产品分类数：9 → 14（实际 14 个分类页）
+- [x] 产品型号数：263 → 260（实际 260 个产品页）
+- [x] IP67 文案统一：Weatherproof → waterproof（EN）/ 全面防护 → 防水等级/防护等级（ZH）
+- [x] Hero 标题中英双语拆分多行：
+  - EN：Smartware / Leading LED / Lighting Innovator（3 行 `display:block`）
+  - ZH：云智迈科技 / 领航照明创新（2 行 `display:block`）
+- [x] Hero 标签中文乱码修复："始于2018，专业定�?/span>" → "始于2018，专业定制"
+
+### 关于我们页面修改
+- [x] Henry 职位：Sales Manager → General Manager / 销售经理 → 总经理
+
+### Cloudflare Web Analytics 接入
+- [x] 注册 Cloudflare 账号，获取 token: `dd39e0fc87c1482cb974e03df894bf9a`
+- [x] 全站 284 页 `</head>` 前注入 analytics 脚本（`defer` 加载，隐私优先，无 Cookie）
+- [x] 将享受 **隐私优先** 的分析——无需 cookie 同意即可合规使用
+
+### 三视角审计（制作者 / 使用者 / 隐私检测）
+- [x] 并行启动 3 个 Agent 对 `index.html` + `about_us.html` 做交叉审计
+- [x] **审计确认无异常**：`display:block` 与语言切换 CSS 零冲突、`initHeroChars()` 兼容多 span、UTF-8 零污染
+- [x] **发现 about_us.html 存量问题**（非今日引入）：
+  - 🔴 核心价值区 4 个 h3 缺中文 span（中文模式下残留英文） → **已修复**
+  - 🔴 核心价值副标题缺中文 span（中文模式下空白） → **已修复**
+  - 🔴 搜索框缺 `data-en`/`data-zh`（语言切换后 placeholder 变空白） → 待修复
+  - 🔴 第 142 行 wrapper `<div>` 未闭合 → 待修复
+  - 🟡 4 处 `<img>` 的 `src` 后多余 `/`、空 `<script>` 块 → 待修复
+- [x] **发现隐私合规存量问题**：
+  - 🔴 Cookie 横幅默示同意违反 GDPR、声称有分析但实际无分析（虚假声明）
+  - 🔴 3 名员工手机号明文暴露（PIPL 风险）→ 用户确认无需处理
+  - 🔴 联系表单缺即时隐私告知 → 用户确认无需处理
+  - 🟡 Unsplash 外链未在隐私政策披露
+- [x] Cookie 实际用途确认：仅 `localStorage`（语言偏好 + 横幅同意标记），**零 Cookie、零追踪**
+
+### about_us.html 后续修复
+- [x] 核心价值区 4 个 h3 补中文 span + 副标题补中文
+- [x] 中文描述去除冗余"XX："标题前缀（标题已移至 h3）
+- [x] Hero 标题简化："Illuminating Global Industry" → "About Smartware"
+- [x] Hero 重复 badge 删除（与 h1 文案重复）
+- [x] 用户审核通过，已上线（b1f6c06）
+
+### Git 提交
+```
+b1f6c06 fix: about_us.html 核心价值区双语补全 + Hero标题简化
+d21aef8 feat: 首页数据修正 + 关于我们职位更新 + Cloudflare Analytics 全站接入
+```
+已推送 origin/master，GitHub Pages 自动部署。
+
+### 操作教训
+- **PowerShell `Set-Content` 破坏 UTF-8 编码**：导致 `</span>` 的 `<` 字节截断、中文末字损坏。替代方案：Python `encoding='utf-8'` 写入或 `git checkout` 恢复后重做
+- **Python 字符串替换时注意转义**：单引号内嵌需用 `\"` 转义，避免 SyntaxError
+- **`initHeroChars()` 使用 `textContent`**：`<br>` 标签会被清除，多行需用独立 `display:block` span 实现
+- **批量注入前先验证模板**：本次 Cloudflare 注入先确认所有页面有 `</head>` 再全量执行
+- **Edit 工具对中文跨行匹配不稳定**：含中文的多行替换优先用 Python 脚本文件（非 inline -c），避免 bash 编码损毁
+
+### 待后续处理
+- [ ] 处理隐私合规存量问题（Cookie 横幅文案/员工手机号/表单告知 — 用户确认员工手机号/邮箱/表单告知无需处理）
+- [ ] Cloudflare Analytics 上线后验证数据是否正常收录
+
+---
+
+## 2026-06-24 工作记录
+
+### 前辈评审驱动优化（8 项改进意见逐条落实）
+
+本次基于前辈对网站的专业评审，逐条落实改进意见。
+
+### 一、Get a Quote 按钮（最高优先级）
+- [x] 全站 284 页导航栏右侧添加「Get a Quote / 获取报价」按钮
+  - 主色 `#a33e00` 背景，白色文字，圆角药丸形
+  - 桌面端 `hidden md:flex`，hover 变 `#E65C00`
+  - 移动端全屏 overlay 菜单内独立按钮（`shared.js` 第 97 行）
+- [x] 点击统一跳转 `contact.html`
+- [x] 覆盖范围：1 首页 + 8 内容页 + 14 分类页 + 260 产品页 + shared.js = 284 个文件
+- [x] 修复 `md:inline-flex` → `md:flex`（静态 Tailwind CSS 中不存在 `md:inline-flex`）
+- [x] 个别页面格式差异单独处理（certifications.html / 404.html）
+
+### 二、全站 SEO 基础优化
+- [x] **Title 格式统一**：全部 279 页 Title 统一为 `{Page Topic} | Smartware — Professional LED Lighting Solutions`
+- [x] **Meta Description 双语化**：全站 description 添加 `data-en` / `data-zh` 双语属性
+  - 英文描述控制在 120-160 字符
+  - 中文描述对应翻译
+- [x] **OG/Twitter 标签同步**：`og:title` / `og:description` / `twitter:title` / `twitter:description` 全部同步更新
+- [x] **Meta Keywords**：按用户要求跳过，不添加
+- [x] 修改统计：
+  - 逐文件手动：5 主要页面（index / products / about_us / resources / contact）
+  - 脚本批量：14 分类页 + 260 产品页 = 274 页
+  - 总计 279 页，每页 6 项修改 = 1,674 处变更
+- [x] 工具脚本保存：`tools/seo-category-batch.py` / `tools/seo-product-batch.py`
+
+### 三、首页新增两块内容
+- [x] **Certifications Section**（质量认证展示）：
+  - 4 列网格：CE Certified / RoHS Compliant / FCC Approved / IP67 Rated
+  - 每张卡片含 Material Icons 图标 + 中英双语文案
+  - 底部认证说明文字
+  - 插入位置：Brand Pillars 结束 → Featured Products 开始之间（第 281-327 行）
+- [x] **How We Work Section**（合作流程图）：
+  - 5 步流程：发送询盘 → 获取报价 → 样品确认 → 批量生产 → 出货交付
+  - 每步编号圆 + Material Icons + 中英双语
+  - 桌面端箭头连接（`chevron_right`），移动端堆叠
+  - 底部 CTA 按钮「立即获取报价」
+  - 灰色背景 `bg-surface-container` 区分视觉层次
+  - 插入位置：Certifications 之后、Featured Products 之前（第 328-384 行）
+
+### 四、Factory Showcase 轮播全面重写
+- [x] **旧轮播问题**：
+  - 桌面端 3D 圆弧定位（半径 675px，三角函数），代码复杂
+  - 移动端 CSS scroll-snap 横向滑动，完全另一套逻辑
+  - 两套系统用 `window.matchMedia('(max-width:1023px)')` 分支
+  - 移动端按钮点击无效 bug：桌面端 `goTo()` 监听器在移动端仍然触发，干扰 `scrollTo()`
+  - 尝试过的修复（均失败或引入新问题）：
+    - 克隆按钮去监听器（`cloneNode`）→ 图片和导航点无法正常显示
+    - 具名函数 + `removeEventListener` → 破坏桌面端 3D 圆弧效果
+    - `isMobile` 标志位 + `if(!isMobile)` 守卫 → 导致更多问题
+- [x] **新轮播方案**：
+  - 桌面端和移动端使用**完全相同的一套代码**，零 `matchMedia`
+  - 淡入淡出（fade）切换动画，`opacity 0.6s ease-in-out`
+  - 8 张图片写死在 HTML 中（不再 JS 动态创建），`object-fit:cover`，高度 400px
+  - 自动播放 4 秒，鼠标悬停暂停（`mouseenter`/`mouseleave`）
+  - 保留左侧文字区（标题 + 图片说明 + 箭头 + 圆点）
+  - 保留 `IntersectionObserver` 离开视口暂停
+  - 图片 `scale(1.5)` 全部去除
+- [x] **变更范围**（仅 `index.html`）：
+  - CSS（`<style>` 第 97 行）：旧 carousel + mobile ~2000 字符 → 新 slideshow ~800 字符
+  - HTML（第 465-483 行）：`carousel-wrapper` + JS 动态卡片 → `factory-slideshow` + 8 张静态 `<img>`
+  - JS（第 635 行）：~5000 字符 → ~1500 字符
+- [x] 验证通过 14 项检查（CSS/HTML/JS 旧代码完全清除，新代码正确注入）
+
+### 操作教训
+- **轮播重写比反复修补更高效**：旧轮播两套逻辑耦合太深，移动端按钮 bug 尝试 3 种修复方案均失败或引入回归。最终完全重写为统一 fade slideshow，代码量减少 70%，彻底消除桌面/移动端逻辑冲突。
+- **Shell 长字符串转义**：含大量特殊字符的 Python inline 代码应写为独立 `.py` 脚本文件执行，避免 bash 转义错误。
+- **静态 Tailwind CSS 限制**：`tailwind-static.css` 只包含项目使用过的类，新增类名前需确认是否已编译在内（如 `md:inline-flex` 不在 CSS 中，需用 `md:flex` 替代）。
