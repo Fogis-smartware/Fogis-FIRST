@@ -4,3 +4,5 @@ Disallow: /node_modules/
 Disallow: /temp_original_page.html
 
 Sitemap: https://www.smartware-official.com/sitemap.xml
+# IndexNow key for Bing/Yandex instant indexing
+Key: https://www.smartware-official.com/b41cd2092c752f9cfb2bc47db803261b.txt
