@@ -8,17 +8,21 @@
 - **LED Indoor Lighting**：该产品线已停产，新站不包含此分类（非遗漏，是有意移除）
 - 旧站 14 个分类中，**LED Tripod 替代了 LED Indoor Lighting**
 
+## 🔒 受保护数据（最高级别——未经允许禁止修改）
+- **邮箱地址**：`fogis@sst-smartware.com` / `sunnie@sst-smartware.com` / `henry@sst-smartware.com`——后缀 `@sst-smartware.com` 为旧站域名，不是笔误。任何批量替换、SEO 优化、域名变更操作均不得触碰邮箱地址，违者即视为严重错误
+
 ## 基本信息
 - **域名**：smartware-official.com（阿里云注册，已备案，SSL 已生效）
 - **旧站域名**：sst-smartware.com（wds168.cn 平台，将被替代）
 - **GitHub**：github.com/Fogis-smartware/Fogis-FIRST
 - **当前部署**：GitHub Pages（待迁阿里云香港 OSS + CDN）
 - **网站类型**：纯静态 HTML（Tailwind 静态 CSS + shared.css）
-- **页面总数**：284 页
+- **页面总数**：346 页
 
-## Git 提交（19 commits）
+## Git 提交（20 commits）
 
 ```
+506cd0d feat: IndexNow密钥部署 + sitemap刷新 + robots更新 — Bing收录加速
 3eaeb82 feat: 全站页脚 LinkedIn + 首页 sameAs
 ef717c9 chore: sitemap 更新至283 URLs
 7f0ff14 feat: 页脚导航 + Privacy/Terms
@@ -579,3 +583,371 @@ d21aef8 feat: 首页数据修正 + 关于我们职位更新 + Cloudflare Analyti
 - **轮播重写比反复修补更高效**：旧轮播两套逻辑耦合太深，移动端按钮 bug 尝试 3 种修复方案均失败或引入回归。最终完全重写为统一 fade slideshow，代码量减少 70%，彻底消除桌面/移动端逻辑冲突。
 - **Shell 长字符串转义**：含大量特殊字符的 Python inline 代码应写为独立 `.py` 脚本文件执行，避免 bash 转义错误。
 - **静态 Tailwind CSS 限制**：`tailwind-static.css` 只包含项目使用过的类，新增类名前需确认是否已编译在内（如 `md:inline-flex` 不在 CSS 中，需用 `md:flex` 替代）。
+
+---
+
+## 2026-06-25 工作记录
+
+### 一、about_us.html 代码修复
+- [x] **未闭合 `<div>` 修复**：第 145 行 wrapper 容器缺少 `</div>`（div 计数 49/48），在 CTA `</section>` 与 `</main>` 之间补上
+- [x] **空 `<script>` 块删除**：DOMContentLoaded 空回调脚本块（`addEventListener` 内含空白函数体）已删除
+- [x] 4 处 `<img>` 的 `"/ loading="lazy"` 乱码斜杠：用户要求跳过，未处理（审计复现确认仍存在）
+
+### 二、about_us.html 公司宣传视频
+- [x] 在 Global Leadership 与 CTA 之间插入 Company Video Section（方案 B）
+- [x] 视频源：`videos/company_compressed.mp4`，poster：`images/video-poster.jpg`
+- [x] 使用 `controls` + `preload="metadata"`（点击播放模式），与 index.html 的 `autoplay loop muted` 区分
+
+### 三、首页 Factory Showcase 轮播优化
+- [x] **移动端图片比例失真修复**：`.factory-slideshow` 桌面 400px / `@media(max-width:1023px)` 260px，解决竖向拉伸
+  - `.factory-slide` 是 `<img>` 本身（非容器），`object-fit:cover` 保留在原选择器上
+  - 用户建议的 `.factory-slide img` 无效（无嵌套子元素），已跳过
+- [x] **图片缩放**：第 1/2/3/8 张图（1.webp / 3.webp / 4.webp / 5.webp）添加 `style="transform:scale(1.5)"`
+
+### 四、首页 How We Work 区块迭代
+- [x] **图标替换**：5 个 Material Symbols → PNG 图片（icon-send-inquiry/get-quote/sample/production/delivery.png），`w-20 h-20 object-contain`
+- [x] **卡片精简**：`p-6` → `p-4`，`rounded-xl` → `rounded-lg`，去掉 `border border-outline-variant shadow-soft`
+- [x] **箭头删除**：4 个步骤间 `chevron_right` 箭头移除（第 5 步原本无箭头）
+- [x] **桌面端横排布局**：新增 `@media(min-width:1024px){.how-we-work-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}}`，容器 class 改为 `how-we-work-grid`
+- [x] **卡片统高 + 文字底对齐**：grid `align-items:stretch` + `<p>` 添加 `margin-top:auto`
+- [x] **`w-20` 类缺失修复**：`tailwind-static.css` 中无 `w-20`，在 index.html `<style>` 补充 `.w-20{width:5rem}`
+
+### 五、首页 Certifications Section 删除
+- [x] 移除整个认证展示区块（Quality Assurance + CE/RoHS/FCC/IP67 四张卡片）
+
+### 六、三程序并行复查审计
+- [x] **Agent 1（HTML 结构）**：确认 index / about_us 标签全部平衡、无重复 ID、无缺失 alt
+- [x] **Agent 2（JS/CSS）**：shared.js 动画 Observer 正常工作（`.fade-up`/`.scale-in` → `.animate`）；5 个 slideshow DOM ID 全匹配；无 XSS 漏洞；1023px/1024px 断点无冲突
+- [x] **Agent 3（跨文件一致性）**：285 页 shared.css/js 无遗漏；Get a Quote 桌面+移动端双端一致；5 个 PNG 图标全存在；视频文件存在
+- [x] **发现 shared.js 已有动画 Observer**：审计 Agent 误报"fade-up 动画失效"——shared.js 第 22–31 行已正确处理，无需额外补 JS
+
+### 七、6/24 评审优化代码提交
+- [x] 将 6/24 的前辈评审优化（SEO/Get a Quote/轮播重写/新板块）+ 6/25 所有修复合并提交
+- [x] Commit: `76103cc feat: 前辈评审优化 + How We Work/轮播/视频/代码修复 — 293页`
+- [x] 已推送 origin/master，GitHub Pages 自动部署
+
+### Git 提交
+```
+76103cc feat: 前辈评审优化 + How We Work/轮播/视频/代码修复 — 293页
+b1f6c06 fix: about_us.html 核心价值区双语补全 + Hero标题简化
+```
+
+### 新增文件（7 个）
+- `images/icon-send-inquiry.png` / `icon-get-quote.png` / `icon-sample.png` / `icon-production.png` / `icon-delivery.png`（How We Work 图标）
+- `tools/seo-category-batch.py` / `tools/seo-product-batch.py`（SEO 批量脚本）
+
+### 已知遗留问题（审计发现，未处理）
+
+| 级别 | # | 问题 | 文件 |
+|------|---|------|------|
+| 🔴 高 | 1 | 4 处 `<img>` 路径乱码斜杠 `"/ loading="lazy"` | about_us.html |
+| 🟡 中 | 2 | `rounded-full` = 12px 非真圆（编号圆圈呈圆角方形） | tailwind-static.config.js |
+| 🟡 中 | 3 | index.html 内联 CSS 与 shared.css 大量重复（~70 行） | index.html |
+| 🟡 中 | 4 | How We Work 第 5 张卡片缺少 `relative` 类 | index.html |
+| 🟡 中 | 5 | 搜索框缺 `data-en`/`data-zh` 双语属性 | about_us/products/category/product |
+| 🟡 中 | 6 | faq/certifications/privacy/terms 标题格式不一致 | 4 页 |
+| 🟢 低 | 7 | 语言切换按钮选择器依赖通用 Tailwind 类 | shared.js |
+| 🟢 低 | 8 | PDF 链接 `target="_blank"` 缺少 `rel="noopener"` | index/about_us |
+| 🟢 低 | 9 | 404.html 缺少 OG/Twitter/hreflang 标签 | 404.html |
+
+### 操作教训
+- **shared.js 功能确认后再补代码**：审计 Agent 报告"动画失效"时应先查 shared.js（已有 Observer），避免重复添加
+- **`.factory-slide` 是 `<img>` 本身**：追加 CSS 子选择器前先确认 HTML 结构，`.factory-slide img` 无效
+- **tailwind-static.css 类名不全**：新增 Tailwind 类（如 `w-20`）需确认是否已编译，必要时补内联样式或重建静态 CSS
+- **多 Agent 并行审计高效**：HTML/JS-CSS/跨文件 三路并行复查，20 分钟覆盖 293 文件，发现 9 项遗留问题
+
+---
+
+## 2026-06-26 工作记录
+
+### 紧急修复：邮箱后缀回退
+- [x] 发现邮箱被错误改为 `@smartware-official.com`（原为 `@sst-smartware.com`）
+- [x] 全站 283 页批量回退：`@smartware-official.com` → `@sst-smartware.com`
+- [x] contact 页三个邮箱格式统一为 `font-headline-md text-headline-md text-on-surface`
+- [x] contact 页 Headquarters → Headquarter（去 s）
+- [x] 🔒 邮箱地址列为最高保护级别写入 memory
+
+### 公司名称统一
+- [x] 全站 283 页 `Smartware (Shenzhen) Technology` → `Shenzhen Smartware Technology Co. Ltd.`
+- [x] 修复连带问题：JSON-LD 中 `Co. Ltd. Co., Ltd` 重复 → `Co., Ltd`
+- [x] 修复连带问题：版权行 `Co. Ltd..` 双句号 → `Co. Ltd.`
+- [x] 全站 283 页页脚 LinkedIn 文本 `LinkedIn / 领英` → `Shenzhen Smartware Technology Co. Ltd.`
+
+### index.html Featured Products 修复
+- [x] 三张卡片外层 `flex flex-col`，内容区 `flex flex-col flex-1`，按钮 `mt-auto`
+- [x] Grid 容器添加 `items-stretch`，三卡等高一列
+
+### faq.html 内容更新
+- [x] Lead time 问答中英双语重写（交期 4-6 周 / EXW）
+- [x] Shipping 问答中英双语重写（EXW 条款 + 物流协助）
+
+### about_us.html Core Values 全面重写
+- [x] Smartware Manufacturing Excellence 标题 Shenzhen → Smartware
+- [x] 四张卡片（制造/研发/供应链/可持续）中英描述全部更新
+- [x] 区块背景：`bg-surface-container-low` → `#fff8f3` + 径向渐变
+
+### SEO 维护
+- [x] sitemap.xml 全部 lastmod 从 2026-06-10 刷新至 2026-06-25
+
+### Git 提交
+```
+16e9af3 feat: 公司名称/邮箱修正 + Core Values文案重写 + UI修复 — 283页
+9da15bf chore: sitemap lastmod 刷新至 2026-06-25
+```
+
+### 操作教训
+- **批量替换前先确认上下文**：`Smartware (Shenzhen) Technology` 在 JSON-LD 中可能是 `Smartware (Shenzhen) Technology Co., Ltd` 的一部分，替换后产生 `Co. Ltd. Co., Ltd` 重复。需在替换后用额外规则清理连带问题
+- **邮箱是最高保护级别数据**：域名切换时不应连带修改邮箱后缀。邮箱后缀与网站域名可以不同——这是业务决策，不可由技术操作自动推断
+
+---
+
+## 2026-06-30 工作记录
+
+### 背景
+用户反馈网站已提交 Bing 但未收录。通过 CDP 浏览器自动化深入诊断 Bing Webmaster Tools 和 Google Search Console，发现核心问题是**零外链新域名的信任阈值**——两个搜索引擎均发现 283 个 URL 但几乎不索引。
+
+### 一、Bing 端诊断与收录加速
+
+#### Bing Webmaster Tools 诊断
+- [x] CDP 浏览器操控：打开 Chrome → Google 登录 Bing WMT → 确认站点 `smartware-official.com` 已注册已验证
+- [x] Sitemap 状态确认：283 URL，6/17 提交，6/28 最后爬取，**Success**，0 错误 0 警告
+- [x] 搜索表现：**0 页面出现在搜索结果**——「Indexed but Not Served」
+- [x] 爬取信息：无已索引页面数据
+- [x] Site Scan：已排队等待执行
+
+#### Bing URL 提交（浏览器自动化）
+- [x] 第 1 批：9 个 URL（首页 + 6 内容页 + 2 分类页）→ ✅ Success
+- [x] 第 2 批：12 个分类页 → ✅ Success
+- [x] 第 3 批：32 个产品页 → ✅ Success
+- [x] **合计 53 个 URL**，剩余配额 47/100
+
+#### IndexNow 实现
+- [x] 生成 API Key：`b41cd2092c752f9cfb2bc47db803261b`
+- [x] 创建密钥文件部署到网站根目录
+- [x] 更新 `robots.txt`：添加 `Key:` 声明自动发现
+- [x] 更新 `sitemap.xml`：283 条 `lastmod` 全部刷新至 2026-06-30
+- [x] IndexNow API 全量提交：POST `api.indexnow.org`，**HTTP 200**，283 URL 一次性提交
+- [x] Git 提交 `506cd0d` + 推送 origin/master
+
+### 二、Google 端诊断
+
+#### Google Search Console
+- [x] 站点已验证（DNS 验证），2026/6/4 添加
+- [x] Sitemap：283 URL，6/30 重读，状态成功
+- [x] 索引状态：🟢 **14 页已索引** / 🔴 **269 页「已发现-尚未编入索引」** + 2 重定向 + 1 重复
+- [x] 搜索效果：0 点击，114 曝光，平均排名 **31.3**（第 4 页）
+- [x] 搜索查询 TOP 8：「smartware」56 次曝光为主，品牌名被搜索但排名低
+- [x] 外链：**0 个外部链接**（致命瓶颈），6 个内部链接
+- [x] 抓取统计：90 天内 660 次抓取请求
+- [x] 无人工处置措施
+- [x] Google Ping 端点已弃用（404），无法强制触发
+- [x] 用户手动完成 URL 检查 + 请求索引（关键页面）
+
+### 三、Bing Places 商家列表
+
+- [x] 创建商家列表：Shenzhen Smartware Technology Co. Ltd.
+- [x] 填写地址/网站/电话/类别等完整信息
+- [x] **PIN 验证受阻**：中国地址只支持邮政信件验证（明信片），无电话/邮件选项
+- [x] Bing 官方支持确认：中国市场需邮件 `placesfeedback@microsoft.com`
+- [x] 准备英文邮件模板（请求电话/邮件替代验证）
+- [x] 商家列表永久保存，不会过期，随时可继续
+
+### 四、外链策略调整
+
+- [x] Google Business Profile：中国不可用，排除
+- [x] 调整优先级：Alibaba 国际站 > Made-in-China.com > Bing Places > Global Sources > LED Professional GLD
+- [x] 准备 B2B 平台提交数据模板（公司信息中英双语）
+
+### 五、Google vs Bing 对比总结
+
+| 指标 | Google | Bing |
+|------|--------|------|
+| 已索引 | 🟡 14 页 | 🔴 0 页 |
+| 未索引原因 | 269「已发现不索引」| 283「已爬取不展示」|
+| 搜索曝光 | 114 次 | 无数据 |
+| Sitemap | 6/30 重读 | 6/28 爬取 |
+| URL 提交 | 手动请求索引 | 53 浏览器 + 283 IndexNow |
+| 外链 | 0 | 0 |
+| **核心瓶颈** | **0 外链 → 信任阈值不达标** | **0 外链 → 信任阈值不达标** |
+
+### Git 提交
+
+```
+506cd0d feat: IndexNow密钥部署 + sitemap刷新 + robots更新 — Bing收录加速
+```
+
+### 新增/修改文件
+
+| 文件 | 操作 |
+|------|------|
+| `b41cd2092c752f9cfb2bc47db803261b.txt` | 新建（IndexNow 密钥） |
+| `robots.txt` | 修改（添加 Key 声明） |
+| `sitemap.xml` | 修改（283 lastmod → 6/30） |
+| `tools/indexnow-submit.py` | 新建（IndexNow 批量提交脚本） |
+| `tools/update-sitemap-lastmod.py` | 新建（Sitemap 日期更新脚本） |
+
+### 已知遗留
+
+| # | 问题 | 状态 |
+|---|------|------|
+| 1 | Bing Places PIN 验证 — 待发邮件给 placesfeedback@microsoft.com | 🔴 |
+| 2 | Google 269 页未索引 — 待外链建设后逐步改善 | 🟡 |
+| 3 | Bing 0 页出现在搜索结果 — 待 IndexNow 处理 + 外链 | 🟡 |
+| 4 | 0 外部反链 — 待 Alibaba/Made-in-China/Bing Places 等平台注册 | 🔴 |
+
+### 操作教训
+- **CDP 浏览器自动化可用于搜索引擎后台操作**：Bing WMT 的 URL 提交可通过 CDP 填充表单+点击完成，53 个 URL 在 15 分钟内提交完毕
+- **IndexNow 密钥文件上线后有 3-5 分钟验证延迟**：初次 403，等待后 HTTP 200
+- **Google SPA 比 Bing 更难自动化**：GSC 的 React 界面 CDP 交互困难，URL 检查更适合手动操作
+- **Bing Places 中国只支持邮政验证**：官方支持明确要求中国用户发邮件到 placesfeedback@microsoft.com
+- **外链是全新域名的生死线**：技术 SEO 完美（sitemap/robots/meta/canonical/hreflang 全对），但两个搜索引擎均因零外链而不索引
+
+---
+
+## 2026-07-01 工作记录
+
+### Hero 视觉全面统一
+
+#### 背景图更换（3 页）
+- [x] `products.html`：`banner-3.jpg` → `banner-E013-2.png`，镜像翻转 `scaleX(-1)`
+- [x] `resources.html`：`banner-2.jpg` → `banner-E013-4.png`
+- [x] `about_us.html`：`About-us.png` → `banner-E013-3.png`
+- [x] 三页渐变遮罩 `bg-gradient-to-r` 全部移除，原图直出
+
+#### Hero 高度统一（9 页）
+- [x] 全站 Hero 移动端统一 `h-[375px]`，桌面端统一 `md:min-h-[700px]`
+- [x] 覆盖：index / products / about_us / resources / contact / faq / certifications / privacy-policy / terms-of-service
+
+#### Hero 文本格式统一（5 页）
+- [x] 对齐 index.html 风格：H1 + Badge + 描述段落统一为橙色 `#a33e00` + 白光 `text-shadow`
+- [x] Badge：`黑→白渐变` → `#a33e00` + `text-shadow`（products / resources，about_us 无 badge）
+- [x] H1：`黑→蓝渐变` → `text-on-surface` + `line-height:1.35;padding:8px 0` + `#a33e00` 内联覆盖
+- [x] 描述段落：18px `text-secondary` 灰色 → 24px 橙色 `font-bold`
+- [x] 容器结构：添加 `grid-cols-12` + `col-span-8`（index 同款）
+- [x] 覆盖：products / resources / about_us / contact
+- [x] `products.html` 中文描述中"云智迈科技"移除 `text-on-surface` 黑色覆盖
+
+#### 新增文件
+- `images/banner-E013-2.png`（1.6MB）
+- `images/banner-E013-3.png`（1.7MB）
+- `images/banner-E013-4.png`（1.7MB）
+
+### 旧站诊断
+- [x] `sst-smartware.com` SEO 审计：Google 索引 **0 页**，Title=Description="公司名"，仅 1 条外链，域名权威度 ≈ 0
+- [x] 结论：新旧站权威度起点相同，新站技术 SEO 远超旧站
+
+### Git 提交
+```
+ca8b89b feat: Hero视觉统一 — 背景图更换 + 全站高度/文本格式对齐
+```
+已推送 origin/master，GitHub Pages 自动部署。
+
+### 页面总数确认
+283 页（无变化）
+
+### 操作教训
+- **`text-on-surface` 不是最终颜色**：index.html 的 H1 实际为橙色，因为 `initHeroChars()` 将每个字用 `.hero-char` 包裹，CSS 中 `.hero-char` 的 `color:#a33e00` 覆盖了 `text-on-surface`。直接加内联 `color:#a33e00` 到 H1 才是正确做法
+- **多行文本匹配需注意缩进格式**：Edit 工具对含 tab 缩进的多行替换敏感，复杂替换优先用 Python 脚本
+- **批量修改前确认前端渲染结果**：不能仅查 CSS 类定义，需考虑 JS 动态生成的样式覆盖
+
+---
+
+## 2026-07-02 工作记录
+
+### 一、contact.html Hero 背景图更换
+- [x] 用户新增 `images/ET1-E013-4.png`（1.5MB）
+- [x] contact.html Hero 背景：Unsplash 外链 → `images/ET1-E013-4.png`
+- [x] 黑色渐变遮罩 `rgba(0,0,0,0.6)` 移除，原图直出（与其他页面统一）
+
+### 二、contact.html Hero 文本居左
+- [x] 容器布局：`text-center px-margin-mobile` → `grid-cols-12` + `col-span-8`（对齐 index.html 标准）
+- [x] 描述段 `mx-auto` 居中 → 移除，自然左对齐
+- [x] 新增 `fade-up` 入场动画
+
+### 三、移动端 Hero 溢出修复（9 页）
+- [x] **问题**：index.html 按钮（VIEW PRODUCTS + REQUEST QUOTE）和 products.html 描述文本在移动端超出 375px 固定高度 Hero
+- [x] **根因**：`h-[375px]` 固定高度，移动端内容换行/堆叠后撑破容器
+- [x] **修复**：全站 9 页 `h-[375px]` → `min-h-[375px]`，Hero 可随内容自适应增高
+- [x] 覆盖：index / products / about_us / contact / resources / faq / certifications / privacy-policy / terms-of-service
+- [x] 桌面端不受影响（`md:min-h-[700px]` 不变）
+
+### Git 提交
+```
+6856153 fix: Hero移动端溢出修复 + contact背景/布局更新 — 9页
+```
+已推送 origin/master，GitHub Pages 自动部署。
+
+### 新增文件
+- `images/ET1-E013-4.png`（1.5MB，contact 页 Hero 背景）
+
+### 操作教训
+- **Edit 工具对含中文/特殊字符的跨行匹配不稳定**：含 tab 缩进 + 中英文混排时，优先用 Python 脚本按标记定位替换
+
+---
+
+## 2026-07-07 工作记录
+
+### 自行车产品线补全（ET3-E001~E064）
+
+#### 背景
+旧站有 135 个自行车产品，新站仅有 72 个（ET8 系列 + ET3 高编号），缺失 63 个 ET3-E 低编号产品。旧站产品页虽薄但包含真实规格数据。
+
+#### 一、数据抓取
+- [x] CDP 浏览器逐页抓取 63 个产品（Node.js WebSocket + Chrome `--remote-debugging-port`）
+- [x] 初始 E001/E017 因 4s 等待太短漏数据，改为 6s 后全部成功（63/63）
+- [x] 每个产品提取：规格表（10-17 项）+ CDN 图片 URL + innerText 全文
+- [x] E040 确认不存在于旧站（ProductDetail ID 10702306 属于 ET1-A003）
+- [x] 旧站 `/cn/` 中文版产品页确认不存在（返回"产品不存在"）
+- [x] 仅 ET3-E063/E064 有英文描述段落，其余 61 个仅有规格表
+
+#### 二、产品页生成
+- [x] 基于 `product-et3-e065.html` 模板批量生成 63 个 HTML 页面
+- [x] 每页规格表使用旧站真实数据（Material/Dimension/Lumens/Battery 等）
+- [x] 60 张产品图片从 CDN（`gcdn.meidianbang.cn`）下载到 `images/et3-e0XX.jpg`
+- [x] 规格标签补全双语格式（`<span lang="en">Color</span><span lang="zh">颜色</span>`），38 个 EN→ZH 映射
+- [x] 仅 E063/E064 保留描述（EN 旧站原文 + ZH 翻译），其余 61 页无描述文本
+- [x] JSON-LD、meta description 描述文本同步清理
+
+#### 三、分类页更新
+- [x] `category-bicycle_accessories.html` 插入 63 张产品卡片（总数 72→135）
+- [x] 全部 13 个分类页产品卡片按型号升序重排（D→E→F 组内升序）
+- [x] 修复排序脚本导致的 grid 闭合 `</div>` 丢失（Load More 按钮位移）
+
+#### 四、搜索优化
+- [x] `search-data.js` 新增 63 条条目（总数 260→323）
+- [x] 全站 323 个产品补充分词语义 token（`et3`、`e001`、`001`），支持跨系列搜索
+- [x] 搜索"E001"可同时命中 ET1-E001/ET3-E001/ET8-E001
+
+#### 五、Bug 修复
+
+| Bug | 根因 | 修复 |
+|-----|------|------|
+| E001/E017 抓取空白 | CDP 4s 等待太短 | 6s 等待 |
+| 63 页规格表仅 1 行 | 正则 `/<\/div><\/div>/s` 少匹配一层 | 改用 indexOf 切片 |
+| 规格标签无双语 | 旧站仅英文标签，未转换为模板双语格式 | 38 个 EN→ZH 映射批量替换 |
+| 搜索"E001"无法跨系列命中 | token 仅有完整型号，无拆分片段 | 补充 `et3`/`e001`/`001` 三级 token |
+| 分类页 Load More 按钮位移 | 排序脚本吞掉 grid 闭合 `</div>` | 8 页补回 |
+| 61 页误加描述文本 | 生成模板默认带描述 | 批量移除 |
+
+### Git 提交
+```
+9c17dd8 feat: 自行车配件产品线补全 — 63新产品页 + 搜索优化 + 全站排序
+```
+已推送 origin/master，GitHub Pages 自动部署。
+
+### 修改文件统计
+- 新增：63 个 HTML + 60 张 JPG = 123 个文件
+- 修改：14 个分类页 + 1 个 search-data.js = 15 个文件
+- 合计：138 files changed，18971 insertions(+)，815 deletions(-)
+
+### 页面总数更新
+283 → **346** 页（+63 个自行车产品页）
+
+### 操作教训
+- **CDP 等待时间要充足**：旧站 wds168.cn 页面渲染慢，4s 不够需 6s
+- **正则替换 HTML 很脆弱**：多一层嵌套就失败，切片更可靠
+- **search-data.js 需分词语义 token**：完整型号 token 无法支持跨系列搜索
+- **批量生成前先单测模板替换**：E001 作为金丝雀避免了 63 页全错
+- **Python `urllib.parse` 需显式 import**：漏掉导致 `/json/new` 405 错误
+- **Chrome CDP WebSocket 需要 `--remote-allow-origins=*`**：Node 原生 WebSocket 绕过 Python 的 Origin 头限制
+- **`h-[375px]` vs `min-h-[375px]`**：固定高度在内容可变场景下是隐患，Hero 区应使用最小高度以兼容不同文本长度和语言
