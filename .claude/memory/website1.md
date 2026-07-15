@@ -9,7 +9,8 @@
 - 旧站 14 个分类中，**LED Tripod 替代了 LED Indoor Lighting**
 
 ## 🔒 受保护数据（最高级别——未经允许禁止修改）
-- **邮箱地址**：`fogis@sst-smartware.com` / `sunnie@sst-smartware.com` / `henry@sst-smartware.com`——后缀 `@sst-smartware.com` 为旧站域名，不是笔误。任何批量替换、SEO 优化、域名变更操作均不得触碰邮箱地址，违者即视为严重错误
+- **邮箱地址**：`fogis@sst-smartware.com` / `sunnie@sst-smartware.com`——后缀 `@sst-smartware.com` 为旧站域名，不是笔误。任何批量替换、SEO 优化、域名变更操作均不得触碰邮箱地址，违者即视为严重错误
+- **Henry 相关信息**：已于 2026-07-10 全站移除（团队成员卡片/邮箱/照片），不再出现在网站任何位置
 
 ## 基本信息
 - **域名**：smartware-official.com（阿里云注册，已备案，SSL 已生效）
@@ -19,9 +20,10 @@
 - **网站类型**：纯静态 HTML（Tailwind 静态 CSS + shared.css）
 - **页面总数**：346 页
 
-## Git 提交（20 commits）
+## Git 提交（21 commits）
 
 ```
+0c52e69 fix: 全站移除Henry相关信息 — 团队改双人布局 + 页脚邮箱清理
 506cd0d feat: IndexNow密钥部署 + sitemap刷新 + robots更新 — Bing收录加速
 3eaeb82 feat: 全站页脚 LinkedIn + 首页 sameAs
 ef717c9 chore: sitemap 更新至283 URLs
