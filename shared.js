@@ -100,6 +100,48 @@
             overlay.querySelector('.mobile-close').addEventListener('click', function () { overlay.style.display = 'none'; });
             overlay.addEventListener('click', function (e) { if (e.target === overlay) overlay.style.display = 'none'; });
         }
+
+        // ============================================================
+        // 4b. Catalog Download Modal — JPEG 2000 warning
+        // ============================================================
+        var catalogLinks = document.querySelectorAll('a[href*="Smartware_Product-Catalog.pdf"]');
+        if (catalogLinks.length > 0) {
+            var modal = document.createElement('div');
+            modal.id = 'catalog-modal';
+            modal.style.cssText = 'display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(26,28,28,0.85);z-index:99999;justify-content:center;align-items:center;';
+            modal.innerHTML = '<div style="background:#fff;border-radius:16px;max-width:480px;width:90%;padding:32px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3)">' +
+                '<span class="material-symbols-outlined" style="font-size:48px;color:#a33e00;margin-bottom:16px">warning</span>' +
+                '<h3 style="font-size:20px;font-weight:700;color:#1a1c1c;margin-bottom:12px"><span lang="en">PDF Viewing Notice</span><span lang="zh">PDF 查看提示</span></h3>' +
+                '<p style="font-size:15px;color:#555;line-height:1.6;margin-bottom:24px;text-align:left">' +
+                '<span lang="en">This catalog contains high-resolution images in a format not fully supported by Chrome/Edge/Firefox. If pages appear blank, please open with <strong>Adobe Acrobat Reader</strong> or <strong>Safari</strong> browser.</span>' +
+                '<span lang="zh">此宣传册包含高清图片，Chrome/Edge/Firefox 浏览器可能无法完整渲染。如出现白页，请使用 <strong>Adobe Acrobat Reader</strong> 或 <strong>Safari 浏览器</strong>打开。</span>' +
+                '</p>' +
+                '<div style="display:flex;justify-content:center;gap:12px">' +
+                '<button id="catalog-continue" style="background:#a33e00;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer"><span lang="en">Continue Download</span><span lang="zh">继续下载</span></button>' +
+                '<button id="catalog-close" style="background:#f5f5f5;color:#333;border:none;padding:12px 28px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer"><span lang="en">Close</span><span lang="zh">关闭</span></button>' +
+                '</div></div>';
+            document.body.appendChild(modal);
+
+            var catalogHref = '';
+            catalogLinks.forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    catalogHref = link.getAttribute('href');
+                    modal.style.display = 'flex';
+                });
+            });
+
+            document.getElementById('catalog-continue').addEventListener('click', function () {
+                modal.style.display = 'none';
+                if (catalogHref) window.open(catalogHref, '_blank');
+            });
+            document.getElementById('catalog-close').addEventListener('click', function () {
+                modal.style.display = 'none';
+            });
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) modal.style.display = 'none';
+            });
+        }
     });
 
     // ============================================================
