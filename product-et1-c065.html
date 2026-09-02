@@ -65,11 +65,6 @@ body{background:#f9f9f9;color:#1a1c1c;overflow-x:hidden}
 #cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(26,28,28,0.97);color:#fff;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;transform:translateY(100%);transition:transform 0.4s ease}#cookie-banner.show{transform:translateY(0)}#cookie-banner p{font-size:14px;line-height:1.5;margin:0;color:rgba(255,255,255,0.8);max-width:700px}#cookie-banner button{background:#a33e00;color:#fff;border:none;padding:10px 24px;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background 0.2s}#cookie-banner button:hover{background:#E65C00}
 @media (max-width:767px){.py-section-gap{padding-top:60px!important;padding-bottom:60px!important}}
 </style>
-
-
-
-<script src="search-data.js"></script>
-<script src="search.js"></script>
     <link rel="stylesheet" href="shared.css">
 <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dd39e0fc87c1482cb974e03df894bf9a"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
@@ -90,7 +85,7 @@ body{background:#f9f9f9;color:#1a1c1c;overflow-x:hidden}
 </div>
 <button class="font-label-md text-label-md font-bold text-primary cursor-pointer active:opacity-70 flex items-center gap-1">
 <span class="material-symbols-outlined text-base">language</span><span class="lang-label">EN</span></button>
-<a href="contact.html" class="hidden md:flex items-center bg-primary text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-[#E65C00] transition-colors duration-200 shadow-sm whitespace-nowrap">
+<a href="contact.html?product=ET1-C065&source=product-page" class="hidden md:flex items-center bg-primary text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-[#E65C00] transition-colors duration-200 shadow-sm whitespace-nowrap">
 <span lang="en">Get a Quote</span><span lang="zh">获取报价</span>
             </a>
 <button class="md:hidden material-symbols-outlined text-on-surface" aria-label="Open menu">menu</button>
@@ -124,7 +119,7 @@ body{background:#f9f9f9;color:#1a1c1c;overflow-x:hidden}
 <h1 class="font-headline-lg text-4xl text-on-surface mb-4 font-bold">ET1-C065</h1>
 <p class="text-secondary text-lg mb-8"><span lang="en">ET1-C065</span><span lang="zh">Smartware LED Product</span></p>
 <div class="flex flex-col sm:flex-row gap-4">
-<a href="contact.html" class="bg-primary-container text-on-primary px-8 py-4 rounded-lg font-bold hover:bg-primary transition-all flex items-center justify-center gap-2">
+<a href="contact.html?product=ET1-C065&source=product-page" class="bg-primary-container text-on-primary px-8 py-4 rounded-lg font-bold hover:bg-primary transition-all flex items-center justify-center gap-2">
 <span class="material-symbols-outlined">description</span><span lang="en">REQUEST QUOTE</span><span lang="zh">获取报价</span>
 </a>
 <a href="category-led_motorcycle_light.html" class="border-2 border-on-surface text-on-surface px-8 py-4 rounded-lg font-bold hover:bg-on-surface hover:text-white transition-all flex items-center justify-center gap-2">
@@ -283,6 +278,9 @@ document.addEventListener('DOMContentLoaded',function(){
 </script>
 <div id=cookie-banner><p><span lang=en>We use cookies to enhance your browsing experience and analyze site traffic. By continuing to use this site, you agree to our use of cookies.</span><span lang=zh>我们使用 Cookie 来提升您的浏览体验并分析网站流量。继续使用本网站即表示您同意我们使用 Cookie。</span></p><button onclick="document.getElementById('cookie-banner').classList.remove('show');localStorage.setItem('cookie-consent','1')"><span lang=en>Accept</span><span lang=zh>接受</span></button></div>
 
-    <script src="shared.js" defer></script>
+    <script src="search-utils.js"></script>
+<script src="search-data.js"></script>
+<script src="search.js"></script>
+<script src="shared.js" defer></script>
 </body>
 </html>

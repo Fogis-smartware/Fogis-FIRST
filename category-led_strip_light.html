@@ -64,11 +64,6 @@ body{background:#f9f9f9;color:#1a1c1c;overflow-x:hidden}
 @media (max-width:767px){.py-section-gap{padding-top:60px!important;padding-bottom:60px!important}}
 @media (max-width:767px){.product-grid{grid-template-columns:repeat(2,1fr)!important;gap:10px!important}.product-grid .product-card h3{font-size:14px!important}.product-grid .product-card .text-sm{font-size:11px!important}.product-grid .product-card .py-3{padding-top:6px!important;padding-bottom:6px!important}.product-grid .product-card .p-6{padding:10px!important}.product-grid .product-card img{padding:10px!important}}
 </style>
-
-
-
-<script src="search-data.js"></script>
-<script src="search.js"></script>
     <link rel="stylesheet" href="shared.css">
 <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dd39e0fc87c1482cb974e03df894bf9a"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
@@ -247,6 +242,9 @@ document.addEventListener('DOMContentLoaded',function(){
 <button id=back-to-top onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top"><span class=material-symbols-outlined>arrow_upward</span></button>
 <div id=cookie-banner><p><span lang=en>We use cookies to enhance your browsing experience and analyze site traffic. By continuing to use this site, you agree to our use of cookies.</span><span lang=zh>我们使用 Cookie 来提升您的浏览体验并分析网站流量。继续使用本网站即表示您同意我们使用 Cookie。</span></p><button onclick="document.getElementById('cookie-banner').classList.remove('show');localStorage.setItem('cookie-consent','1')"><span lang=en>Accept</span><span lang=zh>接受</span></button></div>
 
-    <script src="shared.js" defer></script>
+    <script src="search-utils.js"></script>
+<script src="search-data.js"></script>
+<script src="search.js"></script>
+<script src="shared.js" defer></script>
 </body>
 </html>

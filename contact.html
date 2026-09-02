@@ -190,7 +190,21 @@
 <!-- Right: Contact Form -->
 <div class="lg:col-span-7 bg-white p-8 md:p-12 rounded-xl shadow-soft border border-outline-variant">
 <h3 class="font-headline-md text-headline-md mb-8 text-on-surface"><span lang="en">Send a Message</span><span lang="zh">发送消息</span></h3>
+<div id="product-inquiry" class="hidden mb-8">
+<p class="font-label-md text-label-md text-secondary uppercase tracking-wider mb-2"><span lang="en">Product inquiry</span><span lang="zh">咨询产品</span></p>
+<div class="flex items-center gap-4 w-full bg-surface-container-low border border-outline-variant p-4 rounded-lg">
+<img id="product-inquiry-image" class="shrink-0 object-contain rounded-md border border-outline-variant bg-white" style="width:64px;height:64px;" src="" alt="">
+<div class="min-w-0">
+<p id="product-inquiry-category" class="text-sm text-secondary mt-1"><span lang="en"></span><span lang="zh"></span></p>
+<p id="product-inquiry-model" class="font-bold text-primary"></p>
+<a id="product-inquiry-link" class="inline-flex items-center gap-1 text-sm text-primary underline underline-offset-2 hover:text-on-surface transition-colors mt-1" href="#"><span lang="en">View product details</span><span lang="zh">查看产品详情</span><span class="material-symbols-outlined" style="font-size:16px;">open_in_new</span></a>
+</div>
+</div>
+</div>
 <form id="contact-form" class="space-y-6">
+<input type="hidden" id="product-model" name="product_model" value="">
+<input type="hidden" id="product-page" name="product_page" value="">
+<input type="hidden" id="inquiry-source" name="inquiry_source" value="">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="space-y-2">
 <label class="font-label-md text-label-md text-secondary uppercase tracking-wider" for="name"><span lang="en">Full Name</span><span lang="zh">姓名</span> <span class="text-error">*</span></label>
@@ -325,7 +339,28 @@
 </footer>
 <script>
         document.addEventListener('DOMContentLoaded', function() {
+            var params = new URLSearchParams(window.location.search);
+            var requestedModel = (params.get('product') || '').trim().toLowerCase();
+            var products = window.__SMARTWARE_SEARCH__ || [];
+            var product = products.find(function(item) {
+              return item.model.toLowerCase() === requestedModel;
             });
+            if (!product) return;
+
+            document.getElementById('product-inquiry').classList.remove('hidden');
+            var productInquiryImage = document.getElementById('product-inquiry-image');
+            var productInquiryCategory = document.getElementById('product-inquiry-category');
+            var productInquiryLink = document.getElementById('product-inquiry-link');
+            productInquiryImage.src = product.image;
+            productInquiryImage.alt = product.model;
+            productInquiryCategory.querySelector('[lang="en"]').textContent = product.categoryEn;
+            productInquiryCategory.querySelector('[lang="zh"]').textContent = product.categoryZh;
+            document.getElementById('product-inquiry-model').textContent = product.model;
+            productInquiryLink.href = product.url;
+            document.getElementById('product-model').value = product.model;
+            document.getElementById('product-page').value = new URL(product.url, document.baseURI).href;
+            document.getElementById('inquiry-source').value = params.get('source') === 'product-page' ? 'product-page' : 'contact-page';
+        });
 
 
             // Formspree form submission
@@ -368,6 +403,8 @@
 <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top"><span class="material-symbols-outlined">arrow_upward</span></button>
 
 <div id=cookie-banner><p><span lang=en>We use cookies to enhance your browsing experience and analyze site traffic. By continuing to use this site, you agree to our use of cookies.</span><span lang=zh>我们使用 Cookie 来提升您的浏览体验并分析网站流量。继续使用本网站即表示您同意我们使用 Cookie。</span></p><button onclick="document.getElementById('cookie-banner').classList.remove('show');localStorage.setItem('cookie-consent','1')"><span lang=en>Accept</span><span lang=zh>接受</span></button></div>
-
-    <script src="shared.js" defer></script>
+    <script src="search-utils.js"></script>
+<script src="search-data.js"></script>
+<script src="search.js"></script>
+<script src="shared.js" defer></script>
 </body></html>
