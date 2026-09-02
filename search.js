@@ -1,363 +1,213 @@
-/**
- * Smartware Product Search — Dropdown Live Search
- * Depends on: search-data.js (window.__SMARTWARE_SEARCH__)
- */
+/* Smartware product search UI. Depends on search-utils.js and search-data.js. */
 (function () {
   'use strict';
 
+  var DATA = window.__SMARTWARE_SEARCH__ || [];
+  var utils = window.SmartwareSearchUtils;
+  if (!DATA.length || !utils) return;
+
+  var inputEl;
+  var dropdownEl;
+  var activeIndex = -1;
+  var dropdownResults = [];
+  var MAX_VISIBLE = 8;
+  var isResultsPage = /\/search\.html$/i.test(window.location.pathname);
+
   function debounce(fn, delay) {
     var timer;
-    return function() {
+    return function () {
       var args = arguments;
-      var ctx = this;
       clearTimeout(timer);
-      timer = setTimeout(function() { fn.apply(ctx, args); }, delay);
+      timer = window.setTimeout(function () { fn.apply(null, args); }, delay);
     };
   }
 
-  var DATA = window.__SMARTWARE_SEARCH__;
-  if (!DATA || !DATA.length) return;
+  function findInput() {
+    return document.querySelector('input[type="search"]') || document.querySelector('header input[type="text"]');
+  }
 
-  // ── State ──────────────────────────────────────────
-  var inputEl = null;
-  var dropdownEl = null;
-  var activeIndex = -1;
-  var results = [];
-  var MAX_VISIBLE = 8;
+  function escapeHtml(value) {
+    var element = document.createElement('div');
+    element.textContent = value;
+    return element.innerHTML;
+  }
 
-  // ── Create dropdown DOM ────────────────────────────
+  function navigateToSearch(query) {
+    var normalized = utils.normalizeQuery(query);
+    if (!normalized) return;
+    utils.saveRecentSearch(window.localStorage, normalized);
+    window.location.href = 'search.html?q=' + encodeURIComponent(normalized);
+  }
+
   function createDropdown() {
     if (dropdownEl) return;
     dropdownEl = document.createElement('div');
     dropdownEl.id = 'search-dropdown';
-    dropdownEl.style.cssText =
-      'display:none;position:absolute;top:100%;left:0;right:0;margin-top:6px;' +
-      'background:#fff;border:1px solid #e3bfb1;border-radius:10px;' +
-      'box-shadow:0 8px 32px rgba(0,0,0,0.12);overflow:hidden;z-index:9999;' +
-      'max-height:520px;overflow-y:auto;';
+    dropdownEl.style.cssText = 'display:none;position:fixed;background:#fff;border:1px solid #e3bfb1;border-radius:10px;box-shadow:0 8px 32px rgba(0,0,0,.12);overflow:hidden;z-index:9999;max-height:520px;overflow-y:auto;';
     document.body.appendChild(dropdownEl);
-  }
-
-  // ── Visibility helper ──────────────────────────────
-  function isVisible(el) {
-    if (!el) return false;
-    var style = window.getComputedStyle(el);
-    if (style.display === 'none' || style.visibility === 'hidden') return false;
-    var parent = el.parentElement;
-    while (parent) {
-      var ps = window.getComputedStyle(parent);
-      if (ps.display === 'none') return false;
-      parent = parent.parentElement;
-    }
-    return true;
-  }
-
-  // ── Find search input ──────────────────────────────
-  function findInput() {
-    var inputs = document.querySelectorAll('input[type="text"]');
-    // First pass: prefer visible inputs
-    for (var i = 0; i < inputs.length; i++) {
-      if (!isVisible(inputs[i])) continue;
-      var ph = (inputs[i].getAttribute('placeholder') || '').toLowerCase();
-      if (ph.indexOf('search') !== -1 || ph.indexOf('产品搜索') !== -1 || ph.indexOf('搜索') !== -1) {
-        return inputs[i];
-      }
-    }
-    // Second pass: any input (including hidden)
-    for (var i = 0; i < inputs.length; i++) {
-      var ph = (inputs[i].getAttribute('placeholder') || '').toLowerCase();
-      if (ph.indexOf('search') !== -1 || ph.indexOf('产品搜索') !== -1 || ph.indexOf('搜索') !== -1) {
-        return inputs[i];
-      }
-    }
-    // Fallback: any text input in header
-    var headerInput = document.querySelector('header input[type="text"]');
-    return headerInput || inputs[0];
-  }
-
-  // ── Search logic ───────────────────────────────────
-  function doSearch(query) {
-    if (!query || query.length < 1) {
-      results = [];
-      return;
-    }
-    var q = query.toLowerCase().trim();
-    var exact = [];
-    var prefix = [];
-    var contain = [];
-
-    for (var i = 0; i < DATA.length; i++) {
-      var tokens = DATA[i].tokens;
-      // 1. Exact model match (e.g. "et1-a001")
-      if (DATA[i].model.toLowerCase() === q) {
-        exact.push(DATA[i]);
-      // 2. Word-boundary prefix match (token starts with q, or q follows a space)
-      } else if (tokens.indexOf(q) === 0 || tokens.indexOf(' ' + q) !== -1) {
-        prefix.push(DATA[i]);
-      // 3. Substring match not at word boundary (e.g. "001" inside "et1-a001")
-      } else if (tokens.indexOf(q) > 0) {
-        contain.push(DATA[i]);
-      }
-    }
-
-    results = exact.concat(prefix).concat(contain);
-    // Deduplicate
-    var seen = {};
-    results = results.filter(function (p) {
-      if (seen[p.id]) return false;
-      seen[p.id] = true;
-      return true;
-    });
-  }
-
-  // ── Highlight matching text ────────────────────────
-  function highlight(text, query) {
-    if (!query) return text;
-    var q = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    var re = new RegExp('(' + q + ')', 'gi');
-    return text.replace(re, '<mark style="background:#fff5f0;color:#a33e00;padding:0 1px;border-radius:2px">$1</mark>');
-  }
-
-  // ── Render dropdown ────────────────────────────────
-  function render(query) {
-    if (!dropdownEl) createDropdown();
-    activeIndex = -1;
-
-    if (!results.length) {
-      if (query && query.length >= 1) {
-        dropdownEl.innerHTML =
-          '<div style="padding:24px 16px;text-align:center;color:#999;font-size:14px">' +
-          '<span lang="en">No products found for "</span>' +
-          '<span lang="zh">未找到匹配 "</span>' +
-          '<strong style="color:#1a1c1c">' + escapeHtml(query) + '</strong>' +
-          '<span lang="en">"</span><span lang="zh">" 的产品</span>' +
-          '</div>';
-      } else {
-        dropdownEl.innerHTML = '';
-      }
-      showDropdown(false);
-      return;
-    }
-
-    var visible = results.slice(0, MAX_VISIBLE);
-    var total = results.length;
-    var isZh = document.body.classList.contains('show-zh');
-
-    var html = '';
-    html += '<div style="padding:10px 16px;font-size:12px;font-weight:600;color:#a33e00;' +
-      'text-transform:uppercase;letter-spacing:0.05em;background:#fff5f0;display:flex;justify-content:space-between">' +
-      '<span><span lang="en">Products</span><span lang="zh">产品</span> (' + total + ')</span>' +
-      '<span style="font-weight:400;color:#999;text-transform:none;letter-spacing:0;font-size:11px">' +
-      '<span lang="en">↑↓ navigate · Enter open · Esc close</span>' +
-      '<span lang="zh">↑↓ 导航 · Enter 打开 · Esc 关闭</span></span>' +
-      '</div>';
-
-    for (var i = 0; i < visible.length; i++) {
-      var p = visible[i];
-      var activeClass = i === activeIndex ? ' style="background:#f9f9f9"' : '';
-      html +=
-        '<a href="' + p.url + '" class="search-result-item" data-index="' + i + '"' + activeClass + ' ' +
-        'style="display:flex;align-items:center;gap:12px;padding:10px 16px;' +
-        'cursor:pointer;border-bottom:1px solid #f3f3f3;text-decoration:none;color:inherit;' +
-        'transition:background 0.12s"' +
-        'onmouseenter="this.style.background=\'#f9f9f9\'" ' +
-        'onmouseleave="this.style.background=\'transparent\'">' +
-        '<div style="width:42px;height:42px;background:#f3f3f3;border-radius:6px;flex-shrink:0;' +
-        'display:flex;align-items:center;justify-content:center;overflow:hidden">' +
-        '<img src="' + p.image + '" alt="' + p.model + '" ' +
-        'style="width:100%;height:100%;object-fit:contain;padding:4px" ' +
-        'onerror="this.parentElement.innerHTML=\'&lt;span style=&quot;font-size:10px;color:#999&quot;&gt;\'+this.alt.substring(0,4)+\'&lt;/span&gt;\'">' +
-        '</div>' +
-        '<div style="flex:1;min-width:0">' +
-        '<div style="font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' +
-        highlight(p.model, query) +
-        '</div>' +
-        '<div style="font-size:12px;color:#5f5e5e;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' +
-        (isZh && p.categoryZh ? p.categoryZh : p.categoryEn) +
-        '</div>' +
-        '</div>' +
-        '<span style="color:#a33e00;font-size:18px;flex-shrink:0;font-family:serif">↗</span>' +
-        '</a>';
-    }
-
-    if (total > MAX_VISIBLE) {
-      html +=
-        '<a href="products.html?search=' + encodeURIComponent(query) + '" ' +
-        'style="display:block;padding:12px 16px;text-align:center;font-size:14px;color:#a33e00;' +
-        'font-weight:600;text-decoration:none;background:#fafafa;border-top:1px solid #f3f3f3"' +
-        'onmouseenter="this.style.background=\'#f3f3f3\'" ' +
-        'onmouseleave="this.style.background=\'#fafafa\'">' +
-        '<span lang="en">View all ' + total + ' results →</span>' +
-        '<span lang="zh">查看全部 ' + total + ' 个结果 →</span>' +
-        '</a>';
-    }
-
-    dropdownEl.innerHTML = html;
-    showDropdown(true);
-  }
-
-  function showDropdown(show) {
-    if (!dropdownEl) return;
-    dropdownEl.style.display = show ? 'block' : 'none';
-    if (show) positionDropdown();
   }
 
   function positionDropdown() {
     if (!inputEl || !dropdownEl) return;
     var rect = inputEl.getBoundingClientRect();
-    // For the header search which is inside a relative container, position relative to input
-    var parent = inputEl.closest('.relative, .lg\\:relative');
-    if (parent) {
-      var ddWidth = Math.min(Math.max(rect.width + 20, 300), window.innerWidth - 32);
-      dropdownEl.style.position = 'fixed';
-      dropdownEl.style.top = rect.bottom + 4 + 'px';
-      dropdownEl.style.left = Math.max(8, (window.innerWidth - ddWidth) / 2) + 'px';
-      dropdownEl.style.right = 'auto';
-      dropdownEl.style.transform = 'none';
-      dropdownEl.style.width = ddWidth + 'px';
-      dropdownEl.style.maxWidth = (window.innerWidth - 32) + 'px';
-    } else {
-      dropdownEl.style.position = 'fixed';
-      dropdownEl.style.top = rect.bottom + 4 + 'px';
-      dropdownEl.style.left = Math.max(16, rect.left - 20) + 'px';
-      dropdownEl.style.width = Math.max(rect.width + 40, 340) + 'px';
-      dropdownEl.style.maxWidth = Math.min(window.innerWidth - 32, 480) + 'px';
+    var width = Math.min(Math.max(rect.width + 40, 340), window.innerWidth - 32);
+    dropdownEl.style.top = (rect.bottom + 6) + 'px';
+    dropdownEl.style.left = Math.max(16, Math.min(rect.left - 20, window.innerWidth - width - 16)) + 'px';
+    dropdownEl.style.width = width + 'px';
+  }
+
+  function closeDropdown() {
+    if (dropdownEl) dropdownEl.style.display = 'none';
+    activeIndex = -1;
+  }
+
+  function showDropdown(query) {
+    dropdownResults = utils.searchProducts(DATA, query);
+    activeIndex = -1;
+    if (!query || !dropdownResults.length) {
+      closeDropdown();
+      return;
     }
+    var visible = dropdownResults.slice(0, MAX_VISIBLE);
+    var isZh = document.body.classList.contains('show-zh');
+    var html = '<div style="padding:10px 16px;font-size:12px;font-weight:600;color:#a33e00;background:#fff5f0;display:flex;justify-content:space-between"><span><span lang="en">Products</span><span lang="zh">产品</span> (' + dropdownResults.length + ')</span></div>';
+    visible.forEach(function (product, index) {
+      html += '<a href="' + product.url + '" class="search-result-item" data-index="' + index + '" style="display:flex;align-items:center;gap:12px;padding:10px 16px;border-bottom:1px solid #f3f3f3;text-decoration:none;color:inherit">' +
+        '<img src="' + product.image + '" alt="' + product.model + '" style="width:42px;height:42px;object-fit:contain;padding:4px;background:#f3f3f3;border-radius:6px">' +
+        '<span style="flex:1;min-width:0"><strong style="display:block;font-size:14px">' + escapeHtml(product.model) + '</strong><span style="font-size:12px;color:#5f5e5e">' + escapeHtml(isZh ? product.categoryZh : product.categoryEn) + '</span></span><span style="color:#a33e00">&#8599;</span></a>';
+    });
+    if (dropdownResults.length > MAX_VISIBLE) {
+      html += '<button type="button" class="search-view-all" style="display:block;width:100%;padding:12px 16px;text-align:center;font-size:14px;color:#a33e00;font-weight:600;border:0;background:#fafafa;cursor:pointer"><span lang="en">View all ' + dropdownResults.length + ' results &#8594;</span><span lang="zh">查看全部 ' + dropdownResults.length + ' 个结果 &#8594;</span></button>';
+    }
+    dropdownEl.innerHTML = html;
+    dropdownEl.style.display = 'block';
+    positionDropdown();
+
+    dropdownEl.querySelectorAll('.search-result-item').forEach(function (link) {
+      link.addEventListener('click', function () { utils.saveRecentSearch(window.localStorage, query); });
+    });
+    var viewAll = dropdownEl.querySelector('.search-view-all');
+    if (viewAll) viewAll.addEventListener('click', function () { navigateToSearch(query); });
   }
 
-  function escapeHtml(str) {
-    var div = document.createElement('div');
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
+  function updateDropdownActive() {
+    dropdownEl.querySelectorAll('.search-result-item').forEach(function (item, index) {
+      item.style.background = index === activeIndex ? '#f9f9f9' : 'transparent';
+    });
   }
 
-  // ── Keyboard navigation ────────────────────────────
-  function onKeyDown(e) {
-    if (!results.length) return;
+  function createProductCard(product) {
+    var card = document.createElement('a');
+    card.className = 'product-card group';
+    card.href = product.url;
+    card.addEventListener('click', function () { utils.saveRecentSearch(window.localStorage, inputEl.value); });
+    card.innerHTML = '<div class="product-image"><img src="' + product.image + '" alt="' + product.model + '"></div>' +
+      '<div class="product-info"><p class="model"></p><p class="category"><span lang="en"></span><span lang="zh"></span></p><span class="details"><span lang="en">VIEW PRODUCT &#8594;</span><span lang="zh">查看产品 &#8594;</span></span></div>';
+    card.querySelector('.model').textContent = product.model;
+    card.querySelector('.category [lang="en"]').textContent = product.categoryEn;
+    card.querySelector('.category [lang="zh"]').textContent = product.categoryZh;
+    return card;
+  }
 
-    if (e.key === 'ArrowDown') {
-      e.preventDefault();
-      activeIndex = Math.min(activeIndex + 1, Math.min(results.length, MAX_VISIBLE) - 1);
-      updateActive();
-    } else if (e.key === 'ArrowUp') {
-      e.preventDefault();
+  function renderResultsPage(query) {
+    var normalized = utils.normalizeQuery(query);
+    var products = utils.searchProducts(DATA, normalized);
+    var grid = document.querySelector('.result-grid');
+    var heading = document.querySelector('[data-search-heading]');
+    var count = document.querySelector('[data-search-count]');
+    var intro = document.querySelector('[data-search-intro]');
+    var emptyState = document.querySelector('.empty-state');
+    if (!grid || !heading || !count || !intro || !emptyState) return;
+
+    inputEl.value = normalized;
+    grid.replaceChildren();
+    if (normalized && products.length) products.forEach(function (product) { grid.appendChild(createProductCard(product)); });
+    heading.innerHTML = '<span lang="en">' + (normalized ? 'Results for “' + escapeHtml(normalized) + '”' : 'Search products') + '</span><span lang="zh">' + (normalized ? '“' + escapeHtml(normalized) + '”的搜索结果' : '搜索产品') + '</span>';
+    count.innerHTML = '<span lang="en">' + products.length + ' products</span><span lang="zh">' + products.length + ' 个产品</span>';
+    intro.innerHTML = '<span lang="en">' + (products.length ? 'Choose a product to view its full specifications.' : 'Try another model number or product keyword.') + '</span><span lang="zh">' + (products.length ? '选择产品以查看完整规格。' : '请尝试其他型号或产品关键词。') + '</span>';
+    emptyState.style.display = normalized && !products.length ? 'block' : 'none';
+  }
+
+  function renderHistory() {
+    var history = document.querySelector('.history');
+    if (!history) return;
+    var label = history.querySelector('.history-label');
+    var clearButton = history.querySelector('.history-clear');
+    history.querySelectorAll('.history-chip').forEach(function (chip) { chip.remove(); });
+    var entries = utils.getRecentSearches(window.localStorage);
+    entries.forEach(function (query) {
+      var chip = document.createElement('button');
+      chip.className = 'history-chip';
+      chip.type = 'button';
+      chip.textContent = query;
+      chip.addEventListener('click', function () { navigateToSearch(query); });
+      history.insertBefore(chip, clearButton);
+    });
+    label.style.display = entries.length ? '' : 'none';
+    clearButton.style.display = entries.length ? '' : 'none';
+  }
+
+  function onKeyDown(event) {
+    var query = inputEl.value.trim();
+    if (event.key === 'ArrowDown' && dropdownResults.length) {
+      event.preventDefault();
+      activeIndex = Math.min(activeIndex + 1, Math.min(dropdownResults.length, MAX_VISIBLE) - 1);
+      updateDropdownActive();
+    } else if (event.key === 'ArrowUp' && dropdownResults.length) {
+      event.preventDefault();
       activeIndex = Math.max(activeIndex - 1, -1);
-      updateActive();
-    } else if (e.key === 'Enter') {
-      e.preventDefault();
-      if (activeIndex >= 0 && activeIndex < results.length) {
-        window.location.href = results[activeIndex].url;
-      } else if (results.length > 0) {
-        // Go to products page with search query
-        window.location.href = 'products.html?search=' + encodeURIComponent(inputEl.value.trim());
+      updateDropdownActive();
+    } else if (event.key === 'Enter' && !isResultsPage) {
+      event.preventDefault();
+      if (activeIndex >= 0) {
+        utils.saveRecentSearch(window.localStorage, query);
+        window.location.href = dropdownResults[activeIndex].url;
+      } else {
+        navigateToSearch(query);
       }
-    } else if (e.key === 'Escape') {
-      closeSearch();
+    } else if (event.key === 'Escape') {
+      closeDropdown();
       inputEl.blur();
     }
   }
 
-  function updateActive() {
-    if (!dropdownEl) return;
-    var items = dropdownEl.querySelectorAll('.search-result-item');
-    for (var i = 0; i < items.length; i++) {
-      if (i === activeIndex) {
-        items[i].style.background = '#f9f9f9';
-        items[i].scrollIntoView({ block: 'nearest' });
-      } else {
-        items[i].style.background = 'transparent';
-      }
-    }
-  }
-
-  // ── Open / Close ───────────────────────────────────
-  function openSearch() {
-    if (inputEl.value.trim().length >= 1) {
-      doSearch(inputEl.value.trim());
-      render(inputEl.value.trim());
-    }
-  }
-
-  function closeSearch() {
-    showDropdown(false);
-    activeIndex = -1;
-    results = [];
-  }
-
-  // ── Init ───────────────────────────────────────────
   function init() {
     inputEl = findInput();
     if (!inputEl) return;
-
     createDropdown();
-
-    // Wrap input container for relative positioning
-    var wrapper = inputEl.closest('.relative, .lg\\:relative');
-    if (!wrapper) {
-      wrapper = inputEl.parentElement;
-      if (wrapper && getComputedStyle(wrapper).position === 'static') {
-        wrapper.style.position = 'relative';
-      }
-    }
-
-    // Attach dropdown to the wrapper
-    if (wrapper && dropdownEl && dropdownEl.parentElement !== wrapper) {
-      wrapper.appendChild(dropdownEl);
-    }
-
-    // Input event — live search
     inputEl.addEventListener('input', debounce(function () {
-      var val = this.value.trim();
-      if (val.length >= 1) {
-        doSearch(val);
-        render(val);
-      } else {
-        closeSearch();
-      }
-    }, 200));
-
-    // Focus event
-    inputEl.addEventListener('focus', function () {
-      if (this.value.trim().length >= 1) {
-        openSearch();
-      }
-    });
-
-    // Keydown
+      var query = inputEl.value.trim();
+      if (query) showDropdown(query); else closeDropdown();
+    }, 180));
+    inputEl.addEventListener('focus', function () { if (inputEl.value.trim()) showDropdown(inputEl.value.trim()); });
     inputEl.addEventListener('keydown', onKeyDown);
-
-    // Click outside to close
-    document.addEventListener('click', function (e) {
-      if (dropdownEl && inputEl) {
-        if (!dropdownEl.contains(e.target) && !inputEl.contains(e.target)) {
-          closeSearch();
-        }
-      }
+    window.addEventListener('resize', debounce(positionDropdown, 120));
+    document.addEventListener('click', function (event) {
+      if (dropdownEl && !dropdownEl.contains(event.target) && event.target !== inputEl) closeDropdown();
     });
 
-    // Resize — reposition
-    window.addEventListener('resize', debounce(function () {
-      if (dropdownEl && dropdownEl.style.display === 'block') {
-        positionDropdown();
-      }
-    }, 150));
+    var form = inputEl.closest('form');
+    if (form) form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      navigateToSearch(inputEl.value);
+    });
 
-    // Handle products.html?search=xxx
-    if (window.location.pathname.endsWith('/products.html') || window.location.pathname.endsWith('/products')) {
+    var searchTrigger = inputEl.parentElement.querySelector('[data-search-trigger]');
+    if (searchTrigger) searchTrigger.addEventListener('click', function (event) {
+      event.preventDefault();
+      if (inputEl.value.trim()) navigateToSearch(inputEl.value);
+      else inputEl.focus();
+    });
+
+    if (isResultsPage) {
       var params = new URLSearchParams(window.location.search);
-      var searchQuery = params.get('search');
-      if (searchQuery && inputEl) {
-        inputEl.value = searchQuery;
-        doSearch(searchQuery);
-        render(searchQuery);
-      }
+      renderResultsPage(params.get('q') || '');
+      renderHistory();
+      var clearButton = document.querySelector('.history-clear');
+      if (clearButton) clearButton.addEventListener('click', function () { utils.clearRecentSearches(window.localStorage); renderHistory(); });
     }
   }
 
-  // ── Start ──────────────────────────────────────────
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
 })();

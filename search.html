@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Search Smartware professional LED lighting products by model or category.">
+  <link rel="canonical" href="https://www.smartware-official.com/search.html">
+  <title data-en="Search Products | Smartware" data-zh="产品搜索 | 云智迈科技">Search Products | Smartware</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tailwind-static.css">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    :root { --accent:#a33e00; --ink:#1a1c1c; --muted:#5f5e5e; --line:#e8e4e1; --wash:#fff7f3; }
+    body { color:var(--ink); background:#fff; overflow-x:hidden; }
+    .page-shell { max-width:1280px; margin:0 auto; padding:0 32px; }
+    .search-hero { padding:72px 0 36px; background:linear-gradient(180deg,#fff7f3 0%,#fff 100%); border-bottom:1px solid var(--line); }
+    .search-hero h1 { font-size:42px; line-height:1.1; font-weight:800; margin:12px 0; }
+    .eyebrow { color:var(--accent); font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    .search-field { display:flex; align-items:center; max-width:760px; margin-top:28px; border:1px solid #d9cac4; background:#fff; box-shadow:0 10px 28px rgba(68,35,20,.08); }
+    .search-field > .search-icon { padding-left:18px; color:var(--accent); }
+    .search-field input { flex:1; border:0; outline:0; padding:17px 14px; font-size:16px; min-width:0; }
+    .search-field input:focus { box-shadow:none; }
+    .search-field button { margin:6px; border:0; background:var(--accent); color:#fff; padding:11px 19px; font-weight:700; cursor:pointer; }
+    .history { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin:20px 0 0; }
+    .history-label { color:var(--muted); font-size:13px; }
+    .history-chip { border:1px solid #e2d7d2; background:#fff; color:#4b3d37; padding:7px 11px; font-size:13px; cursor:pointer; }
+    .history-clear { border:0; background:transparent; color:var(--accent); font-size:13px; cursor:pointer; padding:7px; }
+    .results { padding:44px 0 82px; }
+    .results-bar { display:flex; justify-content:space-between; align-items:end; gap:20px; border-bottom:1px solid var(--line); padding-bottom:18px; margin-bottom:26px; }
+    .results-bar h2 { font-size:24px; font-weight:800; margin:0; }
+    .results-bar p { color:var(--muted); margin:7px 0 0; font-size:14px; }
+    .result-count { color:var(--accent); font-size:14px; font-weight:700; white-space:nowrap; }
+    .result-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px; }
+    .product-card { display:flex; flex-direction:column; border:1px solid var(--line); border-radius:12px; background:#fff; box-shadow:0 4px 20px rgba(0,0,0,.05); text-decoration:none; color:inherit; overflow:hidden; transition:transform .2s ease,box-shadow .2s ease; }
+    .product-card:hover { transform:translateY(-8px); box-shadow:0 12px 28px rgba(0,0,0,.1); }
+    .product-image { aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; background:#f5f5f5; overflow:hidden; padding:24px; }
+    .product-image img { height:100%; width:100%; object-fit:contain; transition:transform .5s ease; }
+    .product-card:hover .product-image img { transform:scale(1.1); }
+    .product-info { display:flex; flex:1; flex-direction:column; padding:20px; }
+    .model { color:var(--ink); font-size:18px; font-weight:800; margin:0 0 4px; }
+    .category { color:var(--accent); font-size:14px; font-weight:600; margin:0 0 16px; }
+    .details { display:block; width:100%; margin-top:auto; border:2px solid var(--accent); border-radius:8px; color:var(--accent); font-size:14px; font-weight:700; padding:10px 12px; text-align:center; transition:background .2s ease,color .2s ease; }
+    .product-card:hover .details { background:var(--accent); color:#fff; }
+    .empty-state { display:none; text-align:center; padding:80px 20px; border:1px dashed #d9cac4; background:var(--wash); }
+    .empty-state h2 { margin:12px 0 8px; font-size:24px; }
+    @media (max-width:900px) { .result-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+    @media (max-width:640px) { .page-shell { padding:0 18px; } .search-hero { padding:46px 0 28px; } .search-hero h1 { font-size:30px; } .search-field button { min-width:68px; padding:11px 10px; } .results { padding-top:30px; } .results-bar { align-items:start; flex-direction:column; gap:8px; } .result-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; } .product-image { padding:14px; } .product-info { padding:14px; } .model { font-size:14px; } .category { font-size:11px; min-height:30px; margin:6px 0 12px; } .details { border-width:1px; font-size:11px; padding:8px 6px; } }
+  </style>
+</head>
+<body class="font-body-md text-body-md bg-surface">
+  <header role="banner" class="sticky top-0 z-50 flex justify-between items-center px-gutter md:px-margin-desktop h-24 md:h-28 max-w-container-max mx-auto bg-surface/80 backdrop-blur-xl border-b border-outline-variant shadow-sm w-full">
+    <a href="index.html"><img alt="Smartware Logo" class="h-[90px] md:h-[108px] w-auto object-contain" src="images/logo.png"></a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200" href="index.html"><span lang="en">HOME</span><span lang="zh">首页</span></a>
+      <a class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1 transition-colors duration-200 font-bold" href="products.html"><span lang="en">PRODUCT</span><span lang="zh">产品</span></a>
+      <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200" href="resources.html"><span lang="en">RESOURCES</span><span lang="zh">资源中心</span></a>
+      <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200" href="contact.html"><span lang="en">CONTACT</span><span lang="zh">联系我们</span></a>
+      <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200" href="about_us.html"><span lang="en">ABOUT US</span><span lang="zh">关于我们</span></a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <button class="font-label-md text-label-md font-bold text-primary cursor-pointer active:opacity-70 flex items-center gap-1"><span class="material-symbols-outlined text-base">language</span><span class="lang-label">EN</span></button>
+      <a href="contact.html" class="hidden md:flex items-center bg-primary text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-[#E65C00] transition-colors duration-200 shadow-sm whitespace-nowrap"><span lang="en">Get a Quote</span><span lang="zh">获取报价</span></a>
+      <button class="md:hidden material-symbols-outlined text-on-surface" aria-label="Open menu">menu</button>
+    </div>
+  </header>
+  <main>
+    <section class="search-hero">
+      <div class="page-shell">
+        <p class="eyebrow"><span lang="en">Product Finder</span><span lang="zh">产品搜索</span></p>
+        <h1><span lang="en">Search Smartware products</span><span lang="zh">搜索 Smartware 产品</span></h1>
+        <p class="text-[#5f5e5e] max-w-2xl"><span lang="en">Find a product by model number, product type, or application.</span><span lang="zh">按产品型号、类别或应用场景查找产品。</span></p>
+        <form class="search-field" action="search.html" method="get">
+          <span class="material-symbols-outlined search-icon" aria-hidden="true">search</span>
+          <input aria-label="Search products" data-en="Search by model, such as ET1-A001" data-zh="按型号搜索，例如 ET1-A001" name="q" placeholder="Search by model, such as ET1-A001" type="search" value="ET1">
+          <button type="submit"><span lang="en">Search</span><span lang="zh">搜索</span></button>
+        </form>
+        <div class="history" aria-label="Recent searches">
+          <span class="history-label"><span lang="en">Recent searches</span><span lang="zh">最近搜索</span></span>
+          <button class="history-chip" type="button">ET1</button><button class="history-chip" type="button"><span lang="en">Work light</span><span lang="zh">工作灯</span></button><button class="history-chip" type="button">Tripod</button>
+          <button class="history-clear" type="button"><span lang="en">Clear history</span><span lang="zh">清空历史</span></button>
+        </div>
+      </div>
+    </section>
+    <section class="results page-shell">
+      <div class="results-bar"><div><h2 data-search-heading><span lang="en">Search products</span><span lang="zh">搜索产品</span></h2><p data-search-intro><span lang="en">Enter a model number or product keyword.</span><span lang="zh">请输入产品型号或关键词。</span></p></div><span class="result-count" data-search-count><span lang="en">0 products</span><span lang="zh">0 个产品</span></span></div>
+      <div class="result-grid"></div>
+      <div class="empty-state"><p class="eyebrow"><span lang="en">No match</span><span lang="zh">未找到匹配项</span></p><h2><span lang="en">No products found</span><span lang="zh">未找到产品</span></h2><p><span lang="en">Try another model number or a broader product keyword.</span><span lang="zh">请尝试其他型号或更宽泛的产品关键词。</span></p></div>
+    </section>
+  </main>
+  <footer role="contentinfo" class="w-full pt-16 pb-8 px-gutter md:px-margin-desktop max-w-container-max mx-auto border-t border-outline-variant">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+      <div class="md:col-span-2"><a href="index.html"><img alt="Smartware Logo" class="h-[80px] md:h-[108px] w-auto object-contain mb-6" src="images/logo.png"></a><p class="text-secondary text-body-md max-w-md"><span lang="en">Shenzhen Smartware Technology Co. Ltd. is dedicated to providing professional, high-performance LED lighting solutions to industrial and professional markets worldwide.</span><span lang="zh">云智迈科技（深圳）致力于为全球工业和专业市场提供专业、高性能的 LED 照明解决方案。</span></p></div>
+      <div><h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs"><span lang="en">Navigation</span><span lang="zh">导航</span></h4><ul class="space-y-4"><li><a class="text-secondary hover:text-primary transition-colors" href="index.html"><span lang="en">Home</span><span lang="zh">首页</span></a></li><li><a class="text-secondary hover:text-primary transition-colors" href="products.html"><span lang="en">Products</span><span lang="zh">产品</span></a></li><li><a class="text-secondary hover:text-primary transition-colors" href="about_us.html"><span lang="en">About Us</span><span lang="zh">关于我们</span></a></li></ul></div>
+      <div><h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs"><span lang="en">Contact</span><span lang="zh">联系</span></h4><ul class="space-y-4 text-secondary"><li><span lang="en">Shenzhen, China</span><span lang="zh">中国深圳</span></li><li>fogis@sst-smartware.com<br>sunnie@sst-smartware.com</li><li>+86 755 2108 4541</li></ul></div>
+    </div>
+    <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/30 gap-4"><p class="text-label-md text-secondary">© <span id="copyright-year">2026</span> <span lang="en">Shenzhen Smartware Technology Co. Ltd. All rights reserved.</span><span lang="zh">云智迈科技（深圳）版权所有。</span></p></div>
+  </footer>
+  <script src="search-utils.js"></script>
+  <script src="search-data.js"></script>
+  <script src="search.js"></script>
+  <script src="shared.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var input = document.querySelector('.search-field input[type="search"]');
+      if (!input) return;
+      function updatePlaceholder() {
+        input.placeholder = document.body.classList.contains('show-zh')
+          ? input.getAttribute('data-zh')
+          : input.getAttribute('data-en');
+      }
+      window.setTimeout(updatePlaceholder, 0);
+      document.addEventListener('click', function () { window.setTimeout(updatePlaceholder, 0); });
+    });
+  </script>
+</body>
+</html>
