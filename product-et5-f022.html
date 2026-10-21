@@ -233,10 +233,11 @@ document.addEventListener('DOMContentLoaded',function(){
         img.onload = function() {
             images.push(trySrc);
             totalImages = images.length;
+            var imageIndex = totalImages - 1;
             var thumb = document.createElement('div');
             thumb.className = 'gallery-thumb' + (totalImages === 2 ? ' active' : '');
             thumb.innerHTML = '<img src="' + trySrc + '" alt="' + model + ' - Detail ' + idx + '" loading="lazy">';
-            thumb.onclick = function() { showImage(idx); };
+            thumb.onclick = function() { showImage(imageIndex); };
             thumbs.appendChild(thumb);
             thumbsContainer.style.display = 'block';
             if (totalImages === 2) {
